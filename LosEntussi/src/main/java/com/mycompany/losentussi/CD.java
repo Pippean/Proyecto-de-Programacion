@@ -62,7 +62,7 @@ public class CD extends javax.swing.JFrame{
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(516, Short.MAX_VALUE)
+                .addContainerGap(525, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textField1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -129,7 +129,7 @@ public class CD extends javax.swing.JFrame{
             RenderingHints.KEY_ANTIALIASING,
             RenderingHints.VALUE_ANTIALIAS_ON);
         g2.setRenderingHints(rh);
-        
+        /*
         //Funcion a:
         Path2D.Double palito1 = new Path2D.Double();
         Path2D.Double curva1 = new Path2D.Double();
@@ -167,31 +167,53 @@ public class CD extends javax.swing.JFrame{
         g2.draw(curva11);
         g2.draw(curva22);
         g2.draw(palito22);
-        
-        
-        
-        /*
-        int anchodelinea = 3;
-        g2.setColor(Color.black);
-        g2.setStroke(new BasicStroke(anchodelinea,BasicStroke.CAP_ROUND,BasicStroke.JOIN_ROUND));
-        
-        
-        g2.drawArc(40, 60, 30, 30, -100, 70);
-        g2.drawOval(70, 60, 25, 40);
-        g2.drawArc(100, 60, 30, 40, -50, -100);
-        
-        
-        Path2D q = new Path2D.Double();
-        double m1,m2, x1[]=(440,480,380), y1[]=(400,480,480),x2[]=(440,430,500), y2[]=(300,500,350);
-        
-        q.moveTo(300, 350);
-        
-        for (int i = 0; i < 3; i++) {
-            q.quadTo(x1[i], y1[i], x2[i], y2[i]);
-            g2.draw(q);
-            
-        }
         */
+        
+        
+        //r
+        /*
+        Path2D.Double r = new Path2D.Double();
+        r.moveTo(0, 143);
+        r.curveTo(15, 140, 40,143, 40, 55);
+        r.moveTo(40, 55);
+        r.curveTo(45, 65, 115, 65, 120, 55);
+        r.moveTo(120, 55);
+        r.curveTo(120, 65, 120,143, 160, 143);
+        g2.draw(r);*/
+        
+        //s
+        /*
+        Path2D.Double s = new Path2D.Double();
+        s.moveTo(0, 143);
+        s.curveTo(60, 143, 65,55, 65, 55);
+        s.moveTo(65, 55);
+        s.curveTo(140, 110, 130,125, 130, 143);
+        s.moveTo(80, 140);
+        s.curveTo(94, 147, 145,145, 155, 134);
+        g2.draw(s);
+        */
+        
+        //t
+        /*
+        Path2D.Double t = new Path2D.Double();
+        t.moveTo(0,300);
+        t.curveTo(20,290,30,300, 30, 150);
+        t.moveTo(30,150);
+        t.curveTo(30,300,40,290,60,300);
+        t.moveTo(0,180);
+        t.curveTo(0,180,60,180,60,180);
+        g2.draw(t);*/
+        
+        //u
+        /*
+        Path2D.Double u =new Path2D.Double();
+        u.moveTo(0,143);
+        u.curveTo(0,143,30,143,30,55);
+        u.moveTo(30,55);
+        u.curveTo(20,174,140,174,130,55);
+        u.moveTo(130,55);
+        u.curveTo(130,55,130,143,160,143);
+        g2.draw(u);*/
     }
 }
 
