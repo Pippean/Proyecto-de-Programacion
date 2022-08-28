@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package com.mycompany.losentussi;
 
 import java.awt.*;
@@ -130,7 +127,7 @@ public class CD extends javax.swing.JFrame{
             RenderingHints.VALUE_ANTIALIAS_ON);
         g2.setRenderingHints(rh);
         
-        //Funcion a:
+        /*Funcion a:
         Path2D.Double palito1 = new Path2D.Double();
         Path2D.Double curva1 = new Path2D.Double();
         Path2D.Double curva2 = new Path2D.Double();
@@ -166,10 +163,122 @@ public class CD extends javax.swing.JFrame{
         g2.draw(palito11);
         g2.draw(curva11);
         g2.draw(curva22);
-        g2.draw(palito22);
+        g2.draw(palito22);*/
         
         
+        //Funcion b:
+        /*
+        Path2D.Double b1 = new Path2D.Double();
+        Path2D.Double b2 = new Path2D.Double();
+        Path2D.Double b3 = new Path2D.Double();
+        Path2D.Double b4 = new Path2D.Double();
+        b1.moveTo(10, 143);
+        b1.curveTo(25, 143, 35, 50,25 , 40);
+        b2.moveTo(23,143);
+        b2.curveTo(23,143, 20,45, 25, 40);
+        b3.moveTo(23, 143);
+        b3.curveTo(23, 143, 60, 80,30 , 100);
+        b4.moveTo(30, 100);
+        b4.curveTo(45,100,50, 110,60, 100);
+        g2.draw(b1);
+        g2.draw(b2);
+        g2.draw(b3);
+        g2.draw(b4);*/
         
+        //Funcion C:
+        /*
+        Path2D.Double c1 = new Path2D.Double();
+        Path2D.Double c2 = new Path2D.Double();
+        c1.moveTo(35,100);
+        c1.curveTo(30, 115,30,148,70,143);
+        c2.moveTo(20, 143);
+        c2.curveTo(50,140,5,85, 68, 95);
+        g2.draw(c1);
+        g2.draw(c2);
+        */    
+        
+        //Funcion d :
+        /*
+        Path2D.Double c1 = new Path2D.Double();
+        Path2D.Double c2 = new Path2D.Double();
+        c1.moveTo(35,100);
+        c1.curveTo(30, 115,30,148,80,143);
+        c2.moveTo(20, 143);
+        c2.curveTo(50,140,5,85, 68, 95);
+        c2.moveTo(80,143);
+        c2.curveTo(80,143,60, 140,70, 20);
+        g2.draw(c1);
+        g2.draw(c2);
+        */
+        
+        //Funcion e :
+     
+     /*
+        Path2D.Double e1 = new Path2D.Double();
+        Path2D.Double e2 = new Path2D.Double();
+        e1.moveTo(10, 143);
+        e1.curveTo(25, 143, 35,110,25 , 100);
+        e2.moveTo(35,143);
+        e2.curveTo(20,143, 15,100, 25, 100);
+        g2.draw(e1);
+        g2.draw(e2);
+        */
+        //Funcion f :
+        /*
+        Path2D.Double d1 = new Path2D.Double();
+        Path2D.Double d2 = new Path2D.Double();
+        Path2D.Double d3 = new Path2D.Double();
+        Path2D.Double d4 = new Path2D.Double();
+        d1.moveTo(10, 143);
+        d1.curveTo(25, 143, 35, 50,25 , 60);
+        d2.moveTo(25,170);
+        d2.curveTo(20,143, 25,45, 27, 60);
+        d3.moveTo(25,170);
+        d3.curveTo(50,150,40,130,23,120);
+        d4.moveTo(23,130);
+        d4.curveTo(30,130, 50, 130, 60,120);
+        g2.draw(d1);
+        g2.draw(d2);
+        g2.draw(d3);
+        g2.draw(d4);*/
+        
+        // Funcion g:
+        /*
+        Path2D.Double g1 = new Path2D.Double();
+        g1.moveTo(30,60);
+        g1.curveTo(30,30,70,30,70,60);
+        g1.moveTo(30,60);
+        g1.curveTo(30,90,70,90,70,60);
+        g1.moveTo(30,60);
+        g1.curveTo(30,70,20,85,20,80);
+        g1.moveTo(70,60);
+        g1.curveTo(70,60,65,160,40,140);
+        g1.moveTo(40,140);
+        g1.curveTo(30,130,90,60,90,60);
+        
+        g2.draw(g1);
+        */
+        //Funcion H:
+        /*
+        Path2D.Double h = new Path2D.Double();
+        h.moveTo(10,143);
+        h.curveTo(15,135,30,60,20,50);
+        h.moveTo(20,50);
+        h.curveTo(10,60,20,135,20,143);
+        h.moveTo(18,110);
+        h.curveTo(60,100,30,143,70,143);
+        g2.draw(h);
+        */
+       //Funcion i:
+       /*
+        Path2D.Double i = new Path2D.Double();
+        i.moveTo(0,143);
+        i.curveTo(0,143,35,143, 30, 60);
+        i.moveTo(30,60);
+        i.curveTo(30,143,60,143,60,140);
+        g2.fillOval(25,40,10,10);
+        g2.draw(i);*/
+               
         /*
         int anchodelinea = 3;
         g2.setColor(Color.black);
