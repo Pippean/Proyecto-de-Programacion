@@ -131,7 +131,7 @@ public class CD extends javax.swing.JFrame{
             RenderingHints.VALUE_ANTIALIAS_ON);
         g2.setRenderingHints(rh);
         
-        /*Funcion a:
+        //Funcion a:
         Path2D.Double palito1 = new Path2D.Double();
         Path2D.Double curva1 = new Path2D.Double();
         Path2D.Double curva2 = new Path2D.Double();
@@ -167,7 +167,7 @@ public class CD extends javax.swing.JFrame{
         g2.draw(palito11);
         g2.draw(curva11);
         g2.draw(curva22);
-        g2.draw(palito22);*/
+        g2.draw(palito22);
         
         
         //Funcion b:
