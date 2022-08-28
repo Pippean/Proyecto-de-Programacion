@@ -132,6 +132,53 @@ public class CD extends javax.swing.JFrame{
         g2.setRenderingHints(rh);
         
         /*
+        //Funcion q:
+        Path2D.Double q = new Path2D.Double();
+        q.moveTo(30,60);
+        q.curveTo(30,30,70,30,70,60);
+        q.moveTo(30,60);
+        q.curveTo(30,90,70,90,70,60);
+        q.moveTo(30,60);
+        q.moveTo (70,60);
+        q.curveTo(70,60,60,180,90,110);
+        q.moveTo(90,110);
+        q.curveTo(90,110,100,90,50,90);
+        q.moveTo(50,90);
+        q.curveTo(40,90,50,140,90,70);
+        g2.draw(q);
+        */
+        
+        /*
+        //Funcion p:
+        Path2D.Double p = new Path2D.Double();
+        p.moveTo(0, 143);
+        p.curveTo(35, 143, 40, 110, 40, 90);
+        p.moveTo(40, 90);
+        p.curveTo(45, 110, 45, 170, 35, 180);
+        p.moveTo(40, 90);
+        p.curveTo(100, 50, 135, 145, 43, 143);
+        p.moveTo(40, 130);
+        p.curveTo(80, 120, 70, 160, 120, 143);
+        p.moveTo(40, 130);
+        p.curveTo(30, 135, 33, 145, 43, 143);
+        g2.draw(p);
+        */
+        
+        /*
+        //Funcion o: 
+        Path2D.Double o = new Path2D.Double();
+        o.moveTo(0, 143);
+        o.curveTo(35, 143, 40, 110, 40, 90);
+        o.moveTo(40, 100);
+        o.curveTo(40, 40, 120, 40, 120, 100);
+        o.moveTo(40, 100);
+        o.curveTo(40, 160, 120, 160, 120, 100);
+        o.moveTo(50, 69);
+        o.curveTo(45, 100, 130, 105, 145, 70);
+        g2.draw(o);
+        */
+        
+        /*
         //Funcion ñ:
         Path2D.Double ñ = new Path2D.Double();
         ñ.moveTo(0, 143);
