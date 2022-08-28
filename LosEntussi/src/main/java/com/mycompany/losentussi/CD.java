@@ -420,7 +420,122 @@ public class CD extends javax.swing.JFrame{
         q.curveTo(40,90,50,140,90,70);
         g2.draw(q);
         */
- 
+        
+        //r
+        /*
+        Path2D.Double r = new Path2D.Double();
+        r.moveTo(0, 143);
+        r.curveTo(15, 140, 40,143, 40, 55);
+        r.moveTo(40, 55);
+        r.curveTo(45, 65, 115, 65, 120, 55);
+        r.moveTo(120, 55);
+        r.curveTo(120, 65, 120,143, 160, 143);
+        g2.draw(r);*/
+        
+        //s
+        /*
+        Path2D.Double s = new Path2D.Double();
+        s.moveTo(0, 143);
+        s.curveTo(60, 143, 65,55, 65, 55);
+        s.moveTo(65, 55);
+        s.curveTo(140, 110, 130,125, 130, 143);
+        s.moveTo(80, 140);
+        s.curveTo(94, 147, 145,145, 155, 134);
+        g2.draw(s);
+        */
+        
+        //t
+        /*
+        Path2D.Double t = new Path2D.Double();
+        t.moveTo(0,300);
+        t.curveTo(20,290,30,300, 30, 150);
+        t.moveTo(30,150);
+        t.curveTo(30,300,40,290,60,300);
+        t.moveTo(0,180);
+        t.curveTo(0,180,60,180,60,180);
+        g2.draw(t);*/
+        
+        //u
+        /*
+        Path2D.Double u =new Path2D.Double();
+        u.moveTo(0,143);
+        u.curveTo(0,143,30,143,30,55);
+        u.moveTo(30,55);
+        u.curveTo(20,174,140,174,130,55);
+        u.moveTo(130,55);
+        u.curveTo(130,55,130,143,160,143);
+        g2.draw(u);*/
+        
+        //v
+        /*
+        Path2D.Double v =new Path2D.Double();
+        v.moveTo(0,143);
+        v.curveTo(20,143,15,55,40,55);
+        v.moveTo(40,55);
+        v.curveTo(65,55,60,143,80,143);
+        v.moveTo(80,143);
+        v.curveTo(100,143,110,55,110,55);
+        v.moveTo(110,55);
+        v.curveTo(115,60,155,60,160,55);
+        g2.draw(v);*/
+        
+        //w
+        /*
+        Path2D.Double w =new Path2D.Double();
+        w.moveTo(0,143);
+        w.curveTo(20,143,15,55,40,55);
+        w.moveTo(40,55);
+        w.curveTo(65,55,60,143,80,143);
+        w.moveTo(80,143);
+        w.curveTo(120,153,110,55,110,55);
+        w.moveTo(110,55);
+        w.curveTo(110,55,100,153,140,143);       
+        w.moveTo(140,143);
+        w.curveTo(160,143,160,55,160,55);
+        w.moveTo(160,55);
+        w.curveTo(165,60,195,60,200,55);
+        g2.draw(w);*/
+        
+        //x
+        /*
+        Path2D.Double x =new Path2D.Double();
+        x.moveTo(0,143);
+        x.curveTo(60,143,60,55,100,55);
+        x.moveTo(0,55);
+        x.curveTo(50,55,50,143,100,143);
+        g2.draw(x);*/
+        
+        //y
+        /*
+        Path2D.Double  y =new Path2D.Double();
+        y.moveTo(0,143);
+        y.curveTo(0,143,30,143,30,55);
+        y.moveTo(30,55);
+        y.curveTo(20,174,80,138,80,138);
+        y.moveTo(80,55);
+        y.curveTo(80,55,80,200,80,200);
+        y.moveTo(80,200);
+        y.curveTo(80,225,40,225,40,200);
+        y.moveTo(40,200);
+        y.curveTo(40,180,60,143,120,143);
+        g2.draw(y);*/
+        
+        //z
+        /*
+        Path2D.Double  z =new Path2D.Double();
+        z.moveTo(20,143);
+        z.curveTo(50,143,0,90,70,90);
+        z.moveTo(70,90);
+        z.curveTo(100,90,90,143,70,143);
+        z.moveTo(70,143);
+        z.curveTo(45,143,45,125,70,130);     
+        z.moveTo(70,130);
+        z.curveTo(100,140,110,175,100,200);
+        z.moveTo(100,200);
+        z.curveTo(95,220,60,220,60,200);
+        z.moveTo(60,200);
+        z.curveTo(60,185,100,150,120,143);
+        g2.draw(z);*/
     }
 }
 
