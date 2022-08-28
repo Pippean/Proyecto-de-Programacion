@@ -131,81 +131,201 @@ public class CD extends javax.swing.JFrame{
             RenderingHints.VALUE_ANTIALIAS_ON);
         g2.setRenderingHints(rh);
         
+        /*Funcion a:
+        Path2D.Double palito1 = new Path2D.Double();
+        Path2D.Double curva1 = new Path2D.Double();
+        Path2D.Double curva2 = new Path2D.Double();
+        Path2D.Double palito2 = new Path2D.Double();
+        palito1.moveTo(0, 143);
+        palito1.curveTo(40, 143, 40, 100, 40, 100);
+        curva1.moveTo(40, 100);
+        curva1.curveTo(40, 40, 120, 40, 120, 100);
+        curva2.moveTo(40, 100);
+        curva2.curveTo(40, 160, 120, 160, 120, 100);
+        palito2.moveTo(120, 100);
+        palito2.curveTo(120, 100, 120, 143, 160, 143);
+        g2.draw(palito1);
+        g2.draw(curva1);
+        g2.draw(curva2);
+        g2.draw(palito2);
+        
+        //a2
+        
+        //Funcion a:
+        Path2D.Double palito11 = new Path2D.Double();
+        Path2D.Double curva11 = new Path2D.Double();
+        Path2D.Double curva22 = new Path2D.Double();
+        Path2D.Double palito22 = new Path2D.Double();
+        palito11.moveTo(160, 143);
+        palito11.curveTo(200, 143, 200, 100, 200, 100);
+        curva11.moveTo(200, 100);
+        curva11.curveTo(200, 40, 280, 40, 280, 100);
+        curva22.moveTo(200, 100);
+        curva22.curveTo(200, 160, 280, 160, 280, 100);
+        palito22.moveTo(280, 100);
+        palito22.curveTo(280, 100, 280, 143, 320, 143);
+        g2.draw(palito11);
+        g2.draw(curva11);
+        g2.draw(curva22);
+        g2.draw(palito22);*/
+        
+        
+        //Funcion b:
         /*
-        //Funcion q:
-        Path2D.Double q = new Path2D.Double();
-        q.moveTo(30,60);
-        q.curveTo(30,30,70,30,70,60);
-        q.moveTo(30,60);
-        q.curveTo(30,90,70,90,70,60);
-        q.moveTo(30,60);
-        q.moveTo (70,60);
-        q.curveTo(70,60,60,180,90,110);
-        q.moveTo(90,110);
-        q.curveTo(90,110,100,90,50,90);
-        q.moveTo(50,90);
-        q.curveTo(40,90,50,140,90,70);
-        g2.draw(q);
+        Path2D.Double b1 = new Path2D.Double();
+        Path2D.Double b2 = new Path2D.Double();
+        Path2D.Double b3 = new Path2D.Double();
+        Path2D.Double b4 = new Path2D.Double();
+        b1.moveTo(10, 143);
+        b1.curveTo(25, 143, 35, 50,25 , 40);
+        b2.moveTo(23,143);
+        b2.curveTo(23,143, 20,45, 25, 40);
+        b3.moveTo(23, 143);
+        b3.curveTo(23, 143, 60, 80,30 , 100);
+        b4.moveTo(30, 100);
+        b4.curveTo(45,100,50, 110,60, 100);
+        g2.draw(b1);
+        g2.draw(b2);
+        g2.draw(b3);
+        g2.draw(b4);
+        */
+        
+        //Funcion c:
+        /*
+        Path2D.Double c1 = new Path2D.Double();
+        Path2D.Double c2 = new Path2D.Double();
+        c1.moveTo(35,100);
+        c1.curveTo(30, 115,30,148,70,143);
+        c2.moveTo(20, 143);
+        c2.curveTo(50,140,5,85, 68, 95);
+        g2.draw(c1);
+        g2.draw(c2);
+        */    
+        
+        //Funcion d :
+        /*
+        Path2D.Double c1 = new Path2D.Double();
+        Path2D.Double c2 = new Path2D.Double();
+        c1.moveTo(35,100);
+        c1.curveTo(30, 115,30,148,80,143);
+        c2.moveTo(20, 143);
+        c2.curveTo(50,140,5,85, 68, 95);
+        c2.moveTo(80,143);
+        c2.curveTo(80,143,60, 140,70, 20);
+        g2.draw(c1);
+        g2.draw(c2);
+        */
+        
+        //Funcion e :
+     
+        /*
+        Path2D.Double e1 = new Path2D.Double();
+        Path2D.Double e2 = new Path2D.Double();
+        e1.moveTo(10, 143);
+        e1.curveTo(25, 143, 35,110,25 , 100);
+        e2.moveTo(35,143);
+        e2.curveTo(20,143, 15,100, 25, 100);
+        g2.draw(e1);
+        g2.draw(e2);
+        */
+        
+        //Funcion f :
+        /*
+        Path2D.Double d1 = new Path2D.Double();
+        Path2D.Double d2 = new Path2D.Double();
+        Path2D.Double d3 = new Path2D.Double();
+        Path2D.Double d4 = new Path2D.Double();
+        d1.moveTo(10, 143);
+        d1.curveTo(25, 143, 35, 50,25 , 60);
+        d2.moveTo(25,170);
+        d2.curveTo(20,143, 25,45, 27, 60);
+        d3.moveTo(25,170);
+        d3.curveTo(50,150,40,130,23,120);
+        d4.moveTo(23,130);
+        d4.curveTo(30,130, 50, 130, 60,120);
+        g2.draw(d1);
+        g2.draw(d2);
+        g2.draw(d3);
+        g2.draw(d4);*/
+        
+        // Funcion g:
+        /*
+        Path2D.Double g1 = new Path2D.Double();
+        g1.moveTo(30,60);
+        g1.curveTo(30,30,70,30,70,60);
+        g1.moveTo(30,60);
+        g1.curveTo(30,90,70,90,70,60);
+        g1.moveTo(30,60);
+        g1.curveTo(30,70,20,85,20,80);
+        g1.moveTo(70,60);
+        g1.curveTo(70,60,65,160,40,140);
+        g1.moveTo(40,140);
+        g1.curveTo(30,130,90,60,90,60);
+        g2.draw(g1);
+        */
+        
+        //Funcion h:
+        /*
+        Path2D.Double h = new Path2D.Double();
+        h.moveTo(10,143);
+        h.curveTo(15,135,30,60,20,50);
+        h.moveTo(20,50);
+        h.curveTo(10,60,20,135,20,143);
+        h.moveTo(18,110);
+        h.curveTo(60,100,30,143,70,143);
+        g2.draw(h);
+        */
+        
+       //Funcion i:
+       /*
+        Path2D.Double i = new Path2D.Double();
+        i.moveTo(0,143);
+        i.curveTo(0,143,35,143, 30, 60);
+        i.moveTo(30,60);
+        i.curveTo(30,143,60,143,60,140);
+        g2.fillOval(25,40,10,10);
+        g2.draw(i);
+       */
+        
+       /*
+        //Funcion j:
+        
+        Path2D.Double j = new Path2D.Double();
+        j.moveTo(0, 143);
+        j.curveTo(30, 143, 60, 110, 60, 55);
+        j.moveTo(60, 55);
+        j.curveTo(60, 55, 70, 180, 45, 180);
+        j.moveTo(45, 180);
+        j.curveTo(30, 185, 15, 180, 40, 150);
+        j.moveTo(40, 150);
+        j.curveTo(40, 150, 80, 140, 100, 143);
+        g2.setColor(Color.black);
+        g2.drawOval(55, 40, 10, 10);
+        g2.draw(j);
         */
         
         /*
-        //Funcion p:
-        Path2D.Double p = new Path2D.Double();
-        p.moveTo(0, 143);
-        p.curveTo(35, 143, 40, 110, 40, 90);
-        p.moveTo(40, 90);
-        p.curveTo(45, 110, 45, 170, 35, 180);
-        p.moveTo(40, 90);
-        p.curveTo(100, 50, 135, 145, 43, 143);
-        p.moveTo(40, 130);
-        p.curveTo(80, 120, 70, 160, 120, 143);
-        p.moveTo(40, 130);
-        p.curveTo(30, 135, 33, 145, 43, 143);
-        g2.draw(p);
+        //Funcion k:
+        Path2D.Double k = new Path2D.Double();
+        k.moveTo(0, 100);
+        k.curveTo(100, 100, 20, -25, 50, 143);
+        k.moveTo(43, 100);
+        k.curveTo(43, 100, 70, 40, 80, 55);
+        k.moveTo(43, 100);
+        k.curveTo(50, 100, 70, 115, 70, 120);
+        k.moveTo(70, 120);
+        k.curveTo(78, 127, 80, 155, 100, 143);
+        g2.draw(k);
         */
         
         /*
-        //Funcion o: 
-        Path2D.Double o = new Path2D.Double();
-        o.moveTo(0, 143);
-        o.curveTo(35, 143, 40, 110, 40, 90);
-        o.moveTo(40, 100);
-        o.curveTo(40, 40, 120, 40, 120, 100);
-        o.moveTo(40, 100);
-        o.curveTo(40, 160, 120, 160, 120, 100);
-        o.moveTo(50, 69);
-        o.curveTo(45, 100, 130, 105, 145, 70);
-        g2.draw(o);
-        */
-        
-        /*
-        //Funcion ñ:
-        Path2D.Double ñ = new Path2D.Double();
-        ñ.moveTo(0, 143);
-        ñ.curveTo(35, 143, 25, 80, 40, 70);
-        ñ.moveTo(40, 70);
-        ñ.curveTo(70, 50, 70, 143, 70, 143);
-        ñ.moveTo(70, 143);
-        ñ.curveTo(70, 50, 110, 60, 110, 120);
-        ñ.moveTo(110, 120);
-        ñ.curveTo(110, 140, 105, 160, 150, 143);
-        ñ.moveTo(30, 60);
-        ñ.curveTo(60, 20, 80, 80, 110, 50);
-        g2.draw(ñ);
-        */
-        
-        /*
-        //Funcion n:
-        Path2D.Double n = new Path2D.Double();
-        n.moveTo(0, 143);
-        n.curveTo(35, 143, 25, 80, 40, 70);
-        n.moveTo(40, 70);
-        n.curveTo(70, 50, 70, 143, 70, 143);
-        n.moveTo(70, 143);
-        n.curveTo(70, 50, 110, 60, 110, 120);
-        n.moveTo(110, 120);
-        n.curveTo(110, 140, 105, 160, 150, 143);
-        g2.draw(n);
+        //Funcion l:
+        Path2D.Double l = new Path2D.Double();
+        l.moveTo(0, 143);
+        l.curveTo(40, 143, 60, 40, 40, 55);
+        l.moveTo(40, 55);
+        l.curveTo(25, 60, 20, 143, 80, 143);
+        g2.draw(l);
         */
         
         /*
@@ -225,79 +345,82 @@ public class CD extends javax.swing.JFrame{
         */
         
         /*
-        //Funcion l:
-        Path2D.Double l = new Path2D.Double();
-        l.moveTo(0, 143);
-        l.curveTo(40, 143, 60, 40, 40, 55);
-        l.moveTo(40, 55);
-        l.curveTo(25, 60, 20, 143, 80, 143);
-        g2.draw(l);
+        //Funcion n:
+        Path2D.Double n = new Path2D.Double();
+        n.moveTo(0, 143);
+        n.curveTo(35, 143, 25, 80, 40, 70);
+        n.moveTo(40, 70);
+        n.curveTo(70, 50, 70, 143, 70, 143);
+        n.moveTo(70, 143);
+        n.curveTo(70, 50, 110, 60, 110, 120);
+        n.moveTo(110, 120);
+        n.curveTo(110, 140, 105, 160, 150, 143);
+        g2.draw(n);
         */
         
         /*
-        //Funcion k:
-        Path2D.Double k = new Path2D.Double();
-        k.moveTo(0, 100);
-        k.curveTo(100, 100, 20, -25, 50, 143);
-        k.moveTo(43, 100);
-        k.curveTo(43, 100, 70, 40, 80, 55);
-        k.moveTo(43, 100);
-        k.curveTo(50, 100, 70, 115, 70, 120);
-        k.moveTo(70, 120);
-        k.curveTo(78, 127, 80, 155, 100, 143);
-        g2.draw(k);
+        //Funcion ñ:
+        Path2D.Double ñ = new Path2D.Double();
+        ñ.moveTo(0, 143);
+        ñ.curveTo(35, 143, 25, 80, 40, 70);
+        ñ.moveTo(40, 70);
+        ñ.curveTo(70, 50, 70, 143, 70, 143);
+        ñ.moveTo(70, 143);
+        ñ.curveTo(70, 50, 110, 60, 110, 120);
+        ñ.moveTo(110, 120);
+        ñ.curveTo(110, 140, 105, 160, 150, 143);
+        ñ.moveTo(30, 60);
+        ñ.curveTo(60, 20, 80, 80, 110, 50);
+        g2.draw(ñ);
         */
         
         /*
-        //Funcion j:
-        
-        Path2D.Double j = new Path2D.Double();
-        j.moveTo(0, 143);
-        j.curveTo(30, 143, 60, 110, 60, 55);
-        j.moveTo(60, 55);
-        j.curveTo(60, 55, 70, 180, 45, 180);
-        j.moveTo(45, 180);
-        j.curveTo(30, 185, 15, 180, 40, 150);
-        j.moveTo(40, 150);
-        j.curveTo(40, 150, 80, 140, 100, 143);
-        g2.setColor(Color.black);
-        g2.drawOval(55, 40, 10, 10);
-        g2.draw(j);
+        //Funcion o: 
+        Path2D.Double o = new Path2D.Double();
+        o.moveTo(0, 143);
+        o.curveTo(35, 143, 40, 110, 40, 90);
+        o.moveTo(40, 100);
+        o.curveTo(40, 40, 120, 40, 120, 100);
+        o.moveTo(40, 100);
+        o.curveTo(40, 160, 120, 160, 120, 100);
+        o.moveTo(50, 69);
+        o.curveTo(45, 100, 130, 105, 145, 70);
+        g2.draw(o);
         */
         
         /*
-        //Funcion a:
-        Path2D.Double a = new Path2D.Double();
-        a.moveTo(0, 143);//Primer palito
-        a.curveTo(40, 143, 40, 100, 40, 100);
-        a.moveTo(40, 100);//Curva de arriba
-        a.curveTo(40, 40, 120, 40, 120, 100);
-        a.moveTo(40, 100);//Curva de abajo
-        a.curveTo(40, 160, 120, 160, 120, 100);
-        a.moveTo(120, 100);//Segundo palito
-        a.curveTo(120, 100, 120, 143, 160, 143);
-        g2.draw(a);
+        //Funcion p:
+        Path2D.Double p = new Path2D.Double();
+        p.moveTo(0, 143);
+        p.curveTo(35, 143, 40, 110, 40, 90);
+        p.moveTo(40, 90);
+        p.curveTo(45, 110, 45, 170, 35, 180);
+        p.moveTo(40, 90);
+        p.curveTo(100, 50, 135, 145, 43, 143);
+        p.moveTo(40, 130);
+        p.curveTo(80, 120, 70, 160, 120, 143);
+        p.moveTo(40, 130);
+        p.curveTo(30, 135, 33, 145, 43, 143);
+        g2.draw(p);
         */
         
         /*
-        //Funcion a segunda:
-        Path2D.Double palito11 = new Path2D.Double();
-        Path2D.Double curva11 = new Path2D.Double();
-        Path2D.Double curva22 = new Path2D.Double();
-        Path2D.Double palito22 = new Path2D.Double();
-        palito11.moveTo(100, 143);
-        palito11.curveTo(140, 143, 140, 100, 140, 100);
-        curva11.moveTo(140, 100);
-        curva11.curveTo(140, 40, 220, 40, 220, 100);
-        curva22.moveTo(140, 100);
-        curva22.curveTo(140, 160, 220, 160, 220, 100);
-        palito22.moveTo(220, 100);
-        palito22.curveTo(220, 100, 220, 143, 260, 143);
-        g2.draw(palito11);
-        g2.draw(curva11);
-        g2.draw(curva22);
-        g2.draw(palito22);
+        //Funcion q:
+        Path2D.Double q = new Path2D.Double();
+        q.moveTo(30,60);
+        q.curveTo(30,30,70,30,70,60);
+        q.moveTo(30,60);
+        q.curveTo(30,90,70,90,70,60);
+        q.moveTo(30,60);
+        q.moveTo (70,60);
+        q.curveTo(70,60,60,180,90,110);
+        q.moveTo(90,110);
+        q.curveTo(90,110,100,90,50,90);
+        q.moveTo(50,90);
+        q.curveTo(40,90,50,140,90,70);
+        g2.draw(q);
         */
+ 
     }
 }
 
