@@ -26,12 +26,12 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="txtConvertir" pref="677" max="32767" attributes="0"/>
+              <Component id="txtConvertir" pref="678" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="btnBorrar" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="btnConvertir" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+              <Component id="btnConvertir" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -41,8 +41,8 @@
               <EmptySpace pref="516" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="txtConvertir" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                  <Component id="btnConvertir" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                   <Component id="btnBorrar" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                  <Component id="btnConvertir" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
