@@ -5,11 +5,10 @@
 package com.mycompany.losentussi;
 
 import java.awt.*;
-import java.awt.geom.Path2D;
 
 /**
  *
- * @author Pipe
+ * @author Pipe, Juan, Lazaro  
  */
 public class CD extends javax.swing.JFrame{
 
@@ -29,23 +28,36 @@ public class CD extends javax.swing.JFrame{
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        button1 = new java.awt.Button();
-        textField1 = new java.awt.TextField();
+        btnConvertir = new javax.swing.JButton();
+        txtConvertir = new javax.swing.JTextField();
+        btnBorrar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Convertidor de Script");
 
-        button1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        button1.setLabel("Convertir");
-        button1.addActionListener(new java.awt.event.ActionListener() {
+        btnConvertir.setText("Convertir");
+        btnConvertir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                button1ActionPerformed(evt);
+                btnConvertirActionPerformed(evt);
             }
         });
 
-        textField1.addActionListener(new java.awt.event.ActionListener() {
+        txtConvertir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textField1ActionPerformed(evt);
+                txtConvertirActionPerformed(evt);
+            }
+        });
+
+        btnBorrar.setText("Borrar");
+        btnBorrar.setEnabled(false);
+        btnBorrar.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                btnBorrarStateChanged(evt);
+            }
+        });
+        btnBorrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBorrarActionPerformed(evt);
             }
         });
 
@@ -55,31 +67,48 @@ public class CD extends javax.swing.JFrame{
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(textField1, javax.swing.GroupLayout.DEFAULT_SIZE, 755, Short.MAX_VALUE)
+                .addComponent(txtConvertir, javax.swing.GroupLayout.DEFAULT_SIZE, 677, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(btnBorrar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnConvertir)
+                .addGap(4, 4, 4))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap(516, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textField1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtConvertir, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnConvertir, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnBorrar, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void textField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textField1ActionPerformed
+    private void btnConvertirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConvertirActionPerformed
+        String txtadibujar = txtConvertir.getText();
+        System.out.println(""+ txtadibujar);
+        btnBorrar.setEnabled(true);
+        btnConvertir.setEnabled(false);
+    }//GEN-LAST:event_btnConvertirActionPerformed
 
-    private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
+    private void txtConvertirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtConvertirActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_button1ActionPerformed
+    }//GEN-LAST:event_txtConvertirActionPerformed
+
+    private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
+        String txtadibujar = "";
+        System.out.println(""+ txtadibujar);
+        btnConvertir.setEnabled(true);
+        btnBorrar.setEnabled(false);
+    }//GEN-LAST:event_btnBorrarActionPerformed
+
+    private void btnBorrarStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_btnBorrarStateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnBorrarStateChanged
 
     /**
      * @param args the command line arguments
@@ -118,8 +147,9 @@ public class CD extends javax.swing.JFrame{
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private java.awt.Button button1;
-    private java.awt.TextField textField1;
+    private javax.swing.JButton btnBorrar;
+    private javax.swing.JButton btnConvertir;
+    private javax.swing.JTextField txtConvertir;
     // End of variables declaration//GEN-END:variables
     
     public void paint(Graphics g){
@@ -131,125 +161,106 @@ public class CD extends javax.swing.JFrame{
             RenderingHints.VALUE_ANTIALIAS_ON);
         g2.setRenderingHints(rh);
         
-        /*Funcion a:
-        Path2D.Double palito1 = new Path2D.Double();
-        Path2D.Double curva1 = new Path2D.Double();
-        Path2D.Double curva2 = new Path2D.Double();
-        Path2D.Double palito2 = new Path2D.Double();
-        palito1.moveTo(0, 143);
-        palito1.curveTo(40, 143, 40, 100, 40, 100);
-        curva1.moveTo(40, 100);
-        curva1.curveTo(40, 40, 120, 40, 120, 100);
-        curva2.moveTo(40, 100);
-        curva2.curveTo(40, 160, 120, 160, 120, 100);
-        palito2.moveTo(120, 100);
-        palito2.curveTo(120, 100, 120, 143, 160, 143);
-        g2.draw(palito1);
-        g2.draw(curva1);
-        g2.draw(curva2);
-        g2.draw(palito2);
+        //Funcion ¿:
         
-        //a2
+        //Funcion ?:
         
-        //Funcion a:
-        Path2D.Double palito11 = new Path2D.Double();
-        Path2D.Double curva11 = new Path2D.Double();
-        Path2D.Double curva22 = new Path2D.Double();
-        Path2D.Double palito22 = new Path2D.Double();
-        palito11.moveTo(160, 143);
-        palito11.curveTo(200, 143, 200, 100, 200, 100);
-        curva11.moveTo(200, 100);
-        curva11.curveTo(200, 40, 280, 40, 280, 100);
-        curva22.moveTo(200, 100);
-        curva22.curveTo(200, 160, 280, 160, 280, 100);
-        palito22.moveTo(280, 100);
-        palito22.curveTo(280, 100, 280, 143, 320, 143);
-        g2.draw(palito11);
-        g2.draw(curva11);
-        g2.draw(curva22);
-        g2.draw(palito22);*/
+        //Funcion !:
+        
+        //Funcion ¡:
         
         
-        //Funcion b:
         /*
-        Path2D.Double b1 = new Path2D.Double();
-        Path2D.Double b2 = new Path2D.Double();
-        Path2D.Double b3 = new Path2D.Double();
-        Path2D.Double b4 = new Path2D.Double();
-        b1.moveTo(10, 143);
-        b1.curveTo(25, 143, 35, 50,25 , 40);
-        b2.moveTo(23,143);
-        b2.curveTo(23,143, 20,45, 25, 40);
-        b3.moveTo(23, 143);
-        b3.curveTo(23, 143, 60, 80,30 , 100);
-        b4.moveTo(30, 100);
-        b4.curveTo(45,100,50, 110,60, 100);
-        g2.draw(b1);
-        g2.draw(b2);
-        g2.draw(b3);
-        g2.draw(b4);
+        //Funcion a:
+        Path2D.Double a = new Path2D.Double();
+        a.moveTo(0, 143);
+        a.curveTo(40, 143, 40, 100, 40, 100);
+        a.moveTo(40, 100);
+        a.curveTo(40, 40, 120, 40, 120, 100);
+        a.moveTo(40, 100);
+        a.curveTo(40, 160, 120, 160, 120, 100);
+        a.moveTo(120, 100);
+        a.curveTo(120, 100, 120, 143, 160, 143);
+        g2.draw(a);
         */
         
-        //Funcion c:
+        
         /*
-        Path2D.Double c1 = new Path2D.Double();
-        Path2D.Double c2 = new Path2D.Double();
-        c1.moveTo(35,100);
-        c1.curveTo(30, 115,30,148,70,143);
-        c2.moveTo(20, 143);
-        c2.curveTo(50,140,5,85, 68, 95);
-        g2.draw(c1);
-        g2.draw(c2);
+        //a2
+        Path2D.Double a = new Path2D.Double();
+        a.moveTo(160, 143);
+        a.curveTo(200, 143, 200, 100, 200, 100);
+        a.moveTo(200, 100);
+        a.curveTo(200, 40, 280, 40, 280, 100);
+        a.moveTo(200, 100);
+        a.curveTo(200, 160, 280, 160, 280, 100);
+        a.moveTo(280, 100);
+        a.curveTo(280, 100, 280, 143, 320, 143);
+        g2.draw(a);
+        */
+        
+        /*
+        //Funcion b:
+        Path2D.Double b = new Path2D.Double();
+        b.moveTo(10, 143);
+        b.curveTo(25, 143, 35, 50,25 , 40);
+        b.moveTo(23,143);
+        b.curveTo(23,143, 20,45, 25, 40);
+        b.moveTo(23, 143);
+        b.curveTo(23, 143, 60, 80,30 , 100);
+        b.moveTo(30, 100);
+        b.curveTo(45,100,50, 110,60, 100);
+        g2.draw(b);
+        */
+        
+        /*
+        //Funcion c:
+        Path2D.Double c = new Path2D.Double();
+        c.moveTo(35,100);
+        c.curveTo(30, 115,30,148,70,143);
+        c.moveTo(20, 143);
+        c.curveTo(50,140,5,85, 68, 95);
+        g2.draw(c);
         */    
         
+        /*
         //Funcion d :
-        /*
-        Path2D.Double c1 = new Path2D.Double();
-        Path2D.Double c2 = new Path2D.Double();
-        c1.moveTo(35,100);
-        c1.curveTo(30, 115,30,148,80,143);
-        c2.moveTo(20, 143);
-        c2.curveTo(50,140,5,85, 68, 95);
-        c2.moveTo(80,143);
-        c2.curveTo(80,143,60, 140,70, 20);
-        g2.draw(c1);
-        g2.draw(c2);
+        Path2D.Double d = new Path2D.Double();
+        d.moveTo(35,100);
+        d.curveTo(30, 115,30,148,80,143);
+        d.moveTo(20, 143);
+        d.curveTo(50,140,5,85, 68, 95);
+        d.moveTo(80,143);
+        d.curveTo(80,143,60, 140,70, 20);
+        g2.draw(d);
         */
         
-        //Funcion e :
-     
         /*
-        Path2D.Double e1 = new Path2D.Double();
-        Path2D.Double e2 = new Path2D.Double();
-        e1.moveTo(10, 143);
-        e1.curveTo(25, 143, 35,110,25 , 100);
-        e2.moveTo(35,143);
-        e2.curveTo(20,143, 15,100, 25, 100);
-        g2.draw(e1);
-        g2.draw(e2);
+        //Funcion e :     
+        Path2D.Double e = new Path2D.Double();
+        e.moveTo(10, 143);
+        e.curveTo(25, 143, 35,110,25 , 100);
+        e.moveTo(35,143);
+        e.curveTo(20,143, 15,100, 25, 100);
+        g2.draw(e);        
         */
         
-        //Funcion f :
         /*
-        Path2D.Double d1 = new Path2D.Double();
-        Path2D.Double d2 = new Path2D.Double();
-        Path2D.Double d3 = new Path2D.Double();
-        Path2D.Double d4 = new Path2D.Double();
-        d1.moveTo(10, 143);
-        d1.curveTo(25, 143, 35, 50,25 , 60);
-        d2.moveTo(25,170);
-        d2.curveTo(20,143, 25,45, 27, 60);
-        d3.moveTo(25,170);
-        d3.curveTo(50,150,40,130,23,120);
-        d4.moveTo(23,130);
-        d4.curveTo(30,130, 50, 130, 60,120);
-        g2.draw(d1);
-        g2.draw(d2);
-        g2.draw(d3);
-        g2.draw(d4);*/
+        //Funcion f :        
+        Path2D.Double f = new Path2D.Double();
+        f.moveTo(10, 143);
+        f.curveTo(25, 143, 35, 50,25 , 60);
+        f.moveTo(25,170);
+        f.curveTo(20,143, 25,45, 27, 60);
+        f.moveTo(25,170);
+        f.curveTo(50,150,40,130,23,120);
+        f.moveTo(23,130);
+        f.curveTo(30,130, 50, 130, 60,120);
+        g2.draw(f);
+        */
         
+        /*
         // Funcion g:
-        /*
         Path2D.Double g1 = new Path2D.Double();
         g1.moveTo(30,60);
         g1.curveTo(30,30,70,30,70,60);
@@ -264,8 +275,8 @@ public class CD extends javax.swing.JFrame{
         g2.draw(g1);
         */
         
-        //Funcion h:
         /*
+        //Funcion h:
         Path2D.Double h = new Path2D.Double();
         h.moveTo(10,143);
         h.curveTo(15,135,30,60,20,50);
@@ -276,8 +287,8 @@ public class CD extends javax.swing.JFrame{
         g2.draw(h);
         */
         
+        /*
        //Funcion i:
-       /*
         Path2D.Double i = new Path2D.Double();
         i.moveTo(0,143);
         i.curveTo(0,143,35,143, 30, 60);
@@ -285,11 +296,10 @@ public class CD extends javax.swing.JFrame{
         i.curveTo(30,143,60,143,60,140);
         g2.fillOval(25,40,10,10);
         g2.draw(i);
-       */
+        */
         
-       /*
+        /*
         //Funcion j:
-        
         Path2D.Double j = new Path2D.Double();
         j.moveTo(0, 143);
         j.curveTo(30, 143, 60, 110, 60, 55);
@@ -421,8 +431,8 @@ public class CD extends javax.swing.JFrame{
         g2.draw(q);
         */
         
-        //r
         /*
+        //Funcion r:
         Path2D.Double r = new Path2D.Double();
         r.moveTo(0, 143);
         r.curveTo(15, 140, 40,143, 40, 55);
@@ -430,10 +440,11 @@ public class CD extends javax.swing.JFrame{
         r.curveTo(45, 65, 115, 65, 120, 55);
         r.moveTo(120, 55);
         r.curveTo(120, 65, 120,143, 160, 143);
-        g2.draw(r);*/
-        
-        //s
+        g2.draw(r);
+        */
+         
         /*
+        //Funcion s:
         Path2D.Double s = new Path2D.Double();
         s.moveTo(0, 143);
         s.curveTo(60, 143, 65,55, 65, 55);
@@ -444,8 +455,8 @@ public class CD extends javax.swing.JFrame{
         g2.draw(s);
         */
         
-        //t
         /*
+        //Funcion t:
         Path2D.Double t = new Path2D.Double();
         t.moveTo(0,300);
         t.curveTo(20,290,30,300, 30, 150);
@@ -453,10 +464,11 @@ public class CD extends javax.swing.JFrame{
         t.curveTo(30,300,40,290,60,300);
         t.moveTo(0,180);
         t.curveTo(0,180,60,180,60,180);
-        g2.draw(t);*/
+        g2.draw(t);
+        */
         
-        //u
         /*
+        //Funcion u:
         Path2D.Double u =new Path2D.Double();
         u.moveTo(0,143);
         u.curveTo(0,143,30,143,30,55);
@@ -464,10 +476,11 @@ public class CD extends javax.swing.JFrame{
         u.curveTo(20,174,140,174,130,55);
         u.moveTo(130,55);
         u.curveTo(130,55,130,143,160,143);
-        g2.draw(u);*/
+        g2.draw(u);
+        */
         
-        //v
         /*
+        //Funcion v:
         Path2D.Double v =new Path2D.Double();
         v.moveTo(0,143);
         v.curveTo(20,143,15,55,40,55);
@@ -477,10 +490,11 @@ public class CD extends javax.swing.JFrame{
         v.curveTo(100,143,110,55,110,55);
         v.moveTo(110,55);
         v.curveTo(115,60,155,60,160,55);
-        g2.draw(v);*/
-        
-        //w
+        g2.draw(v);
+        */
+                
         /*
+        //Funcion w:
         Path2D.Double w =new Path2D.Double();
         w.moveTo(0,143);
         w.curveTo(20,143,15,55,40,55);
@@ -494,19 +508,21 @@ public class CD extends javax.swing.JFrame{
         w.curveTo(160,143,160,55,160,55);
         w.moveTo(160,55);
         w.curveTo(165,60,195,60,200,55);
-        g2.draw(w);*/
-        
-        //x
+        g2.draw(w);
+        */
+              
         /*
+        //Funcion x:
         Path2D.Double x =new Path2D.Double();
         x.moveTo(0,143);
         x.curveTo(60,143,60,55,100,55);
         x.moveTo(0,55);
         x.curveTo(50,55,50,143,100,143);
-        g2.draw(x);*/
+        g2.draw(x);
+        */
         
-        //y
         /*
+        //Funcion y:
         Path2D.Double  y =new Path2D.Double();
         y.moveTo(0,143);
         y.curveTo(0,143,30,143,30,55);
@@ -518,10 +534,11 @@ public class CD extends javax.swing.JFrame{
         y.curveTo(80,225,40,225,40,200);
         y.moveTo(40,200);
         y.curveTo(40,180,60,143,120,143);
-        g2.draw(y);*/
-        
-        //z
+        g2.draw(y);
+        */
+                
         /*
+        //Funcion z:
         Path2D.Double  z =new Path2D.Double();
         z.moveTo(20,143);
         z.curveTo(50,143,0,90,70,90);
@@ -535,7 +552,8 @@ public class CD extends javax.swing.JFrame{
         z.curveTo(95,220,60,220,60,200);
         z.moveTo(60,200);
         z.curveTo(60,185,100,150,120,143);
-        g2.draw(z);*/
+        g2.draw(z);
+        */
     }
 }
 
