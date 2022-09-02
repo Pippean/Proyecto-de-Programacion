@@ -30,7 +30,7 @@ public class DibujarCanvas extends JComponent {
         g2.setRenderingHints(rh);
         
         m1.dibujara(g2,250,0);
-        m1.dibujarb(g2,0,143);
+        //m1.dibujarb(g2,0,143);
         
     }
 }
