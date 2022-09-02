@@ -1,15 +1,15 @@
 package com.mycompany.losentussi;
-import static com.mycompany.losentussi.CD.txtadibujar;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-
 
 /**
  *
  * @author Pipe, Juano, Lazaro
  */
 public class Dibujar{   
+    
+    public static String txtadibujar;
     
     public static void main(String[] args){
         int w = 850;
