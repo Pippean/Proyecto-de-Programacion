@@ -22,15 +22,15 @@ public class DibujarCanvas extends JComponent {
     }
     
     public void paintComponent(Graphics g){
-        Graphics2D g2 = (Graphics2D)g;
+        Graphics2D g2d = (Graphics2D)g;
         
         RenderingHints rh = new RenderingHints(
             RenderingHints.KEY_ANTIALIASING,
             RenderingHints.VALUE_ANTIALIAS_ON);
-        g2.setRenderingHints(rh);
+        g2d.setRenderingHints(rh);
         
-        m1.dibujara(g2,250,0);
-        //m1.dibujarb(g2,0,143);
+        m1.dibujara(g2d,250,0);
+        m1.dibujarb(g2d,0,143);
         
     }
 }
