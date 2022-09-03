@@ -13,6 +13,7 @@ public class Dibujar{
     static int w = 850;
     static int h = 550;
     static DibujarCanvas dc;
+    
     public static void main(String[] args){
         
         Button Convertir;
@@ -25,6 +26,7 @@ public class Dibujar{
         TextField t1 = new TextField("  ");
         t1.setBounds(10, 480, 600, 22);  
         JFrame f = new JFrame();
+        
         f.setSize(w,h);
         f.setTitle("Conversor de Scripts");
         f.add(Convertir);
@@ -38,6 +40,7 @@ public class Dibujar{
             @Override
             public void actionPerformed(ActionEvent e){
                 txtadibujar = t1.getText();
+                //dc.setTexto(txtadibujar);
                 System.out.println(""+ txtadibujar);
                 Convertir.setEnabled(false);
                 Borrar.setEnabled(true);
@@ -53,7 +56,7 @@ public class Dibujar{
         ActionListener accionBorrar= new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-                txtadibujar = " ";
+                txtadibujar = "";
                 System.out.println(txtadibujar);
                 t1.setText("");
                 Convertir.setEnabled(true);
@@ -65,7 +68,7 @@ public class Dibujar{
     }
     
     public static void cargarDC(Frame f){
-        dc = new DibujarCanvas(w,h,"hola");
+        dc = new DibujarCanvas(w,h,txtadibujar);
         f.add(dc);
     }
     

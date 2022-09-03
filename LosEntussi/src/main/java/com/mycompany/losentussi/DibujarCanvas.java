@@ -35,12 +35,33 @@ public class DibujarCanvas extends JComponent {
             RenderingHints.KEY_ANTIALIASING,
             RenderingHints.VALUE_ANTIALIAS_ON);
         g2.setRenderingHints(rh);
-        if(!texto.equals("hola"))
+        
+        /*
+        if(!"".equals(texto)){
+            for (int i = 0; i < texto.length(); i++) {
+                if(texto.charAt(i)== 'a'){
+                    m1.dibujara(g2,250,0);
+                }
+                if(texto.charAt(i)=='b'){
+                    m1.dibujarb(g2, 250, 0);
+                }
+            }
+        }
+        */
+        
+        if(texto == null){
+            System.out.println("No hay texto ingresado");
+        }
+        else{
+            System.out.println(texto);
+           if(!texto.equals("hola"))
             m1.dibujara(g2,250,0);
         else{
             m1.dibujarb(g2, 250, 0);
+        } 
         }
-        //m1.dibujarb(g2,0,143);
         
+        //m1.dibujarb(g2,0,143);
+           
     }
 }
