@@ -28,8 +28,30 @@ public class DibujarCanvas extends JComponent {
             RenderingHints.KEY_ANTIALIASING,
             RenderingHints.VALUE_ANTIALIAS_ON);
         g2.setRenderingHints(rh);
-        
-        m1.dibujara(g2,250,0);
+
+        //m1.dibujara2(g2,50,0);
+        m1.dibujara(g2,200,0);
+        m1.dibujarb(g2,360,0);
+        //m1.dibujarc(g2,132,0);
+        //m1.dibujare(g2,10,0);
+        //m1.dibujari(g2,50,0);
+        //m1.dibujarj(g2,50,0);
+        //m1.dibujark(g2,50,0);
+        //m1.dibujarl(g2,50,0);
+        //m1.dibujarm(g2,50,0);
+        //m1.dibujarn(g2,50,0);
+        //m1.dibujarñ(g2,50,0);
+        //m1.dibujaro(g2,50,0);
+        //m1.dibujarp(g2,50,0);
+        //m1.dibujarq(g2,100,0);
+        //m1.dibujarr(g2,100,0);
+        m1.dibujars(g2,10,0);
+
+        //m1.dibujarf(g2,10,0);
+        //m1.dibujarg(g2,10,0);
+        //m1.dibujarh(g2,10,0);
+        //m1.dibujard(g2,10,0);
+        //m1.dibujarq(g2,10,0);
         //m1.dibujarb(g2,0,143);
         
     }

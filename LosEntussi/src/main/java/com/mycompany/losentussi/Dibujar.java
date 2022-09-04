@@ -60,8 +60,5 @@ public class Dibujar{
         };
         Borrar.addActionListener(accionBorrar);
         
-    }
-    
-    
-    
+    } 
 }
