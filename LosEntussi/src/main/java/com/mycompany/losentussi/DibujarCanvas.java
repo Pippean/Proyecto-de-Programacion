@@ -45,8 +45,14 @@ public class DibujarCanvas extends JComponent {
         //m1.dibujarp(g2,50,0);
         //m1.dibujarq(g2,100,0);
         //m1.dibujarr(g2,100,0);
-        m1.dibujars(g2,10,0);
-
+        //m1.dibujars(g2,10,0);
+        //m1.dibujart(g2,10,0);
+        //m1.dibujaru(g2,10,0);
+        //m1.dibujarv(g2,10,0);
+        //m1.dibujarw(g2,10,0);
+        //m1.dibujarx1(g2,10,0);
+        //m1.dibujary1(g2,10,0);
+        m1.dibujarz(g2,10,0);
         //m1.dibujarf(g2,10,0);
         //m1.dibujarg(g2,10,0);
         //m1.dibujarh(g2,10,0);
