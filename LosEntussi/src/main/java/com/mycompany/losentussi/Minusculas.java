@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.geom.*;
 /**
  *
- * @author Pipe
+ * @author Pipe, Juan, Lázaro
  */
 
 public class Minusculas {
@@ -24,6 +24,7 @@ public class Minusculas {
         a.curveTo(120+x, 100+y, 120+x, 143+y, 160+x, 143+y);
         g2.draw(a);
     }
+    
     public void dibujarb(Graphics2D g2,int x, int y){
         Path2D.Double b = new Path2D.Double();
         b.moveTo(10+x, 143+y);
@@ -37,7 +38,116 @@ public class Minusculas {
         g2.draw(b);
     }
     
-    /* Path2D.Double a = new Path2D.Double();
+    public void dibujarc(Graphics2D g2, int x, int y){
+        Path2D.Double c = new Path2D.Double();
+        c.moveTo(35+x,100+y);
+        c.curveTo(30+x, 115+y,30+x,148+y,70+x,143+y);
+        c.moveTo(20+x, 143+y);
+        c.curveTo(50+x,140+y,5+x,85+y, 68+x, 95+y);
+        g2.draw(c);
+    }
+    
+    public void dibujard(Graphics2D g2, int x, int y){
+        Path2D.Double d = new Path2D.Double();
+        d.moveTo(35+x,100+y);
+        d.curveTo(30+x, 115+y,30+x,148+y,80+x,143+y);
+        d.moveTo(20+x, 143+y);
+        d.curveTo(50+x,140+y,5+x,85+y, 68+x, 95+y);
+        d.moveTo(80+x,143+y);
+        d.curveTo(80+x,143+y,60+x, 140+y,70+x, 20+y);
+        g2.draw(d);
+    }
+    /*
+    public void dibujare(Graphics2D g2, int x, int y){
+        
+    }
+    
+    public void dibujarf(Graphics2D g2, int x, int y){
+        
+    }
+    
+    public void dibujarg(Graphics2D g2, int x, int y){
+        
+    }
+    
+    public void dibujarh(Graphics2D g2, int x, int y){
+        
+    }
+    
+    public void dibujari(Graphics2D g2, int x, int y){
+        
+    }
+    
+    public void dibujarj(Graphics2D g2, int x, int y){
+        
+    }
+    
+    public void dibujark(Graphics2D g2, int x, int y){
+        
+    }
+    
+    public void dibujarm(Graphics2D g2, int x, int y){
+        
+    }
+    
+    public void dibujarn(Graphics2D g2, int x, int y){
+        
+    }
+    
+    public void dibujarñ(Graphics2D g2, int x, int y){
+        
+    }
+    
+    public void dibujaro(Graphics2D g2, int x, int y){
+        
+    }
+    
+    public void dibujarp(Graphics2D g2, int x, int y){
+        
+    }
+    
+    public void dibujarq(Graphics2D g2, int x, int y){
+        
+    }
+    
+    public void dibujarr(Graphics2D g2, int x, int y){
+        
+    }
+    
+    public void dibujars(Graphics2D g2, int x, int y){
+        
+    }
+    
+    public void dibujart(Graphics2D g2, int x, int y){
+        
+    }
+    
+    public void dibujaru(Graphics2D g2, int x, int y){
+        
+    }
+    
+    public void dibujarv(Graphics2D g2, int x, int y){
+        
+    }
+    
+    public void dibujarw(Graphics2D g2, int x, int y){
+        
+    }
+    
+    public void dibujarx(Graphics2D g2, int x, int y){
+        
+    }
+    
+    public void dibujary(Graphics2D g2, int x, int y){
+        
+    }
+    
+    public void dibujarz(Graphics2D g2, int x, int y){
+        
+    }
+    */
+    
+    /*  Path2D.Double a = new Path2D.Double();
         a.moveTo(0, 143);
         a.curveTo(40, 143, 40, 100, 40, 100);
         a.moveTo(40, 100);
