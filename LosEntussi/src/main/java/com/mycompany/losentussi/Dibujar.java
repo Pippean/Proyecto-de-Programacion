@@ -10,21 +10,36 @@ import javax.swing.*;
 public class Dibujar{   
     
     public static String txtadibujar = "";
-    static int w = 850;
-    static int h = 550;
+    public static String color = "";
+    static int w = 1300;
+    static int h = 1080;
     static DibujarCanvas dc;
+    
     
     public static void main(String[] args){
         
         Button Convertir;
         Button Borrar;
+        Choice menu;
         
         Convertir = new Button("Convertir");
-        Convertir.setBounds(720, 480, 100, 22);
+        Convertir.setBounds(1050, 700, 100, 22);
         Borrar = new Button("Borrar");
-        Borrar.setBounds(615, 480, 100, 22);
+        Borrar.setBounds(1170, 700, 100, 22);
+        menu = new Choice();
+        menu.setBounds(1170, 10, 100, 20);
+        menu.add("Negro");
+        menu.add("Rojo");
+        menu.add("Azul");
+        menu.add("Amarillo");
+        menu.add("Verde");
+        menu.add("Naranjo");
+        menu.add("Morado");
+        menu.add("Rosado");
+        menu.add("Celeste");
+        menu.add("Blanco");
         TextField t1 = new TextField("");
-        t1.setBounds(10, 480, 600, 22);  
+        t1.setBounds(10, 700, 1000, 22);  
         JFrame f = new JFrame();
         
         f.setSize(w,h);
@@ -32,17 +47,19 @@ public class Dibujar{
         f.setResizable(false);
         f.add(Convertir);
         f.add(Borrar);
+        f.add(menu);
         Borrar.setEnabled(false);
         f.add(t1);
-        cargarDC(f,txtadibujar);
+        cargarDC(f,txtadibujar, color);
        
         ActionListener accionConvertir= new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
                 txtadibujar = t1.getText();
                 Convertir.setEnabled(false);
-                Borrar.setEnabled(true);
-                cargarDC(f, txtadibujar);
+                Borrar.setEnabled(true);   
+                color = menu.getItem(menu.getSelectedIndex());
+                cargarDC(f, txtadibujar, color);
             }
         };
                        
@@ -63,8 +80,8 @@ public class Dibujar{
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
     
-    public static void cargarDC(Frame f, String txtadibujar){
-        dc = new DibujarCanvas(w,h,txtadibujar);
+    public static void cargarDC(Frame f, String txtadibujar, String color){
+        dc = new DibujarCanvas(w,h,txtadibujar, color);
         f.add(dc);
         f.setVisible(true);
     }    
