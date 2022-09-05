@@ -2,7 +2,7 @@ package com.mycompany.losentussi;
 
 /**
  *
- * @author Pipe
+ * @author Pipe, Juan, Lázaro
  */
 public class Mayusculas {
     
