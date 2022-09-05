@@ -6,7 +6,7 @@ package com.mycompany.losentussi;
 
 /**
  *
- * @author Pipe
+ * @author Pipe, Juano
  */
 public class Simbolos {
     
