@@ -123,6 +123,28 @@ public class Simbolos {
         g2.draw(s);
     }
     
+    public void corchetesabiertos(Graphics2D g2, int x, int y){
+        Path2D.Double s = new Path2D.Double();
+        s.moveTo(25+x, 50+y);
+        s.curveTo(25+x, 50+y, 5+x, 50+y, 5+x, 50+y);
+        s.moveTo(5+x, 50+y);
+        s.curveTo(5+x, 50+y, 5+x, 153+y, 5+x, 153+y);
+        s.moveTo(5+x, 153+y);
+        s.curveTo(5+x, 153+y, 25+x, 153+y, 25+x, 153+y);
+        g2.draw(s);
+    }
+    
+    public void corchetescerrados(Graphics2D g2, int x, int y){
+        Path2D.Double s = new Path2D.Double();
+        s.moveTo(5+x, 50+y);
+        s.curveTo(5+x, 50+y, 25+x, 50+y, 25+x, 50+y);
+        s.moveTo(25+x, 50+y);
+        s.curveTo(25+x, 50+y, 25+x, 153+y, 25+x, 153+y);
+        s.moveTo(25+x, 153+y);
+        s.curveTo(25+x, 153+y, 5+x, 153+y, 5+x, 153+y);
+        g2.draw(s);
+    }
+    
     public void llavesabiertas(Graphics2D g2, int x, int y){
         Path2D.Double s = new Path2D.Double();
         s.moveTo(30+x, 140+y);

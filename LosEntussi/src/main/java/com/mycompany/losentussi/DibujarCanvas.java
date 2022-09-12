@@ -291,6 +291,16 @@ public class DibujarCanvas extends JComponent {
                         x+=35;
                         break;
                     }
+                    case '[':{
+                        s1.corchetesabiertos(g2, x, y);
+                        x+=35;
+                        break;
+                    }
+                    case ']':{
+                        s1.corchetescerrados(g2, x, y);
+                        x+=35;
+                        break;
+                    }
                     case '{':{
                         s1.llavesabiertas(g2, x, y);
                         x+=45;
