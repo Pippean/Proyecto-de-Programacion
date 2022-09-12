@@ -24,7 +24,16 @@ public class Minusculas {
         a.curveTo(70+x, 120+y, 70+x, 143+y, 90+x, 143+y);
         g2.draw(a);
     } 
-    
+    public void dibujaracaso(Graphics2D g2, int x, int y){
+        Path2D.Double a1 = new Path2D.Double();
+        a1.moveTo(0+x, 120+y);
+        a1.curveTo(0+x, 90+y, 50+x, 90+y, 50+x, 120+y);
+        a1.moveTo(0+x, 120+y);
+        a1.curveTo(0+x, 160+y, 50+x, 160+y, 50+x, 120+y);
+        a1.moveTo(50+x, 120+y);
+        a1.curveTo(50+x, 120+y, 50+x, 143+y, 70+x, 143+y);
+        g2.draw(a1);
+    }
     public void dibujarb(Graphics2D g2,int x, int y){
         Path2D.Double b = new Path2D.Double();
         b.moveTo(0+x, 143+y);
@@ -34,9 +43,7 @@ public class Minusculas {
         b.moveTo(13+x, 143+y);
         b.curveTo(13+x, 143+y, 60+x, 90+y,20+x , 100+y);
         b.moveTo(20+x, 100+y);
-        b.curveTo(35+x,100+y,40+x, 110+y,50+x, 100+y);
-        b.moveTo(60+x,143+y);
-        b.curveTo(50+x,143+y,40+x,100+y,50+x,100+y);
+        b.curveTo(35+x,100+y,40+x, 115+y,50+x, 110+y);
         g2.draw(b);
     }
 
@@ -69,6 +76,15 @@ public class Minusculas {
         e.moveTo(35+x,143+y);
         e.curveTo(10+x,143+y, 5+x,90+y, 15+x, 90+y);
         g2.draw(e); 
+    }
+    public void dibujarecaso(Graphics2D g2, int x, int y){
+        Path2D.Double e1 = new Path2D.Double();
+        e1.moveTo(0+x,110+y);
+        e1.curveTo(0+x,110+y,25+x,90+y,20+x,80+y);
+        e1.moveTo(20+x,80+y);
+        e1.curveTo(0+x,60+y,15+x,143+y,25+x,143+y);
+        g2.draw(e1); 
+        
     }
     
     public void dibujarf(Graphics2D g2,int x, int y){
@@ -119,6 +135,16 @@ public class Minusculas {
         g2.fillOval(25+x,70+y,10,10);
         g2.draw(i);
     }
+    public void dibujaricaso(Graphics2D g2,int x,int y){
+        Path2D.Double i1 = new Path2D.Double();
+        i1.moveTo(0+x, 110+y);
+        i1.curveTo(5+x,110+y,20+x,90+y,20+x,80+y);
+        i1.moveTo(20+x,80+y);
+        i1.curveTo(20+x,80+y,20+x,143+y,30+x,143+y);
+        g2.fillOval(15+x,65+y,10,10);
+        g2.draw(i1);
+        
+    }
     
     public void dibujarj(Graphics2D g2,int x, int y){
         Path2D.Double j = new Path2D.Double();
@@ -154,6 +180,14 @@ public class Minusculas {
         l.moveTo(20+x, 55+y);
         l.curveTo(5+x, 60+y, 20+x, 143+y, 40+x, 143+y);
         g2.draw(l);
+    }
+    
+    public void dibujarlcaso(Graphics2D g2,int x, int y){
+        Path2D.Double l1 = new Path2D.Double();
+        l1.moveTo(0+x,110+y);
+        l1.curveTo(5+x,110+y,30+x,60+y,25+x,50+y);
+        l1.curveTo(10+x,30+y,10+x,143+y,30+x,143+y);
+        g2.draw(l1);
     }
 
     public void dibujarm(Graphics2D g2,int x, int y){
@@ -207,11 +241,19 @@ public class Minusculas {
         o.curveTo(20+x, 90+y, 70+x, 90+y, 70+x, 120+y);
         o.moveTo(20+x, 120+y);
         o.curveTo(20+x, 160+y, 70+x, 160+y, 70+x, 120+y);
-        o.moveTo(70+x, 120+y);
-        o.curveTo(70+x, 120+y, 70+x, 143+y, 90+x, 143+y);
         o.moveTo(22+x,110+y);
-        o.curveTo(30+x,110+y,50+x,120+y,80+x,110+y);
+        o.curveTo(30+x,130+y,50+x,130+y,90+x,143+y);
         g2.draw(o);
+    }
+    public void dibujarocaso(Graphics2D g2, int x, int y){
+        Path2D.Double o1 = new Path2D.Double();
+        o1.moveTo(0+x, 120+y);
+        o1.curveTo(0+x, 90+y, 50+x, 90+y, 50+x, 120+y);
+        o1.moveTo(0+x, 120+y);
+        o1.curveTo(0+x, 160+y, 50+x, 160+y, 50+x, 120+y);
+        o1.moveTo(2+x,110+y);
+        o1.curveTo(10+x,130+y,30+x,130+y,60+x,143+y);
+        g2.draw(o1);
     }
     
     public void dibujarp(Graphics2D g2,int x, int y){
@@ -257,6 +299,14 @@ public class Minusculas {
         r.curveTo(60+x, 115+y, 60+x,143+y, 70+x, 143+y);
         g2.draw(r);
     }
+    public void dibujarrcaso(Graphics2D g2,int x,int y){
+        Path2D.Double r1= new Path2D.Double();
+        r1.moveTo(0+x,110+y);
+        r1.curveTo(5+x,100+y,10+x,80+y,15+x,80+y);
+        r1.curveTo(20+x,80+y,20+x,85+y,35+x,80+y);
+        r1.curveTo(40+x,80+y,35+x,143+y, 45+x,143+y);
+        g2.draw(r1);
+    }
     
     public void dibujars(Graphics2D g2,int x, int y){
         Path2D.Double s = new Path2D.Double();
@@ -291,6 +341,14 @@ public class Minusculas {
         u.curveTo(70+x, 120+y, 70+x, 143+y, 90+x, 143+y);
         g2.draw(u);
     }
+    public void dibujarucaso(Graphics2D g2, int x, int y){
+        Path2D.Double u1 = new Path2D.Double();        
+        u1.moveTo(0+x, 110+y);
+        u1.curveTo(0+x, 160+y, 50+x, 160+y, 50+x, 110+y);
+        u1.moveTo(50+x, 110+y);
+        u1.curveTo(50+x, 120+y, 50+x, 143+y, 70+x, 143+y);
+        g2.draw(u1);
+    }
     
     public void dibujarv(Graphics2D g2,int x, int y){
         Path2D.Double v =new Path2D.Double();
@@ -301,9 +359,7 @@ public class Minusculas {
         v.moveTo(55+x,143+y);
         v.curveTo(75+x,143+y,70+x,100+y,70+x,100+y);
         v.moveTo(70+x,100+y);
-        v.curveTo(80+x,105+y,105+x,105+y,110+x,100+y);
-        v.moveTo(110+x,100+y);
-        v.curveTo(100+x,100+y,100+x,143+y,110+x,143+y);
+        v.curveTo(80+x,105+y,105+x,115+y,110+x,110+y);
         g2.draw(v);
     }
     
@@ -320,9 +376,7 @@ public class Minusculas {
         w.moveTo(105+x,143+y);
         w.curveTo(120+x,143+y,120+x,100+y,120+x,100+y);
         w.moveTo(120+x,100+y);
-        w.curveTo(120+x,105+y,150+x,105+y,150+x,100+y);
-        w.moveTo(150+x,100+y);
-        w.curveTo(140+x,100+y,140+x,143+y,150+x,143+y);
+        w.curveTo(120+x,105+y,150+x,115+y,150+x,110+y);
         g2.draw(w);
     }
     

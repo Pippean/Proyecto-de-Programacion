@@ -77,6 +77,7 @@ public class DibujarCanvas extends JComponent {
         }
         
         int x= 10, y=0;
+        
         if(!"".equals(texto)){
             for (int i = 0; i < texto.length(); i++) {
                 char caracter = texto.charAt(i);
@@ -85,18 +86,37 @@ public class DibujarCanvas extends JComponent {
                     x=10;
                 }                
                 switch(caracter){
-                    case ' ':{
+                    case ' ':{   
                         x+=40;
                         break;
                     }
                     case 'a':{
-                        m1.dibujara(g2,x,y);
-                        x+=90;
+                        if(i== 0){
+                            m1.dibujara(g2, x, y);
+                            x+=90;
+                        }
+                        else if(texto.charAt(i-1)=='b'){
+                            m1.dibujaracaso(g2, x, y);
+                            x+=70;
+                        }
+                        else if(texto.charAt(i-1) == 'v'){
+                             m1.dibujaracaso(g2, x, y);
+                            x+=70; 
+                        }
+                        else if(texto.charAt(i-1)== 'w'){
+                            m1.dibujaracaso(g2, x, y);
+                            x+=70;
+                        }
+                        
+                        else{
+                            m1.dibujara(g2, x, y);
+                            x+=90;
+                        }
                         break;
                     }
                     case 'b':{
                         m1.dibujarb(g2, x, y);
-                        x+=60;
+                        x+=50;
                         break;
                     }
                     case 'c':{
@@ -110,8 +130,25 @@ public class DibujarCanvas extends JComponent {
                         break;
                     }
                     case 'e':{
-                        m1.dibujare(g2, x, y);
-                        x+=35;
+                        if(i== 0){
+                            m1.dibujare(g2, x, y);
+                        }
+                        else if(texto.charAt(i-1) == 'b'){
+                            m1.dibujarecaso(g2, x, y);
+                            x+=25;                            
+                        }
+                        else if(texto.charAt(i-1) == 'v'){
+                             m1.dibujarecaso(g2, x, y);
+                            x+=25; 
+                        }
+                        else if(texto.charAt(i-1)== 'w'){
+                            m1.dibujarecaso(g2, x, y);
+                            x+=25;
+                        }
+                        else{
+                            m1.dibujare(g2, x, y);
+                            x+=35;
+                        }
                         break;
                     }
                     case 'f':{
@@ -130,8 +167,26 @@ public class DibujarCanvas extends JComponent {
                         break;
                     }
                     case 'i':{
-                        m1.dibujari(g2, x, y);
-                        x+=60;
+                        if(i==0){
+                          m1.dibujari(g2, x, y);
+                          x+=60;
+                        }
+                        else if(texto.charAt(i-1) == 'b'){
+                            m1.dibujaricaso(g2, x, y);
+                            x+=30;                            
+                        }
+                        else if(texto.charAt(i-1) == 'v'){
+                             m1.dibujaricaso(g2, x, y);
+                            x+=30; 
+                        }
+                        else if(texto.charAt(i-1)== 'w'){
+                            m1.dibujaricaso(g2, x, y);
+                            x+=30;
+                        }
+                        else{
+                            m1.dibujari(g2, x, y);
+                            x+=60;
+                        }
                         break;
                     }
                     case 'j':{
@@ -145,8 +200,17 @@ public class DibujarCanvas extends JComponent {
                         break;
                     }
                     case 'l':{
-                        m1.dibujarl(g2, x, y);
-                        x+=40;
+                        if(i==0){
+                          m1.dibujarl(g2, x, y);
+                          x+=40;   
+                        }
+                        else if(texto.charAt(i-1)=='b'){
+                          m1.dibujarlcaso(g2, x, y);
+                        }
+                        else{
+                          m1.dibujarl(g2, x, y);
+                          x+=40;
+                        }
                         break;
                     }
                     case 'm':{
@@ -165,9 +229,28 @@ public class DibujarCanvas extends JComponent {
                         break;
                     }
                     case 'o':{
+                        if (i == 0){
+                          m1.dibujaro(g2, x, y);
+                          x+=90; 
+                        }
+                        else if(texto.charAt(i-1) == 'b'){
+                            m1.dibujarocaso(g2, x, y);
+                            x+=60;                            
+                        }
+                        else if(texto.charAt(i-1) == 'v'){
+                             m1.dibujarocaso(g2, x, y);
+                            x+=60; 
+                        }
+                        else if(texto.charAt(i-1)== 'w'){
+                            m1.dibujarocaso(g2, x, y);
+                            x+=60;
+                        }
+                        else{
                         m1.dibujaro(g2, x, y);
                         x+=90;
+                        }
                         break;
+                    
                     }
                     case 'p':{
                         m1.dibujarp(g2, x, y);
@@ -180,8 +263,26 @@ public class DibujarCanvas extends JComponent {
                         break;
                     }
                     case 'r':{
-                        m1.dibujarr(g2, x, y);
-                        x+=70;
+                        if(i==0){
+                          m1.dibujarr(g2, x, y);
+                          x+=70;    
+                        }
+                        else if(texto.charAt(i-1) == 'b'){
+                            m1.dibujarrcaso(g2, x, y);
+                            x+=45;                            
+                        }
+                        else if(texto.charAt(i-1) == 'v'){
+                             m1.dibujarrcaso(g2, x, y);
+                            x+=45; 
+                        }
+                        else if(texto.charAt(i-1)== 'w'){
+                            m1.dibujarrcaso(g2, x, y);
+                            x+=45;
+                        }
+                        else{
+                            m1.dibujarr(g2, x, y);
+                            x+=70;
+                        }
                         break;
                     }
                     case 's':{
@@ -195,8 +296,26 @@ public class DibujarCanvas extends JComponent {
                         break;
                     }
                     case 'u':{
-                        m1.dibujaru(g2, x, y);
-                        x+=90;
+                        if(i==0){
+                          m1.dibujaru(g2, x, y);
+                          x+=90;    
+                        }
+                        else if(texto.charAt(i-1) == 'b'){
+                            m1.dibujarucaso(g2, x, y);
+                            x+=70;                            
+                        }
+                        else if(texto.charAt(i-1) == 'v'){
+                             m1.dibujarucaso(g2, x, y);
+                            x+=70; 
+                        }
+                        else if(texto.charAt(i-1)== 'w'){
+                            m1.dibujarucaso(g2, x, y);
+                            x+=70;
+                        }
+                        else{
+                            m1.dibujaru(g2, x, y);
+                            x+=90;
+                        }
                         break;
                     }
                     case 'v':{
@@ -214,7 +333,7 @@ public class DibujarCanvas extends JComponent {
                         x+=60;
                         break;
                     }
-                    case 'y':{
+                    case '<':{
                         m1.dibujary1(g2, x, y);
                         x+=120;
                         break;
