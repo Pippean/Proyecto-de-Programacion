@@ -16,11 +16,13 @@ public class DibujarCanvas extends JComponent {
     private Minusculas m1;
     private String texto;
     private String color;
+    private Mayusculas m2;
     
     public DibujarCanvas(int w, int h, String texto, String color){
         width = w;
         height = h;
         m1 = new Minusculas();
+        m2 = new Mayusculas();
         this.texto = texto;
         this.color = color;
     }
@@ -77,7 +79,7 @@ public class DibujarCanvas extends JComponent {
         }
         
         int x= 10, y=0;
-        
+        m2.dibujarY(g2, x, y);
         if(!"".equals(texto)){
             for (int i = 0; i < texto.length(); i++) {
                 char caracter = texto.charAt(i);
