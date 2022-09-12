@@ -14,6 +14,7 @@ public class DibujarCanvas extends JComponent {
     private int width;
     private int height;
     private Minusculas m1;
+    private Simbolos s1;
     private String texto;
     private String color;
     
@@ -21,6 +22,7 @@ public class DibujarCanvas extends JComponent {
         width = w;
         height = h;
         m1 = new Minusculas();
+        s1 = new Simbolos();
         this.texto = texto;
         this.color = color;
     }
@@ -222,6 +224,93 @@ public class DibujarCanvas extends JComponent {
                     case 'z':{
                         m1.dibujarz(g2, x, y);
                         x+=70;
+                        break;
+                    }
+                    case '¿':{
+                        s1.interrogacionabierto(g2, x, y);
+                        x+=45;
+                        break;
+                    }
+                    case '?':{
+                        s1.interrogacioncerrado(g2, x, y);
+                        x+=40;
+                        break;
+                    }
+                    case '!':{
+                        s1.exclamacionabierto(g2, x, y);
+                        x+=40;
+                        break;
+                    }
+                    case '¡':{
+                        s1.exclamacioncerrado(g2, x, y);
+                        x+=40;
+                        break;
+                    }
+                    case '.':{
+                        s1.punto(g2, x, y);
+                        x+=25;
+                        break;
+                    }
+                    case ',':{
+                        s1.coma(g2, x, y);
+                        x+=25;
+                        break;
+                    }
+                    case ';':{
+                        s1.puntoycoma(g2, x, y);
+                        x+=25;
+                        break;
+                    }
+                    case ':':{
+                        s1.dospuntos(g2, x, y);
+                        x+=25;
+                        break;
+                    }
+                    case '\'':{
+                        s1.comillas(g2, x, y);
+                        x+=35;
+                        break;
+                    }
+                    case '<':{
+                        s1.españolaabierta(g2, x, y);
+                        x+=50;
+                        break;
+                    }
+                    case '>':{
+                        s1.españolacerrada(g2, x, y);
+                        x+=50;
+                        break;
+                    }
+                    case '(':{
+                        s1.parentesisabierto(g2, x, y);
+                        x+=35;
+                        break;
+                    }
+                    case ')':{
+                        s1.parentesiscerrado(g2, x, y);
+                        x+=35;
+                        break;
+                    }
+                    case '{':{
+                        s1.llavesabiertas(g2, x, y);
+                        x+=45;
+                        break;
+                    }
+                    case '}':{
+                        s1.llavescerradas(g2, x, y);
+                        x+=45;
+                        break;
+                    }
+                    case '-':{
+                        x+=25;
+                        s1.guion(g2, x, y);
+                        x+=25;
+                        break;
+                    }
+                    case '_':{
+                        x+=30;
+                        s1.guionbajo(g2, x, y);
+                        x+=30;
                         break;
                     }
                     default:{
