@@ -233,7 +233,7 @@ public class DibujarCanvas extends JComponent {
                     }
                     case '?':{
                         s1.interrogacioncerrado(g2, x, y);
-                        x+=40;
+                        x+=55;
                         break;
                     }
                     case '!':{
