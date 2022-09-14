@@ -91,6 +91,17 @@ public class Simbolos {
         g2.draw(s);
     }
     
+    public void comillasinglesas(Graphics2D g2, int x, int y){
+        Path2D.Double s = new Path2D.Double();
+        s.moveTo(28+x, 53+y);
+        s.curveTo(28+x, 53+y, 28+x, 65+y, 25+x, 73+y);
+        g2.fillOval(20+x,50+y,10,10);
+        s.moveTo(40+x, 53+y);
+        s.curveTo(40+x, 53+y, 40+x, 65+y, 37+x, 73+y);
+        g2.fillOval(32+x,50+y,10,10);
+        g2.draw(s);
+    }
+    
     public void españolaabierta(Graphics2D g2, int x, int y){
         Path2D.Double s = new Path2D.Double();
         s.moveTo(10+x, 120+y);

@@ -80,9 +80,12 @@ public class DibujarCanvas extends JComponent {
         
         int x= 10, y=0;
         if(!"".equals(texto)){
-            for (int i = 0; i < texto.length(); i++) {
+            for (int i = 0; i < texto.length(); i++){
                 char caracter = texto.charAt(i);
-                if(x>=1200){
+                if(x>=1150){
+                    if(texto.charAt(i)!= ' '){
+                        s1.guion(g2, x, y);
+                    }
                     y+=180;
                     x=10;
                 }                
@@ -268,6 +271,11 @@ public class DibujarCanvas extends JComponent {
                     }
                     case '\'':{
                         s1.comillas(g2, x, y);
+                        x+=35;
+                        break;
+                    }
+                    case '\"':{
+                        s1.comillasinglesas(g2, x, y);
                         x+=35;
                         break;
                     }
