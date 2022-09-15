@@ -5,7 +5,7 @@ import java.awt.geom.*;
 
 /**
  *
- * @author Pipe
+ * @author Pipe, Juano, Lázaro
  */
 public class Simbolos {
     
@@ -91,6 +91,17 @@ public class Simbolos {
         g2.draw(s);
     }
     
+    public void comillasinglesas(Graphics2D g2, int x, int y){
+        Path2D.Double s = new Path2D.Double();
+        s.moveTo(28+x, 53+y);
+        s.curveTo(28+x, 53+y, 28+x, 65+y, 25+x, 73+y);
+        g2.fillOval(20+x,50+y,10,10);
+        s.moveTo(40+x, 53+y);
+        s.curveTo(40+x, 53+y, 40+x, 65+y, 37+x, 73+y);
+        g2.fillOval(32+x,50+y,10,10);
+        g2.draw(s);
+    }
+    
     public void españolaabierta(Graphics2D g2, int x, int y){
         Path2D.Double s = new Path2D.Double();
         s.moveTo(10+x, 120+y);
@@ -120,28 +131,6 @@ public class Simbolos {
         Path2D.Double s = new Path2D.Double();
         s.moveTo(25+x, 40+y);
         s.curveTo(50+x, 40+y, 50+x, 155+y, 25+x, 155+y);
-        g2.draw(s);
-    }
-    
-    public void corchetesabiertos(Graphics2D g2, int x, int y){
-        Path2D.Double s = new Path2D.Double();
-        s.moveTo(25+x, 50+y);
-        s.curveTo(25+x, 50+y, 5+x, 50+y, 5+x, 50+y);
-        s.moveTo(5+x, 50+y);
-        s.curveTo(5+x, 50+y, 5+x, 153+y, 5+x, 153+y);
-        s.moveTo(5+x, 153+y);
-        s.curveTo(5+x, 153+y, 25+x, 153+y, 25+x, 153+y);
-        g2.draw(s);
-    }
-    
-    public void corchetescerrados(Graphics2D g2, int x, int y){
-        Path2D.Double s = new Path2D.Double();
-        s.moveTo(5+x, 50+y);
-        s.curveTo(5+x, 50+y, 25+x, 50+y, 25+x, 50+y);
-        s.moveTo(25+x, 50+y);
-        s.curveTo(25+x, 50+y, 25+x, 153+y, 25+x, 153+y);
-        s.moveTo(25+x, 153+y);
-        s.curveTo(25+x, 153+y, 5+x, 153+y, 5+x, 153+y);
         g2.draw(s);
     }
     
