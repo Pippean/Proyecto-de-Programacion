@@ -79,7 +79,8 @@ public class DibujarCanvas extends JComponent {
         }
         
         int x= 10, y=0;
-        m2.dibujarY(g2, x, y);
+        m2.dibujarO(g2, x, y);
+    
         if(!"".equals(texto)){
             for (int i = 0; i < texto.length(); i++) {
                 char caracter = texto.charAt(i);
@@ -335,7 +336,7 @@ public class DibujarCanvas extends JComponent {
                         x+=60;
                         break;
                     }
-                    case '<':{
+                    case 'y':{
                         m1.dibujary1(g2, x, y);
                         x+=120;
                         break;
