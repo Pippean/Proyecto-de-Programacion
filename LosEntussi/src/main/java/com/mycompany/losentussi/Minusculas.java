@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.geom.*;
 /**
  *
- * @author Pipe, Juano, Lázaro
+ * @author Pipe, Juano, Lazaro
  */
 
 public class Minusculas {
@@ -12,7 +12,7 @@ public class Minusculas {
         
     }
     
-    public void dibujara(Graphics2D g2, int x, int y){
+    public void dibujara(Graphics2D g2, int x, int y, boolean bandera){
         Path2D.Double a = new Path2D.Double();
         a.moveTo(0+x, 143+y);
         a.curveTo(20+x, 143+y, 20+x, 130+y, 20+x, 120+y);
@@ -22,6 +22,13 @@ public class Minusculas {
         a.curveTo(20+x, 160+y, 70+x, 160+y, 70+x, 120+y);
         a.moveTo(70+x, 120+y);
         a.curveTo(70+x, 120+y, 70+x, 143+y, 90+x, 143+y);
+        if (bandera == true){
+            g2.fillOval(0+x, 143+y, 5, 5);
+            g2.fillOval(20+x, 143+y, 5, 5);
+            g2.fillOval(20+x, 130+y, 5, 5);
+            
+            
+        }
         g2.draw(a);
     } 
     

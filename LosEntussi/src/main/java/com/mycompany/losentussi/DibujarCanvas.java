@@ -18,8 +18,9 @@ public class DibujarCanvas extends JComponent {
     private Simbolos s1;
     private String texto;
     private String color;
+    private boolean bandera;
     
-    public DibujarCanvas(int w, int h, String texto, String color){
+    public DibujarCanvas(int w, int h, String texto, String color, boolean bandera ){
         width = w;
         height = h;
         m1 = new Minusculas();
@@ -27,6 +28,7 @@ public class DibujarCanvas extends JComponent {
         s1 = new Simbolos();
         this.texto = texto;
         this.color = color;
+        this.bandera = bandera;
     }
     
     public void paintComponent(Graphics g){
@@ -98,7 +100,7 @@ public class DibujarCanvas extends JComponent {
                     }
                     case 'a':{
                     if(i== 0){
-                        m1.dibujara(g2, x, y);
+                        m1.dibujara(g2, x, y, bandera);
                         x+=90;
                     }
                     else if(texto.charAt(i-1)=='b'){
@@ -115,7 +117,7 @@ public class DibujarCanvas extends JComponent {
                     }
 
                     else{
-                        m1.dibujara(g2, x, y);
+                        m1.dibujara(g2, x, y, bandera);
                         x+=90;
                     }
                     break;
@@ -442,137 +444,137 @@ public class DibujarCanvas extends JComponent {
                         break;
                     }
                     case 'A':{
-                        m2.dibujarA(g2, x, y);
+                        m2.dibujarA(g2, x, y, bandera);
                         x+=110;
                         break;
                     }
                     case 'B':{
-                        m2.dibujarB(g2, x, y);
+                        m2.dibujarB(g2, x, y, bandera);
                         x+=70;
                         break;
                     }
                     case 'C':{
-                        m2.dibujarC(g2, x, y);
+                        m2.dibujarC(g2, x, y, bandera);
                         x+=80;
                         break;
                     }
                     case 'D':{
-                        m2.dibujarD(g2, x, y);
+                        m2.dibujarD(g2, x, y, bandera);
                         x+=120;
                         break;
                     }
                     case 'E':{
-                        m2.dibujarE(g2, x, y);
+                        m2.dibujarE(g2, x, y, bandera);
                         x+=80;
                         break;
                     }
                     case 'F':{
-                        m2.dibujarF(g2, x, y);
+                        m2.dibujarF(g2, x, y, bandera);
                         x+=80;
                         break;
                     }
                     case 'G':{
-                        m2.dibujarG(g2, x, y);
+                        m2.dibujarG(g2, x, y, bandera);
                         x+=120;
                         break;
                     }
                     case 'H':{
-                        m2.dibujarH(g2, x, y);
+                        m2.dibujarH(g2, x, y, bandera);
                         x+=110;
                         break;
                     }
                     case 'I':{
-                        m2.dibujarI(g2, x, y);
+                        m2.dibujarI(g2, x, y, bandera);
                         x+=70;
                         break;
                     }
                     case 'J':{
-                        m2.dibujarJ(g2, x, y);
+                        m2.dibujarJ(g2, x, y, bandera);
                         x+=70;
                         break;
                     }
                     case 'K':{
-                        m2.dibujarK(g2, x, y);
+                        m2.dibujarK(g2, x, y, bandera);
                         x+=110;
                         break;
                     }
                     case 'L':{
-                        m2.dibujarL(g2, x, y);
+                        m2.dibujarL(g2, x, y, bandera);
                         x+=110;
                         break;
                     }
                     case 'M':{
-                        m2.dibujarM(g2, x, y);
+                        m2.dibujarM(g2, x, y, bandera);
                         x+=130;
                         break;
                     }
                     case 'N':{
-                        m2.dibujarN(g2, x, y);
+                        m2.dibujarN(g2, x, y, bandera);
                         x+=130;
                         break;
                     }
                     case 'Ñ':{
-                        m2.dibujarÑ(g2, x, y);
+                        m2.dibujarÑ(g2, x, y, bandera);
                         x+=130;
                         break;
                     }
                     case 'O':{
-                        m2.dibujarO(g2, x, y);
+                        m2.dibujarO(g2, x, y, bandera);
                         x+=90;
                         break;
                     }
                     case 'P':{
-                        m2.dibujarP(g2, x, y);
+                        m2.dibujarP(g2, x, y, bandera);
                         x+=90;
                         break;
                     }
                     case 'Q':{
-                        m2.dibujarQ(g2, x, y);
+                        m2.dibujarQ(g2, x, y, bandera);
                         x+=100;
                         break;
                     }
                     case 'R':{
-                        m2.dibujarR(g2, x, y);
+                        m2.dibujarR(g2, x, y, bandera);
                         x+=80;
                         break;
                     }
                     case 'S':{
-                        m2.dibujarS(g2, x, y);
+                        m2.dibujarS(g2, x, y, bandera);
                         x+=80;
                         break;
                     }
                     case 'T':{
-                        m2.dibujarT(g2, x, y);
+                        m2.dibujarT(g2, x, y, bandera);
                         x+=100;
                         break;
                     }
                     case 'U':{
-                        m2.dibujarU(g2, x, y);
+                        m2.dibujarU(g2, x, y, bandera);
                         x+=100;
                         break;
                     }
                     case 'V':{
-                        m2.dibujarV(g2, x, y);
+                        m2.dibujarV(g2, x, y, bandera);
                         x+=90;
                         break;
                     }
                     case 'W':{
-                        m2.dibujarW(g2, x, y);
+                        m2.dibujarW(g2, x, y, bandera);
                         x+=100;
                         break;
                     }
                     case 'X':{
-                        m2.dibujarX(g2, x, y);
+                        m2.dibujarX(g2, x, y, bandera);
                         x+=110;
                         break;
                     }
                     case 'Y':{
-                        m2.dibujarY(g2, x, y);
+                        m2.dibujarY(g2, x, y, bandera);
                         x+=110;
                         break;
                     }
                     case 'Z':{
-                        m2.dibujarZ(g2, x, y);
+                        m2.dibujarZ(g2, x, y, bandera);
                         x+=110;
                         break;
                     }
