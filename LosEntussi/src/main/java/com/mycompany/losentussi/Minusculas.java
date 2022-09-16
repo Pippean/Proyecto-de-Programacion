@@ -26,10 +26,6 @@ public class Minusculas {
             g2.fillOval(0+x, 143+y, 5, 5);
             g2.fillOval(20+x, 143+y, 5, 5);
             g2.fillOval(20+x, 130+y, 5, 5);
-<<<<<<< HEAD
-            
-            
-=======
             g2.fillOval(20+x, 120+y, 5, 5);
             g2.fillOval(20+x, 90+y, 5, 5);
             g2.fillOval(70+x, 90+y, 5, 5);
@@ -39,7 +35,6 @@ public class Minusculas {
             g2.fillOval(70+x, 120+y, 5, 5);
             g2.fillOval(70+x, 143+y, 5, 5);
             g2.fillOval(90+x, 143+y, 5, 5);
->>>>>>> JuanMadariaga
         }
         g2.draw(a);
     } 

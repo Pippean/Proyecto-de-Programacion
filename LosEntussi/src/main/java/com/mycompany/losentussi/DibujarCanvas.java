@@ -22,10 +22,7 @@ public class DibujarCanvas extends JComponent {
     private boolean bandera;
     
     public DibujarCanvas(int w, int h, String texto, String color, boolean bandera ){
-<<<<<<< HEAD
-=======
         //Constructor:
->>>>>>> JuanMadariaga
         width = w;
         height = h;
         m1 = new Minusculas();
