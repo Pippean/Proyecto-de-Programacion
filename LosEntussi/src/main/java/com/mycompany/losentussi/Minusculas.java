@@ -248,7 +248,7 @@ public class Minusculas {
         g2.draw(o);
     }
     
-    public void dibujarocaso(Graphics2D g2, int x, int y){
+    public void dibujarocaso(Graphics2D g2, int x, int y,boolean bandera){
         Path2D.Double o1 = new Path2D.Double();
         o1.moveTo(0+x, 120+y);
         o1.curveTo(0+x, 90+y, 50+x, 90+y, 50+x, 120+y);
@@ -256,10 +256,24 @@ public class Minusculas {
         o1.curveTo(0+x, 160+y, 50+x, 160+y, 50+x, 120+y);
         o1.moveTo(2+x,110+y);
         o1.curveTo(10+x,130+y,30+x,130+y,60+x,143+y);
+        if(bandera==true){
+            g2.fillOval(0+x,120+y, 5, 5);
+            g2.fillOval(0+x,90+y, 5, 5);
+            g2.fillOval(50+x,90+y, 5, 5);
+            g2.fillOval(50+x,120+y, 5, 5);
+            g2.fillOval(0+x,120+y, 5, 5);
+            g2.fillOval(0+x,160+y, 5, 5);
+            g2.fillOval(50+x,160+y, 5, 5);
+            g2.fillOval(50+x,120+y, 5, 5);
+            g2.fillOval(2+x,110+y, 5, 5);
+            g2.fillOval(10+x,130+y, 5, 5);
+            g2.fillOval(30+x,130+y, 5, 5);
+            g2.fillOval(60+x,143+y, 5, 5);
+        }
         g2.draw(o1);
     }
     
-    public void dibujarp(Graphics2D g2,int x, int y){
+    public void dibujarp(Graphics2D g2, int x, int y,boolean bandera){
         Path2D.Double p = new Path2D.Double();
         p.moveTo(0+x, 143+y);
         p.curveTo(35+x, 143+y, 30+x, 110+y, 30+x, 100+y);
@@ -271,10 +285,31 @@ public class Minusculas {
         p.curveTo(70+x, 120+y, 60+x, 150+y, 100+x, 143+y);
         p.moveTo(30+x, 130+y);
         p.curveTo(20+x, 135+y, 23+x, 145+y, 33+x, 143+y);
+        if(bandera==true){
+            g2.fillOval(0+x,143+y, 5, 5);
+            g2.fillOval(35+x,143+y, 5, 5);
+            g2.fillOval(30+x,110+y, 5, 5);
+            g2.fillOval(30+x,100+y, 5, 5);
+            g2.fillOval(35+x,110+y, 5, 5);
+            g2.fillOval(35+x,170+y, 5, 5);
+            g2.fillOval(25+x,180+y, 5, 5);
+            g2.fillOval(30+x,100+y, 5, 5);
+            g2.fillOval(60+x,70+y, 5, 5);
+            g2.fillOval(105+x,145+y, 5, 5);
+            g2.fillOval(33+x,143+y, 5, 5);
+            g2.fillOval(30+x,130+y, 5, 5);
+            g2.fillOval(70+x,120+y, 5, 5);
+            g2.fillOval(60+x,150+y, 5, 5);
+            g2.fillOval(100+x,143+y, 5, 5);
+            g2.fillOval(30+x,130+y, 5, 5);
+            g2.fillOval(20+x,135+y, 5, 5);
+            g2.fillOval(23+x,145+y, 5, 5);
+            g2.fillOval(33+x,143+y, 5, 5);
+        }
         g2.draw(p);
     }
     
-    public void dibujarq(Graphics2D g2,int x, int y){
+    public void dibujarq(Graphics2D g2, int x, int y,boolean bandera){
         Path2D.Double q = new Path2D.Double();
         q.moveTo(0+x, 143+y);
         q.curveTo(20+x, 143+y, 20+x, 130+y, 20+x, 120+y);
@@ -289,10 +324,29 @@ public class Minusculas {
         q.curveTo(80+x,170+y,90+x,150+y,40+x,150+y);
         q.moveTo(40+x,150+y);
         q.curveTo(30+x,150+y,40+x,200+y,80+x,143+y);
+        if(bandera==true){
+            g2.fillOval(0+x,143+y, 5, 5);
+            g2.fillOval(20+x,143+y, 5, 5);
+            g2.fillOval(20+x,130+y, 5, 5);
+            g2.fillOval(20+x,120+y, 5, 5);
+            g2.fillOval(20+x,90+y, 5, 5);
+            g2.fillOval(60+x,90+y, 5, 5);
+            g2.fillOval(60+x,120+y, 5, 5);
+            g2.fillOval(20+x,120+y, 5, 5);
+            g2.fillOval(60+x,120+y, 5, 5);
+            g2.fillOval(50+x,240+y, 5, 5);
+            g2.fillOval(80+x,170+y, 5, 5);
+            g2.fillOval(90+x,150+y, 5, 5);
+            g2.fillOval(40+x,150+y, 5, 5);
+            g2.fillOval(30+x,150+y, 5, 5);
+            g2.fillOval(40+x,200+y, 5, 5);
+            g2.fillOval(80+x,143+y, 5, 5);
+        }
         g2.draw(q);
+        
     }
     
-    public void dibujarr(Graphics2D g2,int x, int y){
+    public void dibujarr(Graphics2D g2, int x, int y,boolean bandera){
         Path2D.Double r = new Path2D.Double();
         r.moveTo(0+x, 143+y);
         r.curveTo(15+x, 143+y, 10+x,100+y, 10+x, 100+y);
@@ -300,18 +354,42 @@ public class Minusculas {
         r.curveTo(15+x, 110+y, 60+x, 110+y, 60+x, 100+y);
         r.moveTo(60+x, 100+y);
         r.curveTo(60+x, 115+y, 60+x,143+y, 70+x, 143+y);
+        if(bandera==true){
+            g2.fillOval(0+x,143+y, 5, 5);
+            g2.fillOval(15+x,143+y, 5, 5);
+            g2.fillOval(10+x,100+y, 5, 5);
+            g2.fillOval(15+x,100+y, 5, 5);
+            g2.fillOval(60+x,110+y, 5, 5);
+            g2.fillOval(60+x,100+y, 5, 5);
+            g2.fillOval(60+x,115+y, 5, 5);
+            g2.fillOval(60+x,143+y, 5, 5);
+            g2.fillOval(70+x,143+y, 5, 5);
+        }
         g2.draw(r);
     }
-    public void dibujarrcaso(Graphics2D g2,int x,int y){
+    
+    public void dibujarrcaso(Graphics2D g2, int x, int y,boolean bandera){
         Path2D.Double r1= new Path2D.Double();
         r1.moveTo(0+x,110+y);
         r1.curveTo(5+x,100+y,10+x,80+y,15+x,80+y);
         r1.curveTo(20+x,80+y,20+x,85+y,35+x,80+y);
         r1.curveTo(40+x,80+y,35+x,143+y, 45+x,143+y);
+        if(bandera==true){
+            g2.fillOval(0+x,110+y, 5, 5);
+            g2.fillOval(5+x,100+y, 5, 5);
+            g2.fillOval(10+x,80+y, 5, 5);
+            g2.fillOval(15+x,80+y, 5, 5);
+            g2.fillOval(20+x,80+y, 5, 5);
+            g2.fillOval(20+x,85+y, 5, 5);
+            g2.fillOval(35+x,80+y, 5, 5);
+            g2.fillOval(40+x,80+y, 5, 5);
+            g2.fillOval(35+x,143+y, 5, 5);
+            g2.fillOval(45+x,143+y, 5, 5);
+        }
         g2.draw(r1);
     }
     
-    public void dibujars(Graphics2D g2,int x, int y){
+    public void dibujars(Graphics2D g2, int x, int y,boolean bandera){
         Path2D.Double s = new Path2D.Double();
         s.moveTo(0+x, 143+y);
         s.curveTo(20+x, 143+y, 25+x,100+y, 25+x, 100+y);
@@ -319,11 +397,23 @@ public class Minusculas {
         s.curveTo(80+x, 120+y, 70+x,135+y, 70+x, 143+y);
         s.moveTo(40+x, 140+y);
         s.curveTo(44+x, 147+y, 80+x,145+y, 85+x, 143+y);
+        if(bandera==true){
+            g2.fillOval(0+x,143+y, 5, 5);
+            g2.fillOval(20+x,143+y, 5, 5);
+            g2.fillOval(25+x,100+y, 5, 5);
+            g2.fillOval(80+x,120+y, 5, 5);
+            g2.fillOval(70+x,135+y, 5, 5);
+            g2.fillOval(70+x,143+y, 5, 5);
+            g2.fillOval(40+x,140+y, 5, 5);
+            g2.fillOval(44+x,147+y, 5, 5);
+            g2.fillOval(80+x,145+y, 5, 5);
+            g2.fillOval(85+x,143+y, 5, 5);
+        }
         g2.draw(s);   
         
     }
     
-    public void dibujart(Graphics2D g2,int x, int y){
+    public void dibujart(Graphics2D g2, int x, int y,boolean bandera){
         Path2D.Double t = new Path2D.Double();
         t.moveTo(0+x,143+y);
         t.curveTo(20+x,133+y,20+x,143+y, 20+x, 55+y);
@@ -331,10 +421,19 @@ public class Minusculas {
         t.curveTo(20+x,143+y,20+x,133+y,40+x,143+y);
         t.moveTo(0+x,80+y);
         t.curveTo(0+x,80+y,40+x,80+y,40+x,80+y);
+        if(bandera==true){
+            g2.fillOval(0+x,143+y, 5, 5);
+            g2.fillOval(20+x,133+y, 5, 5);
+            g2.fillOval(20+x,143+y, 5, 5);
+            g2.fillOval(20+x,55+y, 5, 5);
+            g2.fillOval(40+x,143+y, 5, 5);
+            g2.fillOval(0+x,80+y, 5, 5);
+            g2.fillOval(40+x,80+y, 5, 5);
+        }
         g2.draw(t);
     }
     
-    public void dibujaru(Graphics2D g2, int x, int y){
+    public void dibujaru(Graphics2D g2, int x, int y,boolean bandera){
         Path2D.Double u = new Path2D.Double();
         u.moveTo(0+x, 143+y);
         u.curveTo(20+x, 143+y, 20+x, 130+y, 20+x, 100+y);
@@ -342,19 +441,40 @@ public class Minusculas {
         u.curveTo(20+x, 160+y, 70+x, 160+y, 70+x, 100+y);
         u.moveTo(70+x, 100+y);
         u.curveTo(70+x, 120+y, 70+x, 143+y, 90+x, 143+y);
+        if(bandera==true){
+            g2.fillOval(0+x,143+y, 5, 5);
+            g2.fillOval(20+x,143+y, 5, 5);
+            g2.fillOval(20+x,130+y, 5, 5);
+            g2.fillOval(20+x,100+y, 5, 5);
+            g2.fillOval(20+x,160+y, 5, 5);
+            g2.fillOval(70+x,160+y, 5, 5);
+            g2.fillOval(70+x,100+y, 5, 5);
+            g2.fillOval(70+x,120+y, 5, 5);
+            g2.fillOval(70+x,143+y, 5, 5);
+            g2.fillOval(90+x,143+y, 5, 5);
+        }
         g2.draw(u);
     }
     
-    public void dibujarucaso(Graphics2D g2, int x, int y){
+    public void dibujarucaso(Graphics2D g2, int x, int y,boolean bandera){
         Path2D.Double u1 = new Path2D.Double();        
         u1.moveTo(0+x, 110+y);
         u1.curveTo(0+x, 160+y, 50+x, 160+y, 50+x, 110+y);
         u1.moveTo(50+x, 110+y);
         u1.curveTo(50+x, 120+y, 50+x, 143+y, 70+x, 143+y);
+        if(bandera==true){
+            g2.fillOval(0+x,110+y, 5, 5);
+            g2.fillOval(0+x,160+y, 5, 5);
+            g2.fillOval(50+x,160+y, 5, 5);
+            g2.fillOval(50+x,110+y, 5, 5);
+            g2.fillOval(50+x,120+y, 5, 5);
+            g2.fillOval(50+x,143+y, 5, 5);
+            g2.fillOval(70+x,143+y, 5, 5);
+        }
         g2.draw(u1);
     }
     
-    public void dibujarv(Graphics2D g2,int x, int y){
+    public void dibujarv(Graphics2D g2, int x, int y,boolean bandera){
         Path2D.Double v =new Path2D.Double();
         v.moveTo(0+x,143+y);
         v.curveTo(20+x,143+y,0+x,100+y,25+x,100+y);
@@ -364,10 +484,24 @@ public class Minusculas {
         v.curveTo(75+x,143+y,70+x,100+y,70+x,100+y);
         v.moveTo(70+x,100+y);
         v.curveTo(80+x,105+y,105+x,115+y,110+x,110+y);
+        if(bandera==true){
+            g2.fillOval(0+x,143+y, 5, 5);
+            g2.fillOval(20+x,143+y, 5, 5);
+            g2.fillOval(0+x,100+y, 5, 5);
+            g2.fillOval(25+x,100+y, 5, 5);
+            g2.fillOval(50+x,100+y, 5, 5);
+            g2.fillOval(35+x,143+y, 5, 5);
+            g2.fillOval(55+x,143+y, 5, 5);
+            g2.fillOval(75+x,143+y, 5, 5);
+            g2.fillOval(70+x,100+y, 5, 5);
+            g2.fillOval(80+x,105+y, 5, 5);
+            g2.fillOval(105+x,115+y, 5, 5);
+            g2.fillOval(110+x,110+y, 5, 5);
+        }
         g2.draw(v);
     }
     
-    public void dibujarw(Graphics2D g2,int x, int y){
+    public void dibujarw(Graphics2D g2, int x, int y,boolean bandera){
         Path2D.Double w =new Path2D.Double();
         w.moveTo(0+x,143+y);
         w.curveTo(10+x,143+y,0+x,100+y,15+x,100+y);
@@ -381,19 +515,47 @@ public class Minusculas {
         w.curveTo(120+x,143+y,120+x,100+y,120+x,100+y);
         w.moveTo(120+x,100+y);
         w.curveTo(120+x,105+y,150+x,115+y,150+x,110+y);
+        if(bandera==true){
+            g2.fillOval(0+x,143+y, 5, 5);
+            g2.fillOval(10+x,143+y, 5, 5);
+            g2.fillOval(0+x,100+y, 5, 5);
+            g2.fillOval(15+x,100+y, 5, 5);
+            g2.fillOval(50+x,100+y, 5, 5);
+            g2.fillOval(25+x,143+y, 5, 5);
+            g2.fillOval(45+x,143+y, 5, 5);
+            g2.fillOval(85+x,153+y, 5, 5);
+            g2.fillOval(75+x,100+y, 5, 5);
+            g2.fillOval(65+x,153+y, 5, 5);
+            g2.fillOval(105+x,143+y, 5, 5);
+            g2.fillOval(120+x,143+y, 5, 5);
+            g2.fillOval(120+x,100+y, 5, 5);
+            g2.fillOval(120+x,105+y, 5, 5);
+            g2.fillOval(150+x,115+y, 5, 5);
+            g2.fillOval(150+x,110+y, 5, 5);
+        }
         g2.draw(w);
     }
     
-    public void dibujarx1(Graphics2D g2,int x, int y){
+    public void dibujarx1(Graphics2D g2, int x, int y,boolean bandera){
         Path2D.Double x1 =new Path2D.Double();
         x1.moveTo(0+x,143+y);
         x1.curveTo(40+x,143+y,40+x,100+y,60+x,100+y);
         x1.moveTo(0+x,100+y);
         x1.curveTo(30+x,100+y,30+x,143+y,60+x,143+y);
+        if(bandera==true){
+            g2.fillOval(0+x,143+y, 5, 5);
+            g2.fillOval(40+x,143+y, 5, 5);
+            g2.fillOval(40+x,100+y, 5, 5);
+            g2.fillOval(60+x,100+y, 5, 5);
+            g2.fillOval(0+x,100+y, 5, 5);
+            g2.fillOval(30+x,100+y, 5, 5);
+            g2.fillOval(30+x,143+y, 5, 5);
+            g2.fillOval(60+x,143+y, 5, 5);
+        }
         g2.draw(x1);
     }
     
-    public void dibujary1(Graphics2D g2,int x, int y){
+    public void dibujary1(Graphics2D g2, int x, int y,boolean bandera){
         Path2D.Double  y1 =new Path2D.Double();
         y1.moveTo(0+x,143+y);
         y1.curveTo(0+x,143+y,30+x,143+y,30+x,100+y);
@@ -405,10 +567,25 @@ public class Minusculas {
         y1.curveTo(80+x,225+y,40+x,225+y,40+x,200+y);
         y1.moveTo(40+x,200+y);
         y1.curveTo(40+x,180+y,60+x,143+y,120+x,143+y);
+        if(bandera==true){
+            g2.fillOval(0+x,143+y, 5, 5);
+            g2.fillOval(30+x,143+y, 5, 5);
+            g2.fillOval(30+x,100+y, 5, 5);
+            g2.fillOval(20+x,174+y, 5, 5);
+            g2.fillOval(80+x,138+y, 5, 5);
+            g2.fillOval(80+x,100+y, 5, 5);
+            g2.fillOval(80+x,200+y, 5, 5);
+            g2.fillOval(80+x,225+y, 5, 5);
+            g2.fillOval(40+x,225+y, 5, 5);
+            g2.fillOval(40+x,200+y, 5, 5);
+            g2.fillOval(40+x,180+y, 5, 5);
+            g2.fillOval(60+x,143+y, 5, 5);
+            g2.fillOval(120+x,143+y, 5, 5);
+        }
         g2.draw(y1);
     }
     
-    public void dibujarz(Graphics2D g2,int x, int y){
+    public void dibujarz(Graphics2D g2, int x, int y,boolean bandera){
         Path2D.Double  z =new Path2D.Double();
         z.moveTo(0+x,143+y);
         z.curveTo(25+x,143+y,25+x,100+y,40+x,100+y);
@@ -418,6 +595,22 @@ public class Minusculas {
         z.curveTo(80+x,130+y,60+x,200+y,40+x,200+y);
         z.moveTo(70+x,143+y);
         z.curveTo(60+x,150+y,30+x,175+y,40+x,200+y);
+        if(bandera==true){
+            g2.fillOval(0+x,143+y, 5, 5);
+            g2.fillOval(25+x,143+y, 5, 5);
+            g2.fillOval(25+x,100+y, 5, 5);
+            g2.fillOval(40+x,100+y, 5, 5);
+            g2.fillOval(70+x,100+y, 5, 5);
+            g2.fillOval(60+x,143+y, 5, 5);
+            g2.fillOval(40+x,143+y, 5, 5);
+            g2.fillOval(80+x,130+y, 5, 5);
+            g2.fillOval(60+x,200+y, 5, 5);
+            g2.fillOval(40+x,200+y, 5, 5);
+            g2.fillOval(70+x,143+y, 5, 5);
+            g2.fillOval(60+x,150+y, 5, 5);
+            g2.fillOval(30+x,175+y, 5, 5);
+            g2.fillOval(40+x,200+y, 5, 5); 
+        }
         g2.draw(z);
     }
     
