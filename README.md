@@ -9,3 +9,6 @@ https://github.com/Pippean/Proyecto-de-Programacion.git
 
 Link del Trello:
 https://trello.com/b/rVDt9yem/%F0%9F%98%88-los-entussiasmados/power-up/55a5d916446f517774210004
+
+Link del Video:
+https://youtu.be/5VH7EwDVj8o
