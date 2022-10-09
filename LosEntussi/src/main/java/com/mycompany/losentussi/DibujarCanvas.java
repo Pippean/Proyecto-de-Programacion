@@ -395,8 +395,13 @@ public class DibujarCanvas extends JComponent {
                         x+=25;
                         break;
                     }
-                    case '\'':{
-                        s1.comillas(g2, x, y, bandera);
+                    case '‘':{
+                        s1.comillasabiertas(g2, x, y, bandera);
+                        x+=35;
+                        break;
+                    }
+                    case '’':{
+                        s1.comillascerradas(g2, x, y, bandera);
                         x+=35;
                         break;
                     }
@@ -405,12 +410,16 @@ public class DibujarCanvas extends JComponent {
                         x+=35;
                         break;
                     }
-                    case '<':{
+                    case '«':{
+                        s1.españolaabierta(g2, x, y, bandera);
+                        x+=18;
                         s1.españolaabierta(g2, x, y, bandera);
                         x+=50;
                         break;
                     }
-                    case '>':{
+                    case '»':{
+                        s1.españolacerrada(g2, x, y, bandera);
+                        x+=18;
                         s1.españolacerrada(g2, x, y, bandera);
                         x+=50;
                         break;
