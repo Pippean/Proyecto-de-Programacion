@@ -19,18 +19,19 @@ public class Dibujar{
     
     public static void main(String[] args){
         //Variables de la Intefaz:
-        Button Convertir;
-        Button Borrar;
+        //Button Convertir;
+        //Button Borrar;
         Button Puntos;
         Choice menu;
         
         //Dimensiones de los botones:
-        Convertir = new Button("Convertir");
-        Convertir.setBounds(1050, 700, 100, 22);
-        Borrar = new Button("Borrar");
-        Borrar.setBounds(1170, 700, 100, 22);
+        //Convertir = new Button("Convertir");
+        //Convertir.setBounds(1050, 700, 100, 22);
+        //Borrar = new Button("Borrar");
+        //Borrar.setBounds(1170, 700, 100, 22);
+        
         Puntos = new Button("Puntos");
-        Puntos.setBounds(1100, 670, 100, 22);
+        Puntos.setBounds(1170, 700, 100, 22);
         menu = new Choice();
         menu.setBounds(1170, 10, 100, 20);
         menu.add("Negro");
@@ -47,26 +48,48 @@ public class Dibujar{
         t1.setBounds(10, 700, 1000, 22);  
         JFrame f = new JFrame();
         
+        KeyListener EventosdeTeclado = new KeyListener(){
+            
+            @Override
+            public void keyTyped(KeyEvent e) {
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                dc.setVisible(false);
+                txtadibujar = txtadibujar + String.valueOf(e.getKeyChar());
+                cargarDC(f,txtadibujar, color, bandera);                
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+            }  
+        };        
+        
+        t1.addKeyListener(EventosdeTeclado);
+        
+        
         //Agregación para la interfaz
         f.setSize(w,h);
         f.setTitle("Conversor de Scripts");
         f.setResizable(false);
-        f.add(Convertir);
-        f.add(Borrar);
+        //f.add(Convertir);
+        //f.add(Borrar);
         f.add(Puntos);
         f.add(menu);
-        Borrar.setEnabled(false);
+        //Borrar.setEnabled(false);
         Puntos.setEnabled(false);
         f.add(t1);
+        
         cargarDC(f,txtadibujar, color, bandera);
-
-        //Funciones de botones:
+        
+        /*
         ActionListener accionConvertir= new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
                 txtadibujar = t1.getText();
-                Convertir.setEnabled(false);
-                Borrar.setEnabled(true);   
+                //Convertir.setEnabled(false);
+                //Borrar.setEnabled(true);   
                 Puntos.setEnabled(true);
                 t1.setEnabled(false);
                 color = menu.getItem(menu.getSelectedIndex());
@@ -74,7 +97,7 @@ public class Dibujar{
             }
         };
                        
-        Convertir.addActionListener(accionConvertir);
+        //Convertir.addActionListener(accionConvertir);
         
         ActionListener accionBorrar= new ActionListener(){
             @Override
@@ -91,6 +114,8 @@ public class Dibujar{
         };
         Borrar.addActionListener(accionBorrar);
         
+        */
+        
         ActionListener accionPuntos= new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
@@ -102,6 +127,7 @@ public class Dibujar{
         Puntos.addActionListener(accionPuntos);
         
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
     }
     
     //Funcion para cargar los datos al constructor:
@@ -109,5 +135,6 @@ public class Dibujar{
         dc = new DibujarCanvas(w,h,txtadibujar, color, bandera);
         f.add(dc);
         f.setVisible(true);
-    }    
+    }
+    
 }

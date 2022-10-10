@@ -1,5 +1,6 @@
 package com.mycompany.losentussi;
 import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.awt.geom.*;
 import javax.swing.*;
 import java.awt.geom.Path2D;     
