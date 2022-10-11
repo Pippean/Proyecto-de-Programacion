@@ -14,6 +14,7 @@ public class Dibujar{
     public static String color = "";
     static int w = 1300;
     static int h = 1080;
+    static int remover = 0;
     static DibujarCanvas dc;
     public static boolean bandera = false;
     
@@ -58,11 +59,18 @@ public class Dibujar{
             public void keyPressed(KeyEvent e) {
                 dc.setVisible(false);
                 txtadibujar = txtadibujar + String.valueOf(e.getKeyChar());
-                cargarDC(f,txtadibujar, color, bandera);                
+                remover+=1;
+                cargarDC(f,txtadibujar, color, bandera);
             }
 
             @Override
             public void keyReleased(KeyEvent e) {
+                if(e.getKeyCode() == KeyEvent.VK_BACK_SPACE)
+                {                    
+                    dc.setVisible(false);
+                    txtadibujar = txtadibujar.substring(0,remover) + txtadibujar.substring(remover); //Se esta borrando la palabra pero no se actualiza la pantalla
+                    cargarDC(f,txtadibujar, color, bandera);                    
+                }
             }  
         };        
         
@@ -78,7 +86,6 @@ public class Dibujar{
         f.add(Puntos);
         f.add(menu);
         //Borrar.setEnabled(false);
-        Puntos.setEnabled(false);
         f.add(t1);
         
         cargarDC(f,txtadibujar, color, bandera);
