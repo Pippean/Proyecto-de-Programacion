@@ -7,11 +7,14 @@ import javax.swing.*;
  *
  * @author Pipe, Juano, Lázaro
  */
+
 public class Dibujar{   
     
     //Variables:
     public static String txtadibujar = "";
+    public static String aux = "";
     public static String color = "";
+    public static char espacio; 
     static int w = 1300;
     static int h = 1080;
     static int remover = 0;
@@ -21,15 +24,15 @@ public class Dibujar{
     public static void main(String[] args){
         //Variables de la Intefaz:
         //Button Convertir;
-        //Button Borrar;
+        Button Borrar;
         Button Puntos;
         Choice menu;
         
         //Dimensiones de los botones:
         //Convertir = new Button("Convertir");
         //Convertir.setBounds(1050, 700, 100, 22);
-        //Borrar = new Button("Borrar");
-        //Borrar.setBounds(1170, 700, 100, 22);
+        Borrar = new Button("Borrar");
+        Borrar.setBounds(1050, 700, 100, 22);
         
         Puntos = new Button("Puntos");
         Puntos.setBounds(1170, 700, 100, 22);
@@ -49,46 +52,60 @@ public class Dibujar{
         t1.setBounds(10, 700, 1000, 22);  
         JFrame f = new JFrame();
         
-        KeyListener EventosdeTeclado = new KeyListener(){
-            
-            @Override
-            public void keyTyped(KeyEvent e) {
-            }
 
-            @Override
-            public void keyPressed(KeyEvent e) {
-                dc.setVisible(false);
-                txtadibujar = txtadibujar + String.valueOf(e.getKeyChar());
-                remover+=1;
-                cargarDC(f,txtadibujar, color, bandera);
-            }
-
-            @Override
-            public void keyReleased(KeyEvent e) {
-                if(e.getKeyCode() == KeyEvent.VK_BACK_SPACE)
-                {                    
-                    dc.setVisible(false);
-                    txtadibujar = txtadibujar.substring(0,remover) + txtadibujar.substring(remover); //Se esta borrando la palabra pero no se actualiza la pantalla
-                    cargarDC(f,txtadibujar, color, bandera);                    
-                }
-            }  
-        };        
-        
-        t1.addKeyListener(EventosdeTeclado);
-        
-        
         //Agregación para la interfaz
         f.setSize(w,h);
         f.setTitle("Conversor de Scripts");
         f.setResizable(false);
         //f.add(Convertir);
-        //f.add(Borrar);
+        f.add(Borrar);
         f.add(Puntos);
-        f.add(menu);
-        //Borrar.setEnabled(false);
+        f.add(menu);        
         f.add(t1);
         
         cargarDC(f,txtadibujar, color, bandera);
+        
+        
+        KeyListener EventosdeTeclado = new KeyListener(){
+            
+            @Override
+            public void keyTyped(KeyEvent e) {
+                dc.setVisible(false);
+                txtadibujar = txtadibujar + String.valueOf(e.getKeyChar());                
+                aux = txtadibujar;               
+                remover+=1;
+                cargarDC(f,txtadibujar, color, bandera);
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+
+                if(e.getKeyCode() == KeyEvent.VK_BACK_SPACE)
+                {
+                    dc.setVisible(false);
+                    txtadibujar = "";
+                    int i = aux.length()-1;
+                    System.out.println(i);
+                    espacio = aux.charAt(aux.length()-1);
+                    
+                    //System.out.println(espacio);
+                    aux = aux.substring(0,remover) + aux.substring(remover);
+                    txtadibujar = aux;
+                    bandera = false;
+                    cargarDC(f,txtadibujar, color, bandera);
+                    //dc.removeAll();
+                    //dc.setVisible(false);
+                }  
+                
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+                
+            }  
+        };  
+        
+        t1.addKeyListener(EventosdeTeclado);
         
         /*
         ActionListener accionConvertir= new ActionListener(){
@@ -105,23 +122,19 @@ public class Dibujar{
         };
                        
         //Convertir.addActionListener(accionConvertir);
-        
+        */
         ActionListener accionBorrar= new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-                t1.setEnabled(true);
                 txtadibujar = "";
                 t1.setText("");
                 bandera = false;
                 dc.setVisible(false);
-                Convertir.setEnabled(true);
-                Borrar.setEnabled(false);
-                Puntos.setEnabled(false);
             }
         };
         Borrar.addActionListener(accionBorrar);
         
-        */
+        
         
         ActionListener accionPuntos= new ActionListener(){
             @Override

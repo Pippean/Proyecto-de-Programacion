@@ -42,6 +42,7 @@ public class DibujarCanvas extends JComponent {
             RenderingHints.VALUE_ANTIALIAS_ON);
         g2.setRenderingHints(rh);
         
+        
         //Switch para el Choise Menu:
         switch(color){
             case "Negro":{
@@ -89,7 +90,7 @@ public class DibujarCanvas extends JComponent {
         //Switch para dibujar los caracteres:
         int x= 10, y=0;
         if(!"".equals(texto)){
-            for (int i = 0; i < texto.length(); i++){
+            for (int i = 0; i < texto.length(); i++) {
                 char caracter = texto.charAt(i);
                 if(x>=1150){
                     if(texto.charAt(i)!= ' '){
