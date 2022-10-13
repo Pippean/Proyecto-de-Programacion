@@ -14,10 +14,8 @@ public class Dibujar{
     public static String txtadibujar = "";
     public static String aux = "";
     public static String color = "";
-    public static char espacio; 
     static int w = 1300;
     static int h = 1080;
-    static int remover = 0;
     static DibujarCanvas dc;
     public static boolean bandera = false;
     
@@ -69,35 +67,39 @@ public class Dibujar{
         KeyListener EventosdeTeclado = new KeyListener(){
             
             @Override
-            public void keyTyped(KeyEvent e) {
-                dc.setVisible(false);
-                txtadibujar = txtadibujar + String.valueOf(e.getKeyChar());                
-                aux = txtadibujar;               
-                remover+=1;
-                cargarDC(f,txtadibujar, color, bandera);
+            public void keyTyped(KeyEvent e) { 
             }
 
             @Override
-            public void keyPressed(KeyEvent e) {
+            public void keyPressed(KeyEvent e) {  
+                dc.setVisible(false);
+                color = menu.getItem(menu.getSelectedIndex());
 
-                if(e.getKeyCode() == KeyEvent.VK_BACK_SPACE)
-                {
-                    dc.setVisible(false);
-                    txtadibujar = "";
-                    int i = aux.length()-1;
-                    System.out.println(i);
-                    espacio = aux.charAt(aux.length()-1);
-                    
-                    //System.out.println(espacio);
-                    aux = aux.substring(0,remover) + aux.substring(remover);
-                    txtadibujar = aux;
-                    bandera = false;
+                if(e.getKeyCode() != KeyEvent.VK_BACK_SPACE)
+                {  
+                    txtadibujar = txtadibujar + String.valueOf(e.getKeyChar());
+                    aux = txtadibujar;
                     cargarDC(f,txtadibujar, color, bandera);
-                    //dc.removeAll();
-                    //dc.setVisible(false);
-                }  
-                
-            }
+                }
+                else{
+                    if (txtadibujar.isEmpty()) {
+                        //System.out.println("no hay nada");
+                    }
+                    else{
+                        //int i;
+                        //for (i = 0; i <= txtadibujar.length(); i++) {
+                          //  if (aux.charAt(i)!=txtadibujar.charAt(i)) {
+                            //    System.out.println(i);
+                            //}
+                        //}
+                        
+                        
+                        txtadibujar = txtadibujar.substring(0, txtadibujar.length()-1);
+                        cargarDC(f,txtadibujar, color, bandera);
+                    }
+                    
+                }
+                            }
 
             @Override
             public void keyReleased(KeyEvent e) {
