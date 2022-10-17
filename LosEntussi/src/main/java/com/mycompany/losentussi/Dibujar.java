@@ -18,6 +18,7 @@ public class Dibujar{
     static int h = 1080;
     static DibujarCanvas dc;
     public static boolean bandera = false;
+    public static boolean puntosdecontrol = false;
     
     
     public static void main(String[] args){
@@ -85,8 +86,7 @@ public class Dibujar{
                     aux = t1.getText();
                     txtadibujar = ""; 
                     dc.setVisible(false);
-                    txtadibujar = aux;
-                    //txtadibujar = txtadibujar.substring(0, txtadibujar.length()-1);
+                    txtadibujar = aux;                    
                     cargarDC(f,txtadibujar, color, bandera);
                 }
                 else{
@@ -97,8 +97,7 @@ public class Dibujar{
                         aux = t1.getText();
                         txtadibujar = ""; 
                         dc.setVisible(false);
-                        txtadibujar = aux;
-                        //txtadibujar = txtadibujar.substring(0, txtadibujar.length()-1);
+                        txtadibujar = aux;                        
                         cargarDC(f,txtadibujar, color, bandera);
                     }                    
                 }
@@ -126,7 +125,7 @@ public class Dibujar{
         
         ActionListener accionBorrar= new ActionListener(){
             @Override
-            public void actionPerformed(ActionEvent e){
+            public void actionPerformed(ActionEvent e){                
                 txtadibujar = "";
                 t1.setText("");
                 bandera = false;
@@ -134,15 +133,25 @@ public class Dibujar{
             }
         };
         Borrar.addActionListener(accionBorrar);
-        
-        
-        
+
         ActionListener accionPuntos= new ActionListener(){
             @Override
-            public void actionPerformed(ActionEvent e){
-                dc.setVisible(false);
-                bandera = true;
-                cargarDC(f, txtadibujar, color, bandera);
+            public void actionPerformed(ActionEvent e){                
+                if (puntosdecontrol == false) {
+                    puntosdecontrol = true;
+                    dc.setVisible(false);
+                    bandera = true;                      
+                    cargarDC(f, txtadibujar, color, bandera);                    
+                }
+                else{
+                    puntosdecontrol = false;
+                    aux = t1.getText();
+                    txtadibujar = ""; 
+                    dc.setVisible(false);
+                    txtadibujar = aux;  
+                    bandera = false;                   
+                    cargarDC(f,txtadibujar, color, bandera);                                                                                                 
+                }
             }
         };               
         Puntos.addActionListener(accionPuntos);

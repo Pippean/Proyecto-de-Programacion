@@ -12,6 +12,7 @@ public class Mayusculas {
     public Mayusculas(){
         
     }
+    
     public void dibujarA(Graphics2D g2, int x, int y, boolean bandera){
         Path2D.Double A = new Path2D.Double();
         A.moveTo(40+x, 55+y);

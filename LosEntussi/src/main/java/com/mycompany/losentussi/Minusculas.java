@@ -10,9 +10,9 @@ public class Minusculas {
     
     public Minusculas(){
         
-    }
+    } 
     
-    public void dibujara(Graphics2D g2, int x, int y, boolean bandera){
+    public void dibujara(Graphics2D g2, int x, int y, boolean bandera){        
         Path2D.Double a = new Path2D.Double();
         a.moveTo(0+x, 143+y);
         a.curveTo(20+x, 143+y, 20+x, 130+y, 20+x, 120+y);
@@ -21,8 +21,8 @@ public class Minusculas {
         a.moveTo(20+x, 120+y);
         a.curveTo(20+x, 160+y, 70+x, 160+y, 70+x, 120+y);
         a.moveTo(70+x, 120+y);
-        a.curveTo(70+x, 120+y, 70+x, 143+y, 90+x, 143+y);
-        if (bandera == true){
+        a.curveTo(70+x, 120+y, 70+x, 143+y, 90+x, 143+y);        
+        if (bandera == true){            
             g2.fillOval(0+x, 143+y, 5, 5);
             g2.fillOval(20+x, 143+y, 5, 5);
             g2.fillOval(20+x, 130+y, 5, 5);
@@ -34,9 +34,9 @@ public class Minusculas {
             g2.fillOval(70+x, 160+y, 5, 5);
             g2.fillOval(70+x, 120+y, 5, 5);
             g2.fillOval(70+x, 143+y, 5, 5);
-            g2.fillOval(90+x, 143+y, 5, 5);
+            g2.fillOval(90+x, 143+y, 5, 5);                
         }
-        g2.draw(a); 
+        g2.draw(a);       
     } 
     
     public void dibujaracaso(Graphics2D g2, int x, int y, boolean bandera){

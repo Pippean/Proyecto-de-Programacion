@@ -79,9 +79,9 @@ public class DibujarCanvas extends JComponent {
                 break;
             }
             case "Blanco":{
-                g2.setColor(Color.white);
+                g2.setColor(Color.white);                
                 break;
-            }
+            }           
         }
         
         //Switch para dibujar los caracteres:
@@ -100,7 +100,7 @@ public class DibujarCanvas extends JComponent {
                     case ' ':{
                         x+=40;
                         break;
-                    }
+                    }                    
                     case 'a':{
                     if(i== 0){
                         m1.dibujara(g2, x, y, bandera);
