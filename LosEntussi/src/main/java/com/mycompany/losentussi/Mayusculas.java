@@ -12,7 +12,7 @@ public class Mayusculas {
     public Mayusculas(){
         
     }
-    public void dibujarA(Graphics2D g2, int x, int y, boolean bandera){
+    public void dibujarA(Graphics2D g2, int x, int y, boolean bandera,boolean tilde){
         Path2D.Double A = new Path2D.Double();
         A.moveTo(40+x, 55+y);
         A.curveTo(0+x, 55+y, 0+x, 143+y, 40+x, 143+y);
@@ -31,6 +31,15 @@ public class Mayusculas {
             g2.fillOval(70+x,143+y, 5, 5);
             g2.fillOval(100+x,143+y, 5, 5);
         }
+        if(tilde == true){
+            A.moveTo(40+x,50+y);
+            A.lineTo(60+x,30+y);
+            if(bandera==true){
+                g2.fillOval(40+x, 50+y, 5, 5);
+                g2.fillOval(60+x,30+y , 5, 5);
+            }
+        }
+        
         g2.draw(A);
     }
     
@@ -99,7 +108,7 @@ public class Mayusculas {
         g2.draw(D);
     }
     
-    public void dibujarE(Graphics2D g2, int x, int y, boolean bandera){
+    public void dibujarE(Graphics2D g2, int x, int y, boolean bandera, boolean tilde){
         Path2D.Double E = new Path2D.Double();
         E.moveTo(10+x, 60+y);
         E.curveTo(30+x, 50+y, 50+x, 65+y, 70+x, 55+y);
@@ -124,6 +133,14 @@ public class Mayusculas {
             g2.fillOval(30+x,130+y,5,5);
             g2.fillOval(50+x,145+y,5,5);
             g2.fillOval(70+x,143+y,5,5);
+        }
+        if(tilde==true){
+            E.moveTo(40+x,50+y);
+            E.lineTo(60+x, 30+y);
+            if(bandera==true){
+                g2.fillOval(40+x, 50+y, 5, 5);
+                g2.fillOval(60+x,30+ y, 5, 5);
+            }
         }
         g2.draw(E);
     } 
@@ -213,7 +230,7 @@ public class Mayusculas {
         g2.draw(H);
     } 
     
-    public void dibujarI(Graphics2D g2, int x, int y, boolean bandera){
+    public void dibujarI(Graphics2D g2, int x, int y, boolean bandera, boolean tilde){
         Path2D.Double I = new Path2D.Double();
         I.moveTo(0+x,55+y);
         I.curveTo(0+x,65+y,40+x,65+y,50+x,55+y);
@@ -228,6 +245,15 @@ public class Mayusculas {
             g2.fillOval(0+x,170+y,5,5);
             g2.fillOval(0+x,130+y,5,5);
         }
+        if(tilde==true){
+            I.moveTo(25+x,50+y);
+            I.lineTo(45+x, 30+y);
+            if(bandera==true){
+                g2.fillOval(40+x, 50+y, 5, 5);
+                g2.fillOval(60+x,30+ y, 5, 5);
+            }
+        }
+        
         g2.draw(I);
     } 
     
@@ -423,7 +449,7 @@ public class Mayusculas {
         g2.draw(Ñ);
     } 
     
-    public void dibujarO(Graphics2D g2, int x, int y, boolean bandera){
+    public void dibujarO(Graphics2D g2, int x, int y, boolean bandera,boolean tilde){
         Path2D.Double O = new Path2D.Double();
         O.moveTo(40+x, 143+y);
         O.curveTo(0+x, 143+y,0+x,55+y,25+x,55+y);
@@ -443,6 +469,14 @@ public class Mayusculas {
             g2.fillOval(20+x,65+y,5,5);
             g2.fillOval(15+x,85+y,5,5);
             g2.fillOval(20+x,100+y,5,5);
+        }
+        if(tilde == true){
+            O.moveTo(40+x,45+y);
+            O.lineTo(60+x,25+y);
+            if(bandera==true){
+                g2.fillOval(40+x,45+y, 5, 5);
+                g2.fillOval(60+x,25+y , 5, 5);
+            }
         }
         g2.draw(O);
     }
@@ -577,7 +611,7 @@ public class Mayusculas {
         g2.draw(T);
     }
     
-    public void dibujarU(Graphics2D g2, int x, int y, boolean bandera){
+    public void dibujarU(Graphics2D g2, int x, int y, boolean bandera,boolean tilde){
         Path2D.Double U = new Path2D.Double();
         U.moveTo(25+x, 75+y);
         U.curveTo(0+x,85+y,40+x,15+y,40+x,100+y);
@@ -600,6 +634,14 @@ public class Mayusculas {
             g2.fillOval(75+x,120+y,5,5);
             g2.fillOval(80+x,143+y,5,5);
             g2.fillOval(90+x,143+y,5,5);
+        }
+         if(tilde == true){
+            U.moveTo(60+x,50+y);
+            U.lineTo(80+x,30+y);
+            if(bandera==true){
+                g2.fillOval(60+x, 50+y, 5, 5);
+                g2.fillOval(80+x,30+y , 5, 5);
+            }
         }
         g2.draw(U);
     }

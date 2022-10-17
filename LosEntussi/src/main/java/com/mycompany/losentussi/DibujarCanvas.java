@@ -448,7 +448,7 @@ public class DibujarCanvas extends JComponent {
                         break;
                     }
                     case 'A':{
-                        m2.dibujarA(g2, x, y, bandera);
+                        m2.dibujarA(g2, x, y, bandera,false);
                         x+=110;
                         break;
                     }
@@ -468,7 +468,7 @@ public class DibujarCanvas extends JComponent {
                         break;
                     }
                     case 'E':{
-                        m2.dibujarE(g2, x, y, bandera);
+                        m2.dibujarE(g2, x, y, bandera,false);
                         x+=80;
                         break;
                     }
@@ -488,7 +488,7 @@ public class DibujarCanvas extends JComponent {
                         break;
                     }
                     case 'I':{
-                        m2.dibujarI(g2, x, y, bandera);
+                        m2.dibujarI(g2, x, y, bandera,false);
                         x+=70;
                         break;
                     }
@@ -523,7 +523,7 @@ public class DibujarCanvas extends JComponent {
                         break;
                     }
                     case 'O':{
-                        m2.dibujarO(g2, x, y, bandera);
+                        m2.dibujarO(g2, x, y, bandera,false);
                         x+=90;
                         break;
                     }
@@ -553,7 +553,7 @@ public class DibujarCanvas extends JComponent {
                         break;
                     }
                     case 'U':{
-                        m2.dibujarU(g2, x, y, bandera);
+                        m2.dibujarU(g2, x, y, bandera,false);
                         x+=100;
                         break;
                     }
@@ -698,6 +698,31 @@ public class DibujarCanvas extends JComponent {
                         x+=90;
                     }
                     break;
+                    }
+                    case 'Á':{
+                        m2.dibujarA(g2, x, y, bandera,true);
+                        x+=110;
+                        break;
+                    }
+                    case 'É':{
+                        m2.dibujarE(g2, x, y, bandera,true);
+                        x+=110;
+                        break;
+                    }
+                    case 'Í':{
+                        m2.dibujarI(g2, x, y, bandera,true);
+                        x+=110;
+                        break;
+                    }
+                    case 'Ó':{
+                        m2.dibujarO(g2, x, y, bandera,true);
+                        x+=110;
+                        break;
+                    }
+                    case 'Ú':{
+                        m2.dibujarU(g2, x, y, bandera,true);
+                        x+=110;
+                        break;
                     }
                     default:{
                         break;
