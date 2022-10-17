@@ -12,7 +12,7 @@ public class Minusculas {
         
     }
     
-    public void dibujara(Graphics2D g2, int x, int y, boolean bandera){
+    public void dibujara(Graphics2D g2, int x, int y, boolean bandera, boolean tilde){
         Path2D.Double a = new Path2D.Double();
         a.moveTo(0+x, 143+y);
         a.curveTo(20+x, 143+y, 20+x, 130+y, 20+x, 120+y);
@@ -36,10 +36,18 @@ public class Minusculas {
             g2.fillOval(70+x, 143+y, 5, 5);
             g2.fillOval(90+x, 143+y, 5, 5);
         }
+        if(tilde==true){
+            a.moveTo(45+x,90+y);
+            a.lineTo(70+x,70+y);
+            if(bandera == true){
+                g2.fillOval(45+x,90+y, 5, 5);
+                g2.fillOval(70+x,70+y, 5, 5);
+            }
+        }
         g2.draw(a);
-    } 
-    
-    public void dibujaracaso(Graphics2D g2, int x, int y, boolean bandera){
+  
+    }
+    public void dibujaracaso(Graphics2D g2, int x, int y, boolean bandera, boolean tilde){
         Path2D.Double a1 = new Path2D.Double();
         a1.moveTo(0+x, 120+y);
         a1.curveTo(0+x, 90+y, 50+x, 90+y, 50+x, 120+y);
@@ -57,6 +65,14 @@ public class Minusculas {
             g2.fillOval(50+x, 120+y, 5, 5);
             g2.fillOval(50+x, 143+y, 5, 5);
             g2.fillOval(70+x, 143+y, 5, 5);
+        }
+        if(tilde==true){
+            a1.moveTo(25+x,85+y);
+            a1.lineTo(45+x,70+y);
+            if(bandera == true){
+                g2.fillOval(25+x,85+y, 5, 5);
+                g2.fillOval(45+x,70+y, 5, 5);
+            }
         }
         g2.draw(a1);
     }
@@ -134,7 +150,7 @@ public class Minusculas {
         g2.draw(d);
     }
 
-    public void dibujare(Graphics2D g2, int x, int y, boolean bandera){
+    public void dibujare(Graphics2D g2, int x, int y, boolean bandera, boolean tilde){
         Path2D.Double e = new Path2D.Double();
         e.moveTo(0+x, 143+y);
         e.curveTo(25+x, 143+y, 25+x,100+y,15+x , 90+y);
@@ -150,10 +166,22 @@ public class Minusculas {
             g2.fillOval(5+x, 90+y, 5, 5);
             g2.fillOval(15+x, 90+y, 5, 5);
         }
+        if(tilde== true){
+            e.moveTo(15+x,85+y);
+            e.lineTo(30+x,70+y);
+            if(bandera == true){
+                g2.fillOval(15+x, 85+y, 5, 5);
+                g2.fillOval(30+x, 70+y, 5, 5);
+                if(bandera==true){
+                    g2.fillOval(15+x, 85+y, 5, 5);
+                    g2.fillOval(30+x,70+ y, 5, 5);
+                }
+            }
+        }
         g2.draw(e); 
     }
     
-    public void dibujarecaso(Graphics2D g2, int x, int y, boolean bandera){
+    public void dibujarecaso(Graphics2D g2, int x, int y, boolean bandera, boolean tilde){
         Path2D.Double e1 = new Path2D.Double();
         e1.moveTo(0+x,110+y);
         e1.curveTo(0+x,110+y,25+x,90+y,20+x,80+y);
@@ -166,6 +194,10 @@ public class Minusculas {
             g2.fillOval(0+x, 60+y, 5, 5);
             g2.fillOval(15+x, 143+y, 5, 5);
             g2.fillOval(25+x, 143+y, 5, 5);
+        }
+        if(tilde==true){
+            e1.moveTo(20+x, 70+y);
+            e1.lineTo(35+x,50+y);
         }
         g2.draw(e1); 
     }
@@ -255,7 +287,7 @@ public class Minusculas {
         g2.draw(h);
     }
         
-    public void dibujari(Graphics2D g2, int x, int y, boolean bandera){
+    public void dibujari(Graphics2D g2, int x, int y, boolean bandera,boolean tilde){
         Path2D.Double i = new Path2D.Double();
         i.moveTo(0+x,143+y);
         i.curveTo(0+x,143+y,25+x,143+y, 30+x, 100+y);
@@ -268,11 +300,21 @@ public class Minusculas {
             g2.fillOval(30+x, 143+y, 5, 5);
             g2.fillOval(60+x, 143+y, 5, 5);
         }
+        if(tilde==true){
+            i.moveTo(30+x,90+y);
+            i.lineTo(50+x,70+y);
+            if(bandera==true){
+                g2.fillOval(30+x,90+ y, 5, 5);
+                g2.fillOval(50+x, 70+y, 5, 5);
+            }
+        }
+        else{
         g2.fillOval(25+x,70+y,10,10);
+        }
         g2.draw(i);
     }
     
-    public void dibujaricaso(Graphics2D g2, int x, int y, boolean bandera){
+    public void dibujaricaso(Graphics2D g2, int x, int y, boolean bandera,boolean tilde){
         Path2D.Double i1 = new Path2D.Double();
         i1.moveTo(0+x, 110+y);
         i1.curveTo(5+x,110+y,20+x,90+y,20+x,80+y);
@@ -286,7 +328,17 @@ public class Minusculas {
             g2.fillOval(20+x, 143+y, 5, 5);
             g2.fillOval(30+x, 143+y, 5, 5);
         }
-        g2.fillOval(15+x,65+y,10,10);
+        if(tilde==true){
+            i1.moveTo(20+x,75+y);
+            i1.lineTo(35+x,55+y);
+            if(bandera==true){
+                g2.fillOval(20+x, 75+y, 5, 5);
+                g2.fillOval(35+x, 55+y, 5, 5);
+            }
+        }
+        else{
+            g2.fillOval(15+x,65+y,10,10);   
+        }
         g2.draw(i1);  
     }
     
@@ -470,7 +522,7 @@ public class Minusculas {
         g2.draw(ñ);
     }
     
-    public void dibujaro(Graphics2D g2, int x, int y, boolean bandera){
+    public void dibujaro(Graphics2D g2, int x, int y, boolean bandera,boolean tilde){
         Path2D.Double o = new Path2D.Double(); 
         o.moveTo(0+x, 143+y);
         o.curveTo(20+x, 143+y, 20+x, 130+y, 20+x, 120+y);
@@ -496,10 +548,18 @@ public class Minusculas {
             g2.fillOval(50+x, 130+y, 5, 5);
             g2.fillOval(90+x, 143+y, 5, 5);
         }
+        if(tilde==true){
+            o.moveTo(45+x,90+y);
+            o.lineTo(70+x,70+y);
+            if(bandera == true){
+                g2.fillOval(45+x,90+y, 5, 5);
+                g2.fillOval(70+x,70+y, 5, 5);
+            }
+        }
         g2.draw(o);
     }
     
-        public void dibujarocaso(Graphics2D g2, int x, int y,boolean bandera){
+        public void dibujarocaso(Graphics2D g2, int x, int y,boolean bandera,boolean tilde){
         Path2D.Double o1 = new Path2D.Double();
         o1.moveTo(0+x, 120+y);
         o1.curveTo(0+x, 90+y, 50+x, 90+y, 50+x, 120+y);
@@ -520,6 +580,14 @@ public class Minusculas {
             g2.fillOval(10+x,130+y, 5, 5);
             g2.fillOval(30+x,130+y, 5, 5);
             g2.fillOval(60+x,143+y, 5, 5);
+        }
+        if(tilde==true){
+            o1.moveTo(25+x,85+y);
+            o1.lineTo(45+x,70+y);
+            if(bandera == true){
+                g2.fillOval(25+x,85+y, 5, 5);
+                g2.fillOval(45+x,70+y, 5, 5);
+            }
         }
         g2.draw(o1);
     }
@@ -683,7 +751,7 @@ public class Minusculas {
         g2.draw(t);
     }
     
-    public void dibujaru(Graphics2D g2, int x, int y,boolean bandera){
+    public void dibujaru(Graphics2D g2, int x, int y,boolean bandera,boolean tilde){
         Path2D.Double u = new Path2D.Double();
         u.moveTo(0+x, 143+y);
         u.curveTo(20+x, 143+y, 20+x, 130+y, 20+x, 100+y);
@@ -703,10 +771,18 @@ public class Minusculas {
             g2.fillOval(70+x,143+y, 5, 5);
             g2.fillOval(90+x,143+y, 5, 5);
         }
+        if(tilde==true){
+            u.moveTo(45+x,90+y);
+            u.lineTo(70+x,70+y);
+            if(bandera == true){
+                g2.fillOval(45+x,90+y, 5, 5);
+                g2.fillOval(70+x,70+y, 5, 5);
+            }
+        }
         g2.draw(u);
     }
     
-    public void dibujarucaso(Graphics2D g2, int x, int y,boolean bandera){
+    public void dibujarucaso(Graphics2D g2, int x, int y,boolean bandera, boolean tilde){
         Path2D.Double u1 = new Path2D.Double();        
         u1.moveTo(0+x, 110+y);
         u1.curveTo(0+x, 160+y, 50+x, 160+y, 50+x, 110+y);
@@ -720,6 +796,14 @@ public class Minusculas {
             g2.fillOval(50+x,120+y, 5, 5);
             g2.fillOval(50+x,143+y, 5, 5);
             g2.fillOval(70+x,143+y, 5, 5);
+        }
+        if(tilde==true){
+            u1.moveTo(25+x,90+y);
+            u1.lineTo(45+x,70+y);
+            if(bandera == true){
+                g2.fillOval(25+x,90+y, 5, 5);
+                g2.fillOval(45+x,70+y, 5, 5);
+            }
         }
         g2.draw(u1);
     }
