@@ -49,7 +49,7 @@ public class Minusculas {
         g2.draw(b);
     }
 
-     public void dibujarc(Graphics2D g2,int x, int y){
+    public void dibujarc(Graphics2D g2,int x, int y){
         Path2D.Double c = new Path2D.Double();
         c.moveTo(29+x,100+y);
         c.curveTo(10+x, 115+y,20+x,148+y,68+x,143+y);

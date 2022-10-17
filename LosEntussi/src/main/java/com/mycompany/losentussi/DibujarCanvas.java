@@ -15,6 +15,7 @@ public class DibujarCanvas extends JComponent {
     private int height;
     private Minusculas m1;
     private Mayusculas m2;
+    private Cursivas m3;
     private Simbolos s1;
     private String texto;
     private String color;
@@ -25,6 +26,7 @@ public class DibujarCanvas extends JComponent {
         height = h;
         m1 = new Minusculas();
         m2 = new Mayusculas();
+        m3 = new Cursivas();
         s1 = new Simbolos();
         this.texto = texto;
         this.color = color;
@@ -576,6 +578,11 @@ public class DibujarCanvas extends JComponent {
                     case 'Z':{
                         m2.dibujarZ(g2, x, y);
                         x+=110;
+                        break;
+                    }
+                    case '^':{
+                        m3.dibujarfC(g2,x,y);
+                        x+=90;
                         break;
                     }
                     default:{
