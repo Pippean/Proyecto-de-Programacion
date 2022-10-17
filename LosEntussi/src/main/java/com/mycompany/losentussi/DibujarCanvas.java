@@ -1,10 +1,6 @@
 package com.mycompany.losentussi;
 import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.awt.geom.*;
 import javax.swing.*;
-import java.awt.geom.Path2D;     
-import java.util.ArrayList;
 
 /**
  *
@@ -21,6 +17,7 @@ public class DibujarCanvas extends JComponent {
     private String texto;
     private String color;
     private boolean bandera;
+    private boolean negritas = false;
     
     public DibujarCanvas(int w, int h, String texto, String color, boolean bandera ){
         //Constructor:

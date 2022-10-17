@@ -12,12 +12,13 @@ public class Dibujar{
     
     //Variables:
     public static String txtadibujar = "";
-    public static String aux = "";
+    public static String aux = txtadibujar;
     public static String color = "";
     static int w = 1300;
     static int h = 1080;
     static DibujarCanvas dc;
     public static boolean bandera = false;
+    
     
     public static void main(String[] args){
         //Variables de la Intefaz:
@@ -72,38 +73,35 @@ public class Dibujar{
 
             @Override
             public void keyPressed(KeyEvent e) {  
+                
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
                 dc.setVisible(false);
                 color = menu.getItem(menu.getSelectedIndex());
-
-                if(e.getKeyCode() != KeyEvent.VK_BACK_SPACE)
-                {  
-                    txtadibujar = txtadibujar + String.valueOf(e.getKeyChar());
-                    aux = txtadibujar;
+                
+                if(e.getKeyCode() != KeyEvent.VK_BACK_SPACE){  
+                    aux = t1.getText();
+                    txtadibujar = ""; 
+                    dc.setVisible(false);
+                    txtadibujar = aux;
+                    //txtadibujar = txtadibujar.substring(0, txtadibujar.length()-1);
                     cargarDC(f,txtadibujar, color, bandera);
                 }
                 else{
                     if (txtadibujar.isEmpty()) {
                         //System.out.println("no hay nada");
                     }
-                    else{
-                        //int i;
-                        //for (i = 0; i <= txtadibujar.length(); i++) {
-                          //  if (aux.charAt(i)!=txtadibujar.charAt(i)) {
-                            //    System.out.println(i);
-                            //}
-                        //}
-                        
-                        
-                        txtadibujar = txtadibujar.substring(0, txtadibujar.length()-1);
+                    else{   
+                        aux = t1.getText();
+                        txtadibujar = ""; 
+                        dc.setVisible(false);
+                        txtadibujar = aux;
+                        //txtadibujar = txtadibujar.substring(0, txtadibujar.length()-1);
                         cargarDC(f,txtadibujar, color, bandera);
-                    }
-                    
+                    }                    
                 }
-                            }
-
-            @Override
-            public void keyReleased(KeyEvent e) {
-                
             }  
         };  
         
@@ -125,6 +123,7 @@ public class Dibujar{
                        
         //Convertir.addActionListener(accionConvertir);
         */
+        
         ActionListener accionBorrar= new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){

@@ -36,7 +36,7 @@ public class Minusculas {
             g2.fillOval(70+x, 143+y, 5, 5);
             g2.fillOval(90+x, 143+y, 5, 5);
         }
-        g2.draw(a);
+        g2.draw(a); 
     } 
     
     public void dibujaracaso(Graphics2D g2, int x, int y, boolean bandera){
