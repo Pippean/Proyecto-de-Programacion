@@ -22,7 +22,7 @@ public class Minusculas {
         a.curveTo(20+x, 160+y, 70+x, 160+y, 70+x, 120+y);
         a.moveTo(70+x, 120+y);
         a.curveTo(70+x, 120+y, 70+x, 143+y, 90+x, 143+y);        
-        if (bandera == true){            
+        if (bandera == true){
             g2.fillOval(0+x, 143+y, 5, 5);
             g2.fillOval(20+x, 143+y, 5, 5);
             g2.fillOval(20+x, 130+y, 5, 5);

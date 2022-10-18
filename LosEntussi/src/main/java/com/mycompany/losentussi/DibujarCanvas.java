@@ -1,5 +1,6 @@
 package com.mycompany.losentussi;
 import java.awt.*;
+import java.awt.geom.Path2D;
 import javax.swing.*;
 
 /**
@@ -33,6 +34,7 @@ public class DibujarCanvas extends JComponent {
     
     public void paintComponent(Graphics g){
         Graphics2D g2 = (Graphics2D)g;
+        
         
         RenderingHints rh = new RenderingHints(
             RenderingHints.KEY_ANTIALIASING,
@@ -100,7 +102,8 @@ public class DibujarCanvas extends JComponent {
                     case ' ':{
                         x+=40;
                         break;
-                    }                    
+                    }   
+                    //Minusculas
                     case 'a':{
                     if(i== 0){
                         m1.dibujara(g2, x, y, bandera);
@@ -354,6 +357,7 @@ public class DibujarCanvas extends JComponent {
                         x+=70;
                         break;
                     }
+                    // Simbolos 
                     case '¿':{
                         s1.interrogacionabierto(g2, x, y, bandera);
                         x+=45;
@@ -455,6 +459,9 @@ public class DibujarCanvas extends JComponent {
                         x+=65;
                         break;
                     }
+                    
+                    //Mayusculas
+                    
                     case 'A':{
                         m2.dibujarA(g2, x, y, bandera);
                         x+=110;
@@ -506,10 +513,10 @@ public class DibujarCanvas extends JComponent {
                         break;
                     }
                     case 'K':{
-                        m2.dibujarK(g2, x, y, bandera);
-                        x+=110;
+                            m2.dibujarK(g2, x, y, bandera);
+                            x+=110;
                         break;
-                    }
+                    }          
                     case 'L':{
                         m2.dibujarL(g2, x, y, bandera);
                         x+=110;
@@ -590,6 +597,26 @@ public class DibujarCanvas extends JComponent {
                         x+=110;
                         break;
                     }
+                    
+                    //Caret
+                    case '^':{
+                        if(texto.charAt(i+1)=='K'){
+                            System.out.println("cursiva");
+                            i+=1;
+                        }
+                        if(texto.charAt(i+1)=='S'){
+                            //Path2D.Double subr = new Path2D.Double();
+                            //subr.moveTo(x,y+10);
+                            //subr.lineTo(x, y);
+                            System.out.println("subrayado");
+                            i+=1;
+                        }
+                        if(texto.charAt(i+1)=='N'){
+                            System.out.println("Negrita");
+                            i+=1;
+                        }
+                        break;
+                    }    
                     default:{
                         break;
                     } 
