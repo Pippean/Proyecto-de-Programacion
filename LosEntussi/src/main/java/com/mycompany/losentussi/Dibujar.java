@@ -30,7 +30,11 @@ public class Dibujar{
         Borrar = new Button("Borrar");
         Borrar.setBounds(1170, 700, 100, 22);
         Puntos = new Button("Puntos");
+<<<<<<< HEAD
         Puntos.setBounds(1100, 670, 100, 22);
+=======
+        Puntos.setBounds(1050, 600, 100, 22);
+>>>>>>> Lazaro
         menu = new Choice();
         menu.setBounds(1170, 10, 100, 20);
         menu.add("Negro");
@@ -59,8 +63,12 @@ public class Dibujar{
         Puntos.setEnabled(false);
         f.add(t1);
         cargarDC(f,txtadibujar, color, bandera);
+<<<<<<< HEAD
 
         //Funciones de botones:
+=======
+       
+>>>>>>> Lazaro
         ActionListener accionConvertir= new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
@@ -104,7 +112,10 @@ public class Dibujar{
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
     
+<<<<<<< HEAD
     //Funcion para cargar los datos al constructor:
+=======
+>>>>>>> Lazaro
     public static void cargarDC(Frame f, String txtadibujar, String color, boolean bandera){
         dc = new DibujarCanvas(w,h,txtadibujar, color, bandera);
         f.add(dc);

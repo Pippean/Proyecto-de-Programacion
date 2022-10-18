@@ -87,7 +87,11 @@ public class Minusculas {
         g2.draw(b);
     }
 
+<<<<<<< HEAD
     public void dibujarc(Graphics2D g2,int x, int y, boolean bandera){
+=======
+    public void dibujarc(Graphics2D g2,int x, int y){
+>>>>>>> Lazaro
         Path2D.Double c = new Path2D.Double();
         c.moveTo(29+x,100+y);
         c.curveTo(10+x, 115+y,20+x,148+y,68+x,143+y);
@@ -499,7 +503,11 @@ public class Minusculas {
         g2.draw(o);
     }
     
+<<<<<<< HEAD
         public void dibujarocaso(Graphics2D g2, int x, int y,boolean bandera){
+=======
+    public void dibujarocaso(Graphics2D g2, int x, int y,boolean bandera){
+>>>>>>> Lazaro
         Path2D.Double o1 = new Path2D.Double();
         o1.moveTo(0+x, 120+y);
         o1.curveTo(0+x, 90+y, 50+x, 90+y, 50+x, 120+y);
@@ -593,7 +601,12 @@ public class Minusculas {
             g2.fillOval(40+x,200+y, 5, 5);
             g2.fillOval(80+x,143+y, 5, 5);
         }
+<<<<<<< HEAD
         g2.draw(q);        
+=======
+        g2.draw(q);
+        
+>>>>>>> Lazaro
     }
     
     public void dibujarr(Graphics2D g2, int x, int y,boolean bandera){

@@ -16,17 +16,22 @@ public class DibujarCanvas extends JComponent {
     private int height;
     private Minusculas m1;
     private Mayusculas m2;
+    private Cursivas m3;
     private Simbolos s1;
     private String texto;
     private String color;
     private boolean bandera;
     
     public DibujarCanvas(int w, int h, String texto, String color, boolean bandera ){
+<<<<<<< HEAD
         //Constructor:
+=======
+>>>>>>> Lazaro
         width = w;
         height = h;
         m1 = new Minusculas();
         m2 = new Mayusculas();
+        m3 = new Cursivas();
         s1 = new Simbolos();
         this.texto = texto;
         this.color = color;
@@ -92,7 +97,11 @@ public class DibujarCanvas extends JComponent {
                 char caracter = texto.charAt(i);
                 if(x>=1150){
                     if(texto.charAt(i)!= ' '){
+<<<<<<< HEAD
                         s1.guion(g2, x, y, bandera);
+=======
+                        s1.guion(g2, x, y,bandera);
+>>>>>>> Lazaro
                     }
                     y+=180;
                     x=10;
@@ -247,6 +256,7 @@ public class DibujarCanvas extends JComponent {
                       x+=90; 
                     }
                     else if(texto.charAt(i-1) == 'b'){
+<<<<<<< HEAD
                         m1.dibujarocaso(g2, x, y, bandera);
                         x+=60;                            
                     }
@@ -256,6 +266,17 @@ public class DibujarCanvas extends JComponent {
                     }
                     else if(texto.charAt(i-1)== 'w'){
                         m1.dibujarocaso(g2, x, y, bandera);
+=======
+                        m1.dibujarocaso(g2, x, y,bandera);
+                        x+=60;                            
+                    }
+                    else if(texto.charAt(i-1) == 'v'){
+                         m1.dibujarocaso(g2, x, y,bandera);
+                        x+=60; 
+                    }
+                    else if(texto.charAt(i-1)== 'w'){
+                        m1.dibujarocaso(g2, x, y,bandera);
+>>>>>>> Lazaro
                         x+=60;
                     }
                     else{
@@ -265,17 +286,26 @@ public class DibujarCanvas extends JComponent {
                     break;
                     }
                     case 'p':{
+<<<<<<< HEAD
                         m1.dibujarp(g2, x, y, bandera);
+=======
+                        m1.dibujarp(g2, x, y,bandera);
+>>>>>>> Lazaro
                         x+=100;
                         break;
                     }
                     case 'q':{
+<<<<<<< HEAD
                         m1.dibujarq(g2, x, y, bandera);
+=======
+                        m1.dibujarq(g2, x, y,bandera);
+>>>>>>> Lazaro
                         x+=80;
                         break;
                     }
                     case 'r':{
                     if(i==0){
+<<<<<<< HEAD
                       m1.dibujarr(g2, x, y, bandera);
                       x+=70;    
                     }
@@ -293,22 +323,50 @@ public class DibujarCanvas extends JComponent {
                     }
                     else{
                         m1.dibujarr(g2, x, y, bandera);
+=======
+                      m1.dibujarr(g2, x, y,bandera);
+                      x+=70;    
+                    }
+                    else if(texto.charAt(i-1) == 'b'){
+                        m1.dibujarrcaso(g2, x, y,bandera);
+                        x+=45;                            
+                    }
+                    else if(texto.charAt(i-1) == 'v'){
+                         m1.dibujarrcaso(g2, x, y,bandera);
+                        x+=45; 
+                    }
+                    else if(texto.charAt(i-1)== 'w'){
+                        m1.dibujarrcaso(g2, x, y,bandera);
+                        x+=45;
+                    }
+                    else{
+                        m1.dibujarr(g2, x, y,bandera);
+>>>>>>> Lazaro
                         x+=70;
                     }
                     break;
                     }
                     case 's':{
+<<<<<<< HEAD
                         m1.dibujars(g2, x, y, bandera);
+=======
+                        m1.dibujars(g2, x, y,bandera);
+>>>>>>> Lazaro
                         x+=85;
                         break;
                     }
                     case 't':{
+<<<<<<< HEAD
                         m1.dibujart(g2, x, y, bandera);
+=======
+                        m1.dibujart(g2, x, y,bandera);
+>>>>>>> Lazaro
                         x+=40;
                         break;
                     }
                     case 'u':{
                     if(i==0){
+<<<<<<< HEAD
                       m1.dibujaru(g2, x, y, bandera);
                       x+=90;    
                     }
@@ -326,124 +384,235 @@ public class DibujarCanvas extends JComponent {
                     }
                     else{
                         m1.dibujaru(g2, x, y, bandera);
+=======
+                      m1.dibujaru(g2, x, y,bandera);
+                      x+=90;    
+                    }
+                    else if(texto.charAt(i-1) == 'b'){
+                        m1.dibujarucaso(g2, x, y,bandera);
+                        x+=70;                            
+                    }
+                    else if(texto.charAt(i-1) == 'v'){
+                         m1.dibujarucaso(g2, x, y,bandera);
+                        x+=70; 
+                    }
+                    else if(texto.charAt(i-1)== 'w'){
+                        m1.dibujarucaso(g2, x, y,bandera);
+                        x+=70;
+                    }
+                    else{
+                        m1.dibujaru(g2, x, y,bandera);
+>>>>>>> Lazaro
                         x+=90;
                     }
                     break;
                     }
                     case 'v':{
+<<<<<<< HEAD
                         m1.dibujarv(g2, x, y, bandera);
+=======
+                        m1.dibujarv(g2, x, y,bandera);
+>>>>>>> Lazaro
                         x+=110;
                         break;
                     }
                     case 'w':{
+<<<<<<< HEAD
                         m1.dibujarw(g2, x, y, bandera);
+=======
+                        m1.dibujarw(g2, x, y,bandera);
+>>>>>>> Lazaro
                         x+=150;
                         break;
                     }
                     case 'x':{
+<<<<<<< HEAD
                         m1.dibujarx1(g2, x, y, bandera); 
+=======
+                        m1.dibujarx1(g2, x, y,bandera); 
+>>>>>>> Lazaro
                         x+=60;
                         break;
                     }
                     case 'y':{
+<<<<<<< HEAD
                         m1.dibujary1(g2, x, y, bandera);
+=======
+                        m1.dibujary1(g2, x, y,bandera);
+>>>>>>> Lazaro
                         x+=120;
                         break;
                     }
                     case 'z':{
+<<<<<<< HEAD
                         m1.dibujarz(g2, x, y, bandera);
+=======
+                        m1.dibujarz(g2, x, y,bandera);
+>>>>>>> Lazaro
                         x+=70;
                         break;
                     }
                     case '¿':{
+<<<<<<< HEAD
                         s1.interrogacionabierto(g2, x, y, bandera);
+=======
+                        s1.interrogacionabierto(g2, x, y,bandera);
+>>>>>>> Lazaro
                         x+=45;
                         break;
                     }
                     case '?':{
+<<<<<<< HEAD
                         s1.interrogacioncerrado(g2, x, y, bandera);
+=======
+                        s1.interrogacioncerrado(g2, x, y,bandera);
+>>>>>>> Lazaro
                         x+=55;
                         break;
                     }
                     case '!':{
+<<<<<<< HEAD
                         s1.exclamacionabierto(g2, x, y, bandera);
+=======
+                        s1.exclamacionabierto(g2, x, y,bandera);
+>>>>>>> Lazaro
                         x+=40;
                         break;
                     }
                     case '¡':{
+<<<<<<< HEAD
                         s1.exclamacioncerrado(g2, x, y, bandera);
+=======
+                        s1.exclamacioncerrado(g2, x, y,bandera);
+>>>>>>> Lazaro
                         x+=40;
                         break;
                     }
                     case '.':{
+<<<<<<< HEAD
                         s1.punto(g2, x, y, bandera);
+=======
+                        s1.punto(g2, x, y,bandera);
+>>>>>>> Lazaro
                         x+=25;
                         break;
                     }
                     case ',':{
+<<<<<<< HEAD
                         s1.coma(g2, x, y, bandera);
+=======
+                        s1.coma(g2, x, y,bandera);
+>>>>>>> Lazaro
                         x+=25;
                         break;
                     }
                     case ';':{
+<<<<<<< HEAD
                         s1.puntoycoma(g2, x, y, bandera);
+=======
+                        s1.puntoycoma(g2, x, y,bandera);
+>>>>>>> Lazaro
                         x+=25;
                         break;
                     }
                     case ':':{
+<<<<<<< HEAD
                         s1.dospuntos(g2, x, y, bandera);
+=======
+                        s1.dospuntos(g2, x, y,bandera);
+>>>>>>> Lazaro
                         x+=25;
                         break;
                     }
                     case '\'':{
+<<<<<<< HEAD
                         s1.comillas(g2, x, y, bandera);
+=======
+                        s1.comillas(g2, x, y,bandera);
+>>>>>>> Lazaro
                         x+=35;
                         break;
                     }
                     case '\"':{
+<<<<<<< HEAD
                         s1.comillasinglesas(g2, x, y, bandera);
+=======
+                        s1.comillasinglesas(g2, x, y,bandera);
+>>>>>>> Lazaro
                         x+=35;
                         break;
                     }
                     case '<':{
+<<<<<<< HEAD
                         s1.españolaabierta(g2, x, y, bandera);
+=======
+                        s1.españolaabierta(g2, x, y,bandera);
+>>>>>>> Lazaro
                         x+=50;
                         break;
                     }
                     case '>':{
+<<<<<<< HEAD
                         s1.españolacerrada(g2, x, y, bandera);
+=======
+                        s1.españolacerrada(g2, x, y,bandera);
+>>>>>>> Lazaro
                         x+=50;
                         break;
                     }
                     case '(':{
+<<<<<<< HEAD
                         s1.parentesisabierto(g2, x, y, bandera);
+=======
+                        s1.parentesisabierto(g2, x, y,bandera);
+>>>>>>> Lazaro
                         x+=35;
                         break;
                     }
                     case ')':{
+<<<<<<< HEAD
                         s1.parentesiscerrado(g2, x, y, bandera);
+=======
+                        s1.parentesiscerrado(g2, x, y,bandera);
+>>>>>>> Lazaro
                         x+=35;
                         break;
                     }
                     case '{':{
+<<<<<<< HEAD
                         s1.llavesabiertas(g2, x, y, bandera);
+=======
+                        s1.llavesabiertas(g2, x, y,bandera);
+>>>>>>> Lazaro
                         x+=45;
                         break;
                     }
                     case '}':{
+<<<<<<< HEAD
                         s1.llavescerradas(g2, x, y, bandera);
+=======
+                        s1.llavescerradas(g2, x, y,bandera);
+>>>>>>> Lazaro
                         x+=45;
                         break;
                     }
                     case '-':{
                         x+=25;
+<<<<<<< HEAD
                         s1.guion(g2, x, y, bandera);
+=======
+                        s1.guion(g2, x, y,bandera);
+>>>>>>> Lazaro
                         x+=55;
                         break;
                     }
                     case '_':{
                         x+=30;
+<<<<<<< HEAD
                         s1.guionbajo(g2, x, y, bandera);
+=======
+                        s1.guionbajo(g2, x, y,bandera);
+>>>>>>> Lazaro
                         x+=65;
                         break;
                     }
@@ -580,6 +749,11 @@ public class DibujarCanvas extends JComponent {
                     case 'Z':{
                         m2.dibujarZ(g2, x, y, bandera);
                         x+=110;
+                        break;
+                    }
+                    case '^':{
+                        m3.dibujarfC(g2,x,y);
+                        x+=90;
                         break;
                     }
                     default:{
