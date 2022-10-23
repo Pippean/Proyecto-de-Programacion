@@ -20,6 +20,9 @@ public class DibujarCanvas extends JComponent {
     private String texto;
     private String color;
     private boolean bandera;
+    private boolean negrita = false;
+    private boolean subrayado = false;
+    private boolean cursiva = false;
     
     public DibujarCanvas(int w, int h, String texto, String color, boolean bandera ){
         //Constructor:
@@ -41,7 +44,7 @@ public class DibujarCanvas extends JComponent {
             RenderingHints.KEY_ANTIALIASING,
             RenderingHints.VALUE_ANTIALIAS_ON);
         g2.setRenderingHints(rh);
-        boolean negrita = false;
+        
         //Switch para el Choise Menu:
         switch(color){
             case "Negro":{
@@ -91,7 +94,7 @@ public class DibujarCanvas extends JComponent {
         if(!"".equals(texto)){
             for (int i = 0; i < texto.length(); i++){
                 char caracter = texto.charAt(i);
-                if(x>=1150){
+                if(x>=1150*2){
                     if(texto.charAt(i)!= ' '){
                         s1.guion(g2, x, y, bandera);
                     }
@@ -124,7 +127,7 @@ public class DibujarCanvas extends JComponent {
 
                     else{
                         m1.dibujara(g2, x, y, bandera,false,negrita);
-                        x+=90;
+                         x+=90;
                     }
                     break;
                     }
@@ -450,137 +453,137 @@ public class DibujarCanvas extends JComponent {
                         break;
                     }
                     case 'A':{
-                        m2.dibujarA(g2, x, y, bandera,false);
+                        m2.dibujarA(g2, x, y, bandera,false,negrita,subrayado,cursiva);
                         x+=110;
                         break;
                     }
                     case 'B':{
-                        m2.dibujarB(g2, x, y, bandera);
+                        m2.dibujarB(g2, x, y, bandera,negrita,subrayado,cursiva);
                         x+=70;
                         break;
                     }
                     case 'C':{
-                        m2.dibujarC(g2, x, y, bandera);
+                        m2.dibujarC(g2, x, y, bandera,negrita,subrayado,cursiva);
                         x+=80;
                         break;
                     }
                     case 'D':{
-                        m2.dibujarD(g2, x, y, bandera);
+                        m2.dibujarD(g2, x, y, bandera,negrita,subrayado,cursiva);
                         x+=120;
                         break;
                     }
                     case 'E':{
-                        m2.dibujarE(g2, x, y, bandera,false);
+                        m2.dibujarE(g2, x, y, bandera,false,negrita,subrayado,cursiva);
                         x+=80;
                         break;
                     }
                     case 'F':{
-                        m2.dibujarF(g2, x, y, bandera);
+                        m2.dibujarF(g2, x, y, bandera,negrita,subrayado,cursiva);
                         x+=80;
                         break;
                     }
                     case 'G':{
-                        m2.dibujarG(g2, x, y, bandera);
+                        m2.dibujarG(g2, x, y, bandera,negrita,subrayado,cursiva);
                         x+=120;
                         break;
                     }
                     case 'H':{
-                        m2.dibujarH(g2, x, y, bandera);
+                        m2.dibujarH(g2, x, y, bandera,negrita,subrayado,cursiva);
                         x+=110;
                         break;
                     }
                     case 'I':{
-                        m2.dibujarI(g2, x, y, bandera,false);
+                        m2.dibujarI(g2, x, y, bandera,false,negrita,subrayado,cursiva);
                         x+=70;
                         break;
                     }
                     case 'J':{
-                        m2.dibujarJ(g2, x, y, bandera);
+                        m2.dibujarJ(g2, x, y, bandera,negrita,subrayado,cursiva);
                         x+=70;
                         break;
                     }
                     case 'K':{
-                        m2.dibujarK(g2, x, y, bandera);
+                        m2.dibujarK(g2, x, y, bandera,negrita,subrayado,cursiva);
                         x+=110;
                         break;
                     }
                     case 'L':{
-                        m2.dibujarL(g2, x, y, bandera);
+                        m2.dibujarL(g2, x, y, bandera,negrita,subrayado,cursiva);
                         x+=110;
                         break;
                     }
                     case 'M':{
-                        m2.dibujarM(g2, x, y, bandera);
+                        m2.dibujarM(g2, x, y, bandera,negrita,subrayado,cursiva);
                         x+=130;
                         break;
                     }
                     case 'N':{
-                        m2.dibujarN(g2, x, y, bandera);
+                        m2.dibujarN(g2, x, y, bandera,negrita,subrayado,cursiva);
                         x+=130;
                         break;
                     }
                     case 'Ñ':{
-                        m2.dibujarÑ(g2, x, y, bandera);
+                        m2.dibujarÑ(g2, x, y, bandera,negrita,subrayado,cursiva);
                         x+=130;
                         break;
                     }
                     case 'O':{
-                        m2.dibujarO(g2, x, y, bandera,false);
+                        m2.dibujarO(g2, x, y, bandera,false,negrita,subrayado,cursiva);
                         x+=90;
                         break;
                     }
                     case 'P':{
-                        m2.dibujarP(g2, x, y, bandera);
+                        m2.dibujarP(g2, x, y, bandera,negrita,subrayado,cursiva);
                         x+=90;
                         break;
                     }
                     case 'Q':{
-                        m2.dibujarQ(g2, x, y, bandera);
+                        m2.dibujarQ(g2, x, y, bandera,negrita,subrayado,cursiva);
                         x+=100;
                         break;
                     }
                     case 'R':{
-                        m2.dibujarR(g2, x, y, bandera);
+                        m2.dibujarR(g2, x, y, bandera,negrita,subrayado,cursiva);
                         x+=80;
                         break;
                     }
                     case 'S':{
-                        m2.dibujarS(g2, x, y, bandera);
+                        m2.dibujarS(g2, x, y, bandera,negrita,subrayado,cursiva);
                         x+=80;
                         break;
                     }
                     case 'T':{
-                        m2.dibujarT(g2, x, y, bandera);
+                        m2.dibujarT(g2, x, y, bandera,negrita,subrayado,cursiva);
                         x+=100;
                         break;
                     }
                     case 'U':{
-                        m2.dibujarU(g2, x, y, bandera,false);
+                        m2.dibujarU(g2, x, y, bandera,false,negrita,subrayado,cursiva);
                         x+=100;
                         break;
                     }
                     case 'V':{
-                        m2.dibujarV(g2, x, y, bandera);
+                        m2.dibujarV(g2, x, y, bandera,negrita,subrayado,cursiva);
                         x+=90;
                         break;
                     }
                     case 'W':{
-                        m2.dibujarW(g2, x, y, bandera);
+                        m2.dibujarW(g2, x, y, bandera,negrita,subrayado,cursiva);
                         x+=100;
                         break;
                     }
                     case 'X':{
-                        m2.dibujarX(g2, x, y, bandera);
+                        m2.dibujarX(g2, x, y, bandera,negrita,subrayado,cursiva);
                         x+=110;
                         break;
                     }
                     case 'Y':{
-                        m2.dibujarY(g2, x, y, bandera);
+                        m2.dibujarY(g2, x, y, bandera,negrita,subrayado,cursiva);
                         x+=110;
                         break;
                     }
                     case 'Z':{
-                        m2.dibujarZ(g2, x, y, bandera);
+                        m2.dibujarZ(g2, x, y, bandera,negrita,subrayado,cursiva);
                         x+=110;
                         break;
                     }
@@ -591,15 +594,15 @@ public class DibujarCanvas extends JComponent {
                         x+=90;
                     }
                     else if(texto.charAt(i-1)=='b'){
-                        m1.dibujaracaso(g2, x, y, bandera,true);
+                        m1.dibujaracaso(g2, x, y, bandera,true,negrita);
                         x+=70;
                     }
                     else if(texto.charAt(i-1) == 'v'){
-                        m1.dibujaracaso(g2, x, y, bandera,true);
+                        m1.dibujaracaso(g2, x, y, bandera,true,negrita);
                         x+=70; 
                     }
                     else if(texto.charAt(i-1)== 'w'){
-                        m1.dibujaracaso(g2, x, y, bandera,true);
+                        m1.dibujaracaso(g2, x, y, bandera,true,negrita);
                         x+=70;
                     }
 
@@ -611,118 +614,118 @@ public class DibujarCanvas extends JComponent {
                     }
                     case 'é':{
                     if(i== 0){
-                        m1.dibujare(g2, x, y, bandera,true);
+                        m1.dibujare(g2, x, y, bandera,true,negrita);
                         x+=35;
                     }
                     else if(texto.charAt(i-1) == 'b'){
-                        m1.dibujarecaso(g2, x, y, bandera,true);
+                        m1.dibujarecaso(g2, x, y, bandera,true,negrita);
                         x+=25;                            
                     }
                     else if(texto.charAt(i-1) == 'v'){
-                         m1.dibujarecaso(g2, x, y, bandera,true);
+                         m1.dibujarecaso(g2, x, y, bandera,true,negrita);
                         x+=25; 
                     }
                     else if(texto.charAt(i-1)== 'w'){
-                        m1.dibujarecaso(g2, x, y, bandera,true);
+                        m1.dibujarecaso(g2, x, y, bandera,true,negrita);
                         x+=25;
                     }
                     else{
-                        m1.dibujare(g2, x, y, bandera,true);
+                        m1.dibujare(g2, x, y, bandera,true,negrita);
                         x+=35;
                     }
                     break;
                     }
                     case 'í':{
                     if(i==0){
-                      m1.dibujari(g2, x, y, bandera,true);
+                      m1.dibujari(g2, x, y, bandera,true,negrita);
                       x+=60;
                     }
                     else if(texto.charAt(i-1) == 'b'){
-                        m1.dibujaricaso(g2, x, y, bandera,true);
+                        m1.dibujaricaso(g2, x, y, bandera,true,negrita);
                         x+=30;                            
                     }
                     else if(texto.charAt(i-1) == 'v'){
-                         m1.dibujaricaso(g2, x, y, bandera,true);
+                         m1.dibujaricaso(g2, x, y, bandera,true,negrita);
                         x+=30; 
                     }
                     else if(texto.charAt(i-1)== 'w'){
-                        m1.dibujaricaso(g2, x, y, bandera,true);
+                        m1.dibujaricaso(g2, x, y, bandera,true,negrita);
                         x+=30;
                     }
                     else{
-                        m1.dibujari(g2, x, y, bandera,true);
+                        m1.dibujari(g2, x, y, bandera,true,negrita);
                         x+=60;
                     }
                     break;
                     }
                     case 'ó':{
                     if (i == 0){
-                      m1.dibujaro(g2, x, y, bandera,true);
+                      m1.dibujaro(g2, x, y, bandera,true,negrita);
                       x+=90; 
                     }
                     else if(texto.charAt(i-1) == 'b'){
-                        m1.dibujarocaso(g2, x, y, bandera,true);
+                        m1.dibujarocaso(g2, x, y, bandera,true,negrita);
                         x+=60;                            
                     }
                     else if(texto.charAt(i-1) == 'v'){
-                         m1.dibujarocaso(g2, x, y, bandera,true);
+                         m1.dibujarocaso(g2, x, y, bandera,true,negrita);
                         x+=60; 
                     }
                     else if(texto.charAt(i-1)== 'w'){
-                        m1.dibujarocaso(g2, x, y, bandera,true);
+                        m1.dibujarocaso(g2, x, y, bandera,true,negrita);
                         x+=60;
                     }
                     else{
-                    m1.dibujaro(g2, x, y, bandera,true);
+                    m1.dibujaro(g2, x, y, bandera,true,negrita);
                     x+=90;
                     }
                     break;
                     }
                     case 'ú':{
                     if(i==0){
-                      m1.dibujaru(g2, x, y, bandera,true);
+                      m1.dibujaru(g2, x, y, bandera,true,negrita);
                       x+=90;    
                     }
                     else if(texto.charAt(i-1) == 'b'){
-                        m1.dibujarucaso(g2, x, y, bandera,true);
+                        m1.dibujarucaso(g2, x, y, bandera,true,negrita);
                         x+=70;                            
                     }
                     else if(texto.charAt(i-1) == 'v'){
-                         m1.dibujarucaso(g2, x, y, bandera,true);
+                         m1.dibujarucaso(g2, x, y, bandera,true,negrita);
                         x+=70; 
                     }
                     else if(texto.charAt(i-1)== 'w'){
-                        m1.dibujarucaso(g2, x, y, bandera,true);
+                        m1.dibujarucaso(g2, x, y, bandera,true,negrita);
                         x+=70;
                     }
                     else{
-                        m1.dibujaru(g2, x, y, bandera,true);
+                        m1.dibujaru(g2, x, y, bandera,true,negrita);
                         x+=90;
                     }
                     break;
                     }
                     case 'Á':{
-                        m2.dibujarA(g2, x, y, bandera,true);
+                        m2.dibujarA(g2, x, y, bandera,true,negrita,subrayado,cursiva);
                         x+=110;
                         break;
                     }
                     case 'É':{
-                        m2.dibujarE(g2, x, y, bandera,true);
+                        m2.dibujarE(g2, x, y, bandera,true,negrita,subrayado,cursiva);
                         x+=110;
                         break;
                     }
                     case 'Í':{
-                        m2.dibujarI(g2, x, y, bandera,true);
+                        m2.dibujarI(g2, x, y, bandera,true,negrita,subrayado,cursiva);
                         x+=110;
                         break;
                     }
                     case 'Ó':{
-                        m2.dibujarO(g2, x, y, bandera,true);
+                        m2.dibujarO(g2, x, y, bandera,true,negrita,subrayado,cursiva);
                         x+=110;
                         break;
                     }
                     case 'Ú':{
-                        m2.dibujarU(g2, x, y, bandera,true);
+                        m2.dibujarU(g2, x, y, bandera,true,negrita,subrayado,cursiva);
                         x+=110;
                         break;
                     }
@@ -730,12 +733,11 @@ public class DibujarCanvas extends JComponent {
                     case '^':{
                         if(texto.charAt(i+1)=='K'){
                             System.out.println("cursiva");
+                            cursiva = true;
                             i+=1;
                         }
                         if(texto.charAt(i+1)=='S'){
-                            //Path2D.Double subr = new Path2D.Double();
-                            //subr.moveTo(x,y+10);
-                            //subr.lineTo(x, y);
+                            subrayado = true;
                             System.out.println("subrayado");
                             i+=1;
                         }
