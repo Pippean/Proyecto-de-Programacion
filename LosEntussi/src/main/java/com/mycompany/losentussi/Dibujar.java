@@ -80,48 +80,20 @@ public class Dibujar{
             @Override
             public void keyReleased(KeyEvent e) {
                 dc.setVisible(false);
-                color = menu.getItem(menu.getSelectedIndex());
-                
-                if(e.getKeyCode() != KeyEvent.VK_BACK_SPACE){  
-                    aux = t1.getText();
-                    txtadibujar = ""; 
-                    dc.setVisible(false);
-                    txtadibujar = aux;                    
-                    cargarDC(f,txtadibujar, color, bandera);
+                color = menu.getItem(menu.getSelectedIndex());                                 
+                aux = t1.getText();
+                txtadibujar = ""; 
+                dc.setVisible(false);
+                txtadibujar = aux;                    
+                cargarDC(f,txtadibujar, color, bandera);                
+                if (txtadibujar.isEmpty()) {
+                    //System.out.println("no hay nada");
                 }
-                else{
-                    if (txtadibujar.isEmpty()) {
-                        //System.out.println("no hay nada");
-                    }
-                    else{   
-                        aux = t1.getText();
-                        txtadibujar = ""; 
-                        dc.setVisible(false);
-                        txtadibujar = aux;                        
-                        cargarDC(f,txtadibujar, color, bandera);
-                    }                    
-                }
+                          
             }  
         };  
         
-        t1.addKeyListener(EventosdeTeclado);
-        
-        /*
-        ActionListener accionConvertir= new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e){
-                txtadibujar = t1.getText();
-                //Convertir.setEnabled(false);
-                //Borrar.setEnabled(true);   
-                Puntos.setEnabled(true);
-                t1.setEnabled(false);
-                color = menu.getItem(menu.getSelectedIndex());
-                cargarDC(f, txtadibujar, color, bandera);
-            }
-        };
-                       
-        //Convertir.addActionListener(accionConvertir);
-        */
+        t1.addKeyListener(EventosdeTeclado);                
         
         ActionListener accionBorrar= new ActionListener(){
             @Override
