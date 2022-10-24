@@ -19,7 +19,8 @@ public class DibujarCanvas extends JComponent {
     private boolean bandera;
     private boolean negrita = false;
     private boolean subrayado = false;    
-    private boolean cursiva = false;    
+    private boolean cursiva = false;  
+    private float  tamaño = 1;
     
     
     public DibujarCanvas(int w, int h, String texto, String color, boolean bandera ){
@@ -863,6 +864,24 @@ public class DibujarCanvas extends JComponent {
                         }
                         if (texto.charAt(i+1)=='T') {
                             i+=1;
+                            if(texto.charAt(i+1)== '1'){
+                                i+=1;
+                                if(texto.charAt(i+1)=='0'){
+                                    System.out.println("tamaño = 0");   
+                                }
+                                if(texto.charAt(i+1)=='2'){
+                                    System.out.println("tamaño = 2");
+                                }
+                                if(texto.charAt(i+1)=='4'){
+                                    System.out.println("tamaño = 4");
+                                }
+                                if(texto.charAt(i+1)=='6'){
+                                    System.out.println("tamaño = 6");
+                                }
+                                if(texto.charAt(i+1)=='8'){
+                                    System.out.println("tamaño = 8");
+                                }
+                            }
                         }
                         break;
                     }
