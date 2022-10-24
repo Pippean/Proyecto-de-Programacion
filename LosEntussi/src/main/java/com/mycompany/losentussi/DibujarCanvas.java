@@ -752,7 +752,7 @@ public class DibujarCanvas extends JComponent {
                         break;
                     }
                     case '^':{
-                        m3.dibujarWC(g2,x,y);
+                        m3.dibujarfC(g2,x,y);
                         x+=90;
                         break;
                     }
