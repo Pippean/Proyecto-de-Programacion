@@ -694,23 +694,19 @@ public class Minusculas {
         for(int i = 0; i<limite;i++){
             if (cursiva==true) {
                 k.moveTo(0+x, 143+y);
-                k.curveTo(100+x, 90+y, 20+x, -25+y, 50+x, 143+y);
+                k.curveTo(110+x, 90+y, 30+x, -25+y, 50+x, 143+y);
                 k.moveTo(43+x, 100+y);
-                k.curveTo(43+x, 100+y, 70+x, 40+y, 80+x, 55+y);
-                k.moveTo(43+x, 100+y);
-                k.curveTo(50+x, 100+y, 70+x, 115+y, 60+x, 120+y);
-                k.moveTo(60+x, 120+y);
-                k.curveTo(68+x, 127+y, 70+x, 155+y, 90+x, 143+y);
+                k.curveTo(50+x, 90+y, 90+x, 120+y, 45+x, 120+y);
+                k.moveTo(55+x, 120+y);
+                k.curveTo(60+x, 120+y, 80+x, 150+y, 80+x, 143+y);
             }
-            else{
+            else{                               
                 k.moveTo(0+x, 143+y);
                 k.curveTo(100+x, 90+y, 20+x, -25+y, 50+x, 143+y);
                 k.moveTo(43+x, 100+y);
-                k.curveTo(43+x, 100+y, 70+x, 40+y, 80+x, 55+y);
-                k.moveTo(43+x, 100+y);
-                k.curveTo(50+x, 100+y, 70+x, 115+y, 70+x, 120+y);
-                k.moveTo(70+x, 120+y);
-                k.curveTo(78+x, 127+y, 80+x, 155+y, 100+x, 143+y);
+                k.curveTo(50+x, 90+y, 90+x, 120+y, 45+x, 120+y);
+                k.moveTo(45+x, 120+y);
+                k.curveTo(50+x, 120+y, 70+x, 150+y, 80+x, 143+y);
             }
             
             if(subrayado==true){
