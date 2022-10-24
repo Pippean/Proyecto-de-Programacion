@@ -563,7 +563,7 @@ public class DibujarCanvas extends JComponent {
                     }
                     case 'S':{
                         m2.dibujarS(g2, x, y, bandera,negrita,subrayado,cursiva);
-                        x+=80;
+                        x+=90;
                         break;
                     }
                     case 'T':{
@@ -760,6 +760,9 @@ public class DibujarCanvas extends JComponent {
                                             i+=1;
                                         }
                                     }
+                                    else{                                
+                                        break;
+                                    }
                                 }
                                 if (texto.charAt(i+1)=='N') {
                                     negrita = true;
@@ -771,7 +774,13 @@ public class DibujarCanvas extends JComponent {
                                             i+=1;
                                         }
                                     }
+                                    else{                                
+                                        break;
+                                    }
                                 }
+                            }
+                            else{                                
+                                break;
                             }
                         }
                         if(texto.charAt(i+1)=='S'){
@@ -789,6 +798,9 @@ public class DibujarCanvas extends JComponent {
                                             i+=1;
                                         }
                                     }
+                                    else{                                
+                                        break;
+                                    }
                                 }
                                 if (texto.charAt(i+1)=='N') {
                                     negrita = true;
@@ -800,8 +812,15 @@ public class DibujarCanvas extends JComponent {
                                             i+=1;
                                         }
                                     }
+                                    else{                                
+                                        break;
+                                    }
                                 }
                             }
+                            else{                                
+                                break;
+                            }
+
                         }
                         if(texto.charAt(i+1)=='N'){                            
                             negrita = true;
@@ -818,6 +837,9 @@ public class DibujarCanvas extends JComponent {
                                             i+=1;
                                         }
                                     }
+                                    else{                                
+                                        break;
+                                    }
                                 }
                                 if (texto.charAt(i+1)=='K') {
                                     cursiva = true;
@@ -829,8 +851,15 @@ public class DibujarCanvas extends JComponent {
                                             i+=1;
                                         }
                                     }
+                                    else{                                
+                                        break;
+                                    }
                                 }
                             }
+                            else{                                
+                                break;
+                            }
+
                         }
                         if (texto.charAt(i+1)=='T') {
                             i+=1;
