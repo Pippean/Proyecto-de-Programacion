@@ -21,6 +21,7 @@ public class DibujarCanvas extends JComponent {
     private boolean subrayado = false;    
     private boolean cursiva = false;  
     private float  tamaño = 1;
+    private float limite = 1;
     
     
     public DibujarCanvas(int w, int h, String texto, String color, boolean bandera ){
@@ -92,9 +93,9 @@ public class DibujarCanvas extends JComponent {
         if(!"".equals(texto)){
             for (int i = 0; i < texto.length(); i++) {
                 char caracter = texto.charAt(i);
-                if(x>=1150){
+                if(x>=1150*limite){
                     if(texto.charAt(i)!= ' '){
-                        s1.guion(g2, x, y, bandera);
+                        s1.guion(g2, x, y, bandera,tamaño);
                     }
                     y+=180;
                     x=10;
@@ -104,13 +105,14 @@ public class DibujarCanvas extends JComponent {
                         subrayado = false;
                         negrita = false;
                         cursiva = false;
+                        tamaño = 1;
                         x+=40;                       
                         break;
                     }   
                     //Minusculas
                     case 'a':{
                     if(i== 0){
-                        m1.dibujara(g2, x, y, bandera,false,negrita, subrayado, cursiva);
+                        m1.dibujara(g2, x, y, bandera,false,negrita, subrayado, cursiva,tamaño);
                         x+=90;
                     }
                     else if(texto.charAt(i-1)=='b'){
@@ -127,7 +129,7 @@ public class DibujarCanvas extends JComponent {
                     }
 
                     else{
-                        m1.dibujara(g2, x, y, bandera,false,negrita,subrayado, cursiva);
+                        m1.dibujara(g2, x, y, bandera,false,negrita,subrayado, cursiva,tamaño);
                          x+=90;
                     }
                     break;
@@ -454,7 +456,7 @@ public class DibujarCanvas extends JComponent {
                     }
                     case '-':{
                         x+=25;
-                        s1.guion(g2, x, y, bandera);
+                        s1.guion(g2, x, y, bandera,tamaño);
                         x+=55;
                         break;
                     }
@@ -605,7 +607,7 @@ public class DibujarCanvas extends JComponent {
                     //Tildes:
                     case 'á':{
                     if(i== 0){
-                        m1.dibujara(g2, x, y, bandera,true, negrita,subrayado, cursiva);
+                        m1.dibujara(g2, x, y, bandera,true, negrita,subrayado, cursiva,tamaño);
                         x+=90;
                     }
                     else if(texto.charAt(i-1)=='b'){
@@ -622,7 +624,7 @@ public class DibujarCanvas extends JComponent {
                     }
 
                     else{
-                        m1.dibujara(g2, x, y, bandera,true,negrita,subrayado, cursiva);
+                        m1.dibujara(g2, x, y, bandera,true,negrita,subrayado, cursiva,tamaño);
                         x+=90;
                     }
                     break;
@@ -825,7 +827,7 @@ public class DibujarCanvas extends JComponent {
                         }
                         if(texto.charAt(i+1)=='N'){                            
                             negrita = true;
-                            i+=1;                            
+                            i+=1;
                             if (texto.charAt(i+1)=='+') {
                                 i+=1;
                                 if (texto.charAt(i+1)=='S') {
@@ -867,19 +869,29 @@ public class DibujarCanvas extends JComponent {
                             if(texto.charAt(i+1)== '1'){
                                 i+=1;
                                 if(texto.charAt(i+1)=='0'){
-                                    System.out.println("tamaño = 0");   
+                                    System.out.println("tamaño = 0");
+                                    tamaño = (float) 0.3;
+                                    limite = (float) 3.5;
                                 }
                                 if(texto.charAt(i+1)=='2'){
                                     System.out.println("tamaño = 2");
+                                    tamaño = (float) 0.5;
+                                    limite = 2;
                                 }
                                 if(texto.charAt(i+1)=='4'){
                                     System.out.println("tamaño = 4");
+                                    tamaño = (float) 0.7;
+                                    limite = (float) 1.44;
                                 }
                                 if(texto.charAt(i+1)=='6'){
                                     System.out.println("tamaño = 6");
+                                    tamaño = (float) 1.3;
+                                    limite = (float) 0.75;
                                 }
                                 if(texto.charAt(i+1)=='8'){
                                     System.out.println("tamaño = 8");
+                                    tamaño = (float) 1.5;
+                                    limite = (float) 0.63;
                                 }
                             }
                         }

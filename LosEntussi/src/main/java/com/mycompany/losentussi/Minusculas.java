@@ -12,7 +12,7 @@ public class Minusculas {
         
     }
     
-    public void dibujara(Graphics2D g2, int x, int y, boolean bandera, boolean tilde, boolean negrita, boolean subrayado, boolean cursiva){
+    public void dibujara(Graphics2D g2, int x, int y, boolean bandera, boolean tilde, boolean negrita, boolean subrayado, boolean cursiva, float tamaño){
         Path2D.Double a = new Path2D.Double();
         int limite = 1;
         if(negrita == true){
@@ -20,32 +20,32 @@ public class Minusculas {
         }
         for(int i = 0; i<limite; i++){
             if(cursiva == true){
-                a.moveTo(0+x, 143+y);
-                a.curveTo(20+x, 143+y, 20+x, 130+y, 20+x, 120+y);
-                a.moveTo(20+x, 120+y);
-                a.curveTo(30+x, 90+y, 80+x, 90+y, 70+x, 120+y);
-                a.moveTo(20+x, 120+y);
-                a.curveTo(10+x, 160+y, 60+x, 160+y, 70+x, 120+y);
-                a.moveTo(70+x, 120+y);
-                a.curveTo(70+x, 120+y, 70+x, 143+y, 90+x, 143+y);
+                a.moveTo((0+x)*tamaño, (143+y)*tamaño);
+                a.curveTo((20+x)*tamaño, (143+y)*tamaño, (20+x)*tamaño, (130+y)*tamaño, (20+x)*tamaño, (120+y)*tamaño);
+                a.moveTo((20+x)*tamaño, (120+y)*tamaño);
+                a.curveTo((30+x)*tamaño, (90+y)*tamaño, (80+x)*tamaño, (90+y)*tamaño, (70+x)*tamaño, (120+y)*tamaño);
+                a.moveTo((20+x)*tamaño, (120+y)*tamaño);
+                a.curveTo((10+x)*tamaño, (160+y)*tamaño, (60+x)*tamaño, (160+y)*tamaño, (70+x)*tamaño, (120+y)*tamaño);
+                a.moveTo((70+x)*tamaño, (120+y)*tamaño);
+                a.curveTo((70+x)*tamaño, (120+y)*tamaño, (70+x)*tamaño, (143+y)*tamaño, (90+x)*tamaño, (143+y)*tamaño);
             }
             else{
-                a.moveTo(0+x, 143+y);
-                a.curveTo(20+x, 143+y, 20+x, 130+y, 20+x, 120+y);
-                a.moveTo(20+x, 120+y);
-                a.curveTo(20+x, 90+y, 70+x, 90+y, 70+x, 120+y);
-                a.moveTo(20+x, 120+y);
-                a.curveTo(20+x, 160+y, 70+x, 160+y, 70+x, 120+y);
-                a.moveTo(70+x, 120+y);
-                a.curveTo(70+x, 120+y, 70+x, 143+y, 90+x, 143+y);
+                a.moveTo((0+x)*tamaño, (143+y)*tamaño);
+                a.curveTo((20+x)*tamaño, (143+y)*tamaño, (20+x)*tamaño, (130+y)*tamaño, (20+x)*tamaño, (120+y)*tamaño);
+                a.moveTo((20+x)*tamaño, (120+y)*tamaño);
+                a.curveTo((20+x)*tamaño, (90+y)*tamaño, (70+x)*tamaño, (90+y)*tamaño, (70+x)*tamaño, (120+y)*tamaño);
+                a.moveTo((20+x)*tamaño, (120+y)*tamaño);
+                a.curveTo((20+x)*tamaño, (160+y)*tamaño, (70+x)*tamaño, (160+y)*tamaño, (70+x)*tamaño, (120+y)*tamaño);
+                a.moveTo((70+x)*tamaño, (120+y)*tamaño);
+                a.curveTo((70+x)*tamaño, (120+y)*tamaño, (70+x)*tamaño, (143+y)*tamaño, (90+x)*tamaño, (143+y)*tamaño);
             }            
             if(subrayado==true){
-                a.moveTo(0+x, 153+y);
-                a.lineTo(90+x, 153+y);
+                a.moveTo((0+x)*tamaño, (153+y)*tamaño);
+                a.lineTo((90+x)*tamaño, (153+y)*tamaño);
             }
             if(tilde==true){
-                a.moveTo(45+x,90+y);
-                a.lineTo(70+x,70+y);
+                a.moveTo((45+x)*tamaño,(90+y)*tamaño);
+                a.lineTo((70+x)*tamaño,(70+y)*tamaño);
                 if(bandera == true){
                     g2.fillOval(45+x,90+y, 5, 5);
                     g2.fillOval(70+x,70+y, 5, 5);

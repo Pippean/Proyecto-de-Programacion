@@ -255,10 +255,10 @@ public class Simbolos {
         g2.draw(s);
     }
     
-    public void guion(Graphics2D g2, int x, int y,boolean bandera){
+    public void guion(Graphics2D g2, int x, int y,boolean bandera,float tamaño){
         Path2D.Double s = new Path2D.Double();
-        s.moveTo(5+x, 120+y);
-        s.curveTo(5+x, 120+y, 45+x, 120+y, 45+x, 120+y);
+        s.moveTo((5+x)*tamaño, (120+y)*tamaño);
+        s.curveTo((5+x)*tamaño, (120+y)*tamaño, (45+x)*tamaño, (120+y)*tamaño, (45+x)*tamaño, (120+y)*tamaño);
         if(bandera==true){
             g2.fillOval(5+x,120+y, 5, 5);
             g2.fillOval(45+x,120+y, 5, 5);
