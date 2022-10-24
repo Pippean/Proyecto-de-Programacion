@@ -119,7 +119,20 @@ public class Simbolos {
         g2.draw(s);
     }
     
-    public void comillas(Graphics2D g2, int x, int y,boolean bandera){
+    public void comillasabiertas(Graphics2D g2, int x, int y,boolean bandera){
+        Path2D.Double s = new Path2D.Double();
+        s.moveTo(23+x, 53+y);
+        s.curveTo(23+x, 53+y, 22+x, 65+y, 25+x, 73+y);
+        g2.fillOval(25+x,70+y,10,10);
+        if(bandera==true){
+            g2.fillOval(23+x,53+y,5,5);
+            g2.fillOval(22+x,65+y,5,5);
+            g2.fillOval(25+x,73+y,5,5);
+        }
+        g2.draw(s);
+    }
+    
+    public void comillascerradas(Graphics2D g2, int x, int y,boolean bandera){
         Path2D.Double s = new Path2D.Double();
         s.moveTo(28+x, 53+y);
         s.curveTo(28+x, 53+y, 28+x, 65+y, 25+x, 73+y);
