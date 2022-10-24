@@ -20,7 +20,12 @@ public class Mayusculas {
         }
         for(int i = 0; i<limite;i++){
             if(cursiva==true){
-                
+                A.moveTo(55+x, 53+y);
+                A.curveTo(0+x, 53+y, 0+x, 143+y, 25+x, 140+y);
+                A.moveTo(55+x, 53+y);
+                A.curveTo(80+x, 53+y, 80+x, 143+y, 25+x, 140+y);
+                A.moveTo(66+x, 110+y);
+                A.curveTo(67+x, 110+y, 70+x, 143+y, 100+x, 143+y);
             }
             else{
                 A.moveTo(40+x, 55+y);
@@ -56,9 +61,7 @@ public class Mayusculas {
             g2.fillOval(70+x,110+y, 5, 5);
             g2.fillOval(70+x,143+y, 5, 5);
             g2.fillOval(100+x,143+y, 5, 5);
-        }
-        
-        
+        }                
         g2.draw(A);
     }
     
@@ -70,7 +73,14 @@ public class Mayusculas {
         }
         for(int i = 0; i<limite;i++){
             if(cursiva==true){
-                
+                B.moveTo(0+x, 70+y);
+                B.curveTo(0+x,70+y, 15+x, 70+y, 20+x, 55+y);
+                B.moveTo(20+x, 55+y);
+                B.curveTo(20+x, 55+y, 10+x, 143+y, 10+x, 143+y);
+                B.moveTo(20+x, 55+y);
+                B.curveTo(70+x, 55+y, 60+x, 100+y, 30+x, 100+y);
+                B.moveTo(30+x, 100+y);
+                B.curveTo(50+x, 100+y, 60+x, 153+y, 0+x, 143+y);
             }
             else{
                 B.moveTo(0+x, 70+y);
@@ -115,7 +125,7 @@ public class Mayusculas {
                 C.curveTo(0+x, 45+y, 0+x, 170+y, 70+x, 143+y);
             }
             else{
-                C.moveTo(75+x, 60+y);
+                C.moveTo(70+x, 55+y);
                 C.curveTo(0+x, 45+y, 0+x, 153+y, 70+x, 143+y);
             }
             if(subrayado == true){
@@ -144,11 +154,11 @@ public class Mayusculas {
             if(cursiva==true){
                 D.moveTo(75+x, 65+y);
                 D.curveTo(60+x, 65+y, 60+x, 120+y, 52+x, 130+y);
-                D.moveTo(52+x, 130+y);       
+                D.moveTo(52+x, 130+y);
                 D.curveTo(32+x, 160+y, 0+x, 128+y, 30+x, 130+y);
-                D.moveTo(30+x, 130+y);       
+                D.moveTo(30+x, 130+y);
                 D.curveTo(40+x, 145+y, 100+x, 155+y, 110+x, 100+y);
-                D.moveTo(110+x, 100+y);      
+                D.moveTo(110+x, 100+y);
                 D.curveTo(110+x, 60+y, 65+x, 45+y, 50+x, 60+y);
             }
             else{
@@ -159,7 +169,7 @@ public class Mayusculas {
                 D.moveTo(30+x, 130+y);       
                 D.curveTo(40+x, 145+y, 100+x, 155+y, 110+x, 100+y);
                 D.moveTo(110+x, 100+y);       
-                D.curveTo(110+x, 60+y, 75+x, 45+y, 40+x, 55+y);
+                D.curveTo(110+x, 60+y, 75+x, 45+y, 30+x, 55+y);
             }
             if(subrayado == true){
                 D.moveTo(0+x, 153+y);
@@ -193,8 +203,15 @@ public class Mayusculas {
             limite = 5;
         }
         for(int i = 0; i<limite;i++){
-            if(cursiva==true){
-                
+            if(cursiva==true){                
+                E.moveTo(20+x, 60+y);
+                E.curveTo(30+x, 50+y, 50+x, 65+y, 80+x, 55+y);                
+                E.moveTo(50+x, 57+y);
+                E.curveTo(50+x, 55+y, 50+x, 133+y, 0+x, 143+y);                
+                E.moveTo(40+x, 100+y);
+                E.curveTo(40+x, 100+y, 60+x, 100+y, 55+x, 100+y);           
+                E.moveTo(0+x, 143+y);
+                E.curveTo(30+x, 130+y, 50+x, 145+y, 60+x, 143+y);
             }
             else{
                 E.moveTo(10+x, 60+y);
@@ -247,8 +264,13 @@ public class Mayusculas {
             limite = 5;
         }
         for(int i = 0; i<limite;i++){
-            if(cursiva==true){
-                
+            if(cursiva==true){                
+                F.moveTo(20+x, 60+y);
+                F.curveTo(30+x, 50+y, 50+x, 65+y, 80+x, 55+y);                
+                F.moveTo(50+x, 57+y);
+                F.curveTo(50+x, 55+y, 50+x, 133+y, 0+x, 143+y);                
+                F.moveTo(30+x, 100+y);
+                F.curveTo(30+x, 100+y, 50+x, 100+y, 65+x, 100+y);
             }
             else{
                 F.moveTo(10+x, 60+y);
@@ -343,7 +365,16 @@ public class Mayusculas {
         }
         for(int i = 0; i<limite;i++){
             if(cursiva==true){
-                
+                H.moveTo(10+x,55+y);
+                H.curveTo(10+x,60+y,40+x,60+y,40+x,55+y);
+                H.moveTo(40+x,55+y);
+                H.curveTo(50+x,170+y,0+x,170+y,0+x,140+y);
+                H.moveTo(0+x,140+y);
+                H.curveTo(0+x,120+y,60+x,80+y,60+x,80+y);
+                H.moveTo(60+x,80+y);
+                H.curveTo(90+x,70+y,70+x,40+y,60+x,60+y);
+                H.moveTo(60+x,60+y);
+                H.curveTo(60+x,150+y,80+x,143+y,90+x,143+y);
             }
             else{
                 H.moveTo(0+x,55+y);
@@ -436,7 +467,7 @@ public class Mayusculas {
                 J.moveTo(40+x,75+y);
                 J.curveTo(30+x,170+y,0+x,190+y,0+x,180+y);
                 J.moveTo(0+x,180+y);
-                J.curveTo(0+x,140+y,60+x,143+y,60+x,143+y);  
+                J.curveTo(0+x,140+y,60+x,143+y,60+x,143+y);
             }
             else{
                 J.moveTo(10+x,110+y);
@@ -474,7 +505,18 @@ public class Mayusculas {
         }
         for(int i = 0; i<limite;i++){
             if(cursiva==true){
-                
+                K.moveTo(40+x, 65+y);
+                K.curveTo(15+x, 68+y, 10+x, 60+y, 20+x, 57+y);
+                K.moveTo(20+x, 57+y);
+                K.curveTo(30+x, 52+y, 40+x, 60+y, 65+x, 55+y);
+                K.moveTo(65+x, 55+y);
+                K.curveTo(35+x, 65+y, 60+x, 110+y, 37+x, 130+y);
+                K.moveTo(37+x, 130+y);       
+                K.curveTo(20+x, 160+y, 0+x, 128+y, 20+x, 130+y);
+                K.moveTo(100+x, 55+y);
+                K.curveTo(65+x, 53+y, 80+x, 90+y, 52+x, 103+y);
+                K.moveTo(52+x, 103+y);
+                K.curveTo(80+x, 103+y, 52+x, 143+y, 100+x, 143+y);
             }
             else{
                 K.moveTo(30+x, 65+y);
@@ -649,9 +691,16 @@ public class Mayusculas {
         }
         for(int i = 0; i<limite;i++){
             if(cursiva==true){
-                
+                N.moveTo(45+x, 55+y);
+                N.curveTo(45+x, 65+y, 40+x, 110+y, 27+x, 130+y);
+                N.moveTo(27+x, 130+y);       
+                N.curveTo(10+x, 160+y, -20+x, 128+y, 10+x, 130+y);
+                N.moveTo(45+x, 55+y);       
+                N.curveTo(35+x, 65+y, 50+x, 110+y, 80+x, 143+y);
+                N.moveTo(80+x, 143+y);       
+                N.curveTo(85+x, 120+y, 90+x, 55+y, 130+x, 55+y);                                
             }
-            else{
+            else{                                
                 N.moveTo(25+x, 55+y);
                 N.curveTo(25+x, 65+y, 40+x, 110+y, 27+x, 130+y);
                 N.moveTo(27+x, 130+y);       
@@ -693,7 +742,16 @@ public class Mayusculas {
         }
         for(int i = 0; i<limite;i++){
             if(cursiva==true){
-                
+                Ñ.moveTo(45+x, 55+y);
+                Ñ.curveTo(45+x, 65+y, 40+x, 110+y, 27+x, 130+y);
+                Ñ.moveTo(27+x, 130+y);       
+                Ñ.curveTo(10+x, 160+y, -20+x, 128+y, 10+x, 130+y);
+                Ñ.moveTo(45+x, 55+y);       
+                Ñ.curveTo(35+x, 65+y, 50+x, 110+y, 80+x, 143+y);
+                Ñ.moveTo(80+x, 143+y);       
+                Ñ.curveTo(85+x, 120+y, 90+x, 55+y, 130+x, 55+y);                  
+                Ñ.moveTo(35+x, 40+y);       
+                Ñ.curveTo(45+x, 25+y, 75+x, 50+y, 115+x, 40+y);
             }
             else{
                 Ñ.moveTo(25+x, 55+y);
@@ -743,7 +801,12 @@ public class Mayusculas {
         }
         for(int i = 0; i<limite;i++){
             if(cursiva==true){
-                
+                O.moveTo(40+x, 143+y);
+                O.curveTo(0+x, 143+y,10+x,55+y,35+x,55+y);
+                O.moveTo(40+x, 143+y);
+                O.curveTo(80+x, 143+y, 100+x, 20+y, 45+x,60+y);
+                O.moveTo(45+x,60+y);
+                O.curveTo(40+x, 65+y, 35+x, 85+y, 40+x, 100+y);
             }
             else{
                 O.moveTo(40+x, 143+y);
@@ -798,7 +861,7 @@ public class Mayusculas {
                 P.moveTo(20+x,70+y);
                 P.curveTo(22+x,65+y,60+x,50+y,70+x, 55+y);
                 P.moveTo(70+x,55+y);
-                P.curveTo(90+x, 65+y, 60+x, 100+y, 20+x, 100+y);   
+                P.curveTo(90+x, 65+y, 60+x, 100+y, 20+x, 100+y); 
             }
             else{
                 P.moveTo(20+x,80+y);
@@ -842,7 +905,12 @@ public class Mayusculas {
         }
         for(int i = 0; i<limite;i++){
             if(cursiva==true){
-                
+                Q.moveTo(40+x, 130+y);
+                Q.curveTo(0+x, 143+y,20+x,55+y,60+x,55+y);
+                Q.moveTo(40+x, 143+y);
+                Q.curveTo(80+x, 143+y, 100+x, 55+y, 60+x, 55+y);
+                Q.moveTo(40+x, 143+y);
+                Q.curveTo(40+x, 120+y, 80+x, 143+y, 80+x, 140+y);
             }
             else{
                 Q.moveTo(40+x, 130+y);
@@ -889,7 +957,7 @@ public class Mayusculas {
                 R.moveTo(70+x,55+y);
                 R.curveTo(90+x, 65+y, 60+x, 100+y, 30+x, 100+y);
                 R.moveTo(30+x,100+y);
-                R.curveTo(40+x, 100+y, 50+x, 143+y, 70+x, 143+y);    
+                R.curveTo(40+x, 100+y, 50+x, 143+y, 70+x, 143+y);  
             }
             else{
                 R.moveTo(20+x,80+y);
@@ -939,7 +1007,12 @@ public class Mayusculas {
         }
         for(int i = 0; i<limite;i++){
             if(cursiva==true){
-                
+                S.moveTo(40+x,65+y);
+                S.curveTo(20+x,85+y,70+x,100+y,70+x,120+y);
+                S.moveTo(40+x,65+y);
+                S.curveTo(42+x,50+y,110+x,50+y,105+x,70+y);
+                S.moveTo(70+x,120+y);
+                S.curveTo(68+x,135+y,50+x,160+y,10+x,130+y);
             }
             else{
                 S.moveTo(10+x,65+y);
@@ -983,7 +1056,7 @@ public class Mayusculas {
                 T.moveTo(70+x,55+y);
                 T.curveTo(90+x,65+y,120+x,50+y,90+x,50+y);
                 T.moveTo(90+x,50+y);
-                T.curveTo(50+x,45+y,60+x,120+y,50+x,143+y);  
+                T.curveTo(50+x,45+y,60+x,120+y,50+x,143+y); 
             }
             else{
                 T.moveTo(35+x, 70+y);
@@ -1022,7 +1095,14 @@ public class Mayusculas {
         }
         for(int i = 0; i<limite;i++){
             if(cursiva==true){
-                
+                U.moveTo(45+x, 75+y);
+                U.curveTo(20+x,85+y,60+x,15+y,50+x,100+y);
+                U.moveTo(50+x,100+y);
+                U.curveTo(50+x,200+y,85+x,100+y,100+x,70+y);
+                U.moveTo(100+x,70+y);
+                U.curveTo(100+x,55+y,90+x,40+y,90+x,120+y);
+                U.moveTo(90+x,120+y);
+                U.curveTo(90+x,120+y,90+x,143+y,100+x,143+y);
             }
             else{
                 U.moveTo(25+x, 75+y);
@@ -1154,10 +1234,10 @@ public class Mayusculas {
         }
         for(int i = 0; i<limite;i++){
             if(cursiva==true){
-                X.moveTo(0+x,50+y);
-                X.curveTo(30+x,20+y,70+x,160+y,100+x,130+y);
+                X.moveTo(10+x,60+y);
+                X.curveTo(40+x,20+y,70+x,190+y,100+x,130+y);
                 X.moveTo(0+x, 135+y);
-                X.curveTo(30+x,150+y,70+x,20+y,100+x,60+y);  
+                X.curveTo(10+x,180+y,90+x,20+y,100+x,60+y);
             }
             else{
                 X.moveTo(0+x,60+y);
@@ -1192,7 +1272,18 @@ public class Mayusculas {
         }
         for(int i = 0; i<limite;i++){
             if(cursiva==true){
-                
+                Y.moveTo(25+x, 75+y);
+                Y.curveTo(0+x,85+y,40+x,15+y,40+x,100+y);
+                Y.moveTo(40+x,100+y);
+                Y.curveTo(50+x,110+y,60+x,100+y,70+x, 60+y);
+                Y.moveTo(70+x,60+y);
+                Y.curveTo(70+x,45+y,55+x,70+y,55+x,140+y);
+                Y.moveTo(55+x,140+y);
+                Y.curveTo(55+x,170+y,25+x,200+y,30+x,160+y);
+                Y.moveTo(30+x,160+y);
+                Y.curveTo(40+x,120+y,55+x,110+y,60+x,115+y);
+                Y.moveTo(60+x,115+y);
+                Y.curveTo(70+x,115+y,80+x,143+y,100+x,143+y); 
             }
             else{
                 Y.moveTo(25+x, 75+y);
@@ -1246,17 +1337,17 @@ public class Mayusculas {
         for(int i = 0; i<limite;i++){
             if(cursiva==true){
                 Z.moveTo(40+x,80+y);
-                Z.curveTo(0+x,70+y,10+x,55+y,100+x,60+y);
-                Z.curveTo(100+x,20+y,30+x,143+y,0+x,143+y);
-                Z.curveTo(10+x,110+y,90+x,175+y,110+x,120+y);
+                Z.curveTo(10+x,70+y,10+x,55+y,110+x,60+y);
+                Z.curveTo(90+x,20+y,30+x,143+y,0+x,135+y);
+                Z.curveTo(10+x,110+y,80+x,175+y,100+x,120+y);
                 Z.moveTo(30+x,100+y);
                 Z.lineTo(70+x,100+y);
             }
             else{
-                Z.moveTo(40+x,80+y);
-                Z.curveTo(0+x,70+y,10+x,55+y,100+x,60+y);
-                Z.curveTo(100+x,20+y,30+x,143+y,0+x,143+y);
-                Z.curveTo(10+x,110+y,90+x,175+y,110+x,120+y);
+                Z.moveTo(30+x,80+y);
+                Z.curveTo(0+x,70+y,0+x,55+y,100+x,60+y);
+                Z.curveTo(90+x,20+y,30+x,143+y,0+x,143+y);
+                Z.curveTo(10+x,110+y,90+x,175+y,100+x,120+y);
                 Z.moveTo(30+x,100+y);
                 Z.lineTo(70+x,100+y);
             }
