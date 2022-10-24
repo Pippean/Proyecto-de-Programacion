@@ -88,7 +88,7 @@ public class DibujarCanvas extends JComponent {
                 break;
             }
         }
-        
+        m2.dibujarW(g2, 10, 0, false, false, false, true);
         //Switch para dibujar los caracteres:
         int x= 10, y=0;
         if(!"".equals(texto)){
@@ -224,6 +224,7 @@ public class DibujarCanvas extends JComponent {
                     }
                     else if(texto.charAt(i-1)=='b'){
                       m1.dibujarlcaso(g2, x, y, bandera,negrita);
+                      x+=30;
                     }
                     else{
                       m1.dibujarl(g2, x, y, bandera,negrita);
