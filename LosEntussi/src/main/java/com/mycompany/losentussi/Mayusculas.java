@@ -12,7 +12,7 @@ public class Mayusculas {
     public Mayusculas(){
         
     }
-    public void dibujarA(Graphics2D g2, int x, int y, boolean bandera,boolean tilde,boolean negrita, boolean subrayado, boolean cursiva){
+    public void dibujarA(Graphics2D g2, int x, int y, boolean bandera,boolean tilde,boolean negrita, boolean subrayado, boolean cursiva, float tamaño){
         Path2D.Double A = new Path2D.Double();
         int limite = 1;
         if(negrita == true){
@@ -65,7 +65,7 @@ public class Mayusculas {
         g2.draw(A);
     }
     
-    public void dibujarB(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva){
+    public void dibujarB(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva, float tamaño){
         Path2D.Double B = new Path2D.Double();
         int limite = 1;
         if(negrita == true){
@@ -113,7 +113,7 @@ public class Mayusculas {
       
     }
     
-    public void dibujarC(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva){
+    public void dibujarC(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva, float tamaño){
         Path2D.Double C = new Path2D.Double();
         int limite = 1;
         if(negrita == true){
@@ -144,7 +144,7 @@ public class Mayusculas {
         g2.draw(C);
     }
     
-    public void dibujarD(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva){
+    public void dibujarD(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva, float tamaño){
         Path2D.Double D = new Path2D.Double();
         int limite = 1;
         if(negrita == true){
@@ -196,7 +196,7 @@ public class Mayusculas {
         g2.draw(D);
     }
     
-    public void dibujarE(Graphics2D g2, int x, int y, boolean bandera, boolean tilde,boolean negrita, boolean subrayado, boolean cursiva){
+    public void dibujarE(Graphics2D g2, int x, int y, boolean bandera, boolean tilde,boolean negrita, boolean subrayado, boolean cursiva, float tamaño){
         Path2D.Double E = new Path2D.Double();
         int limite = 1;
         if(negrita == true){
@@ -257,7 +257,7 @@ public class Mayusculas {
         g2.draw(E);
     } 
     
-    public void dibujarF(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva){
+    public void dibujarF(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva, float tamaño){
         Path2D.Double F = new Path2D.Double();
         int limite = 1;
         if(negrita == true){
@@ -301,7 +301,7 @@ public class Mayusculas {
         g2.draw(F);
     } 
     
-    public void dibujarG(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva){
+    public void dibujarG(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva, float tamaño){
         Path2D.Double G = new Path2D.Double();
         int limite = 1;
         if(negrita == true){
@@ -357,7 +357,7 @@ public class Mayusculas {
         g2.draw(G);
     } 
     
-    public void dibujarH(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva){
+    public void dibujarH(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva, float tamaño){
         Path2D.Double H = new Path2D.Double();
         int limite = 1;
         if(negrita == true){
@@ -409,7 +409,7 @@ public class Mayusculas {
         g2.draw(H);
     } 
     
-    public void dibujarI(Graphics2D g2, int x, int y, boolean bandera, boolean tilde,boolean negrita, boolean subrayado, boolean cursiva){
+    public void dibujarI(Graphics2D g2, int x, int y, boolean bandera, boolean tilde,boolean negrita, boolean subrayado, boolean cursiva, float tamaño){
         Path2D.Double I = new Path2D.Double();
        int limite = 1;
         if(negrita == true){
@@ -454,7 +454,7 @@ public class Mayusculas {
         g2.draw(I);
     } 
     
-    public void dibujarJ(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva){
+    public void dibujarJ(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva, float tamaño){
         Path2D.Double J = new Path2D.Double();
         int limite = 1;
         if(negrita == true){
@@ -497,7 +497,7 @@ public class Mayusculas {
         g2.draw(J);
     }
     
-    public void dibujarK(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva){
+    public void dibujarK(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva, float tamaño){
         Path2D.Double K = new Path2D.Double();
         int limite = 1;
         if(negrita == true){
@@ -563,7 +563,7 @@ public class Mayusculas {
         g2.draw(K);
     } 
     
-    public void dibujarL(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva){
+    public void dibujarL(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva, float tamaño){
         Path2D.Double L = new Path2D.Double();
         int limite = 1;
         if(negrita == true){
@@ -622,7 +622,7 @@ public class Mayusculas {
         g2.draw(L);
     } 
     
-    public void dibujarM(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva){
+    public void dibujarM(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva, float tamaño){
         Path2D.Double M = new Path2D.Double();
         int limite = 1;
         if(negrita == true){
@@ -683,7 +683,7 @@ public class Mayusculas {
         g2.draw(M);
     } 
     
-    public void dibujarN(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva){
+    public void dibujarN(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva, float tamaño){
         Path2D.Double N = new Path2D.Double();
         int limite = 1;
         if(negrita == true){
@@ -734,7 +734,7 @@ public class Mayusculas {
         g2.draw(N);
     } 
     
-    public void dibujarÑ(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva){
+    public void dibujarÑ(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva, float tamaño){
         Path2D.Double Ñ = new Path2D.Double();
         int limite = 1;
         if(negrita == true){
@@ -793,7 +793,7 @@ public class Mayusculas {
         g2.draw(Ñ);
     } 
     
-    public void dibujarO(Graphics2D g2, int x, int y, boolean bandera,boolean tilde,boolean negrita, boolean subrayado, boolean cursiva){
+    public void dibujarO(Graphics2D g2, int x, int y, boolean bandera,boolean tilde,boolean negrita, boolean subrayado, boolean cursiva, float tamaño){
         Path2D.Double O = new Path2D.Double();
         int limite = 1;
         if(negrita == true){
@@ -846,7 +846,7 @@ public class Mayusculas {
         g2.draw(O);
     }
     
-    public void dibujarP(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva){
+    public void dibujarP(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva, float tamaño){
         Path2D.Double P = new Path2D.Double();
         int limite = 1;
         if(negrita == true){
@@ -897,7 +897,7 @@ public class Mayusculas {
         g2.draw(P);
     }
     
-    public void dibujarQ(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva){
+    public void dibujarQ(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva, float tamaño){
         Path2D.Double Q = new Path2D.Double();
         int limite = 1;
         if(negrita == true){
@@ -940,7 +940,7 @@ public class Mayusculas {
         g2.draw(Q);
     } 
     
-    public void dibujarR(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva){
+    public void dibujarR(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva, float tamaño){
         Path2D.Double R = new Path2D.Double();
         int limite = 1;
         if(negrita == true){
@@ -999,7 +999,7 @@ public class Mayusculas {
         g2.draw(R);
     }
     
-    public void dibujarS(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva){
+    public void dibujarS(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva, float tamaño){
         Path2D.Double S = new Path2D.Double();
        int limite = 1;
         if(negrita == true){
@@ -1043,7 +1043,7 @@ public class Mayusculas {
         g2.draw(S);
     }
     
-    public void dibujarT(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva){
+    public void dibujarT(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva, float tamaño){
         Path2D.Double T = new Path2D.Double();
         int limite = 1;
         if(negrita == true){
@@ -1087,7 +1087,7 @@ public class Mayusculas {
         g2.draw(T);
     }
     
-    public void dibujarU(Graphics2D g2, int x, int y, boolean bandera,boolean tilde,boolean negrita, boolean subrayado, boolean cursiva){
+    public void dibujarU(Graphics2D g2, int x, int y, boolean bandera,boolean tilde,boolean negrita, boolean subrayado, boolean cursiva, float tamaño){
         Path2D.Double U = new Path2D.Double();
         int limite = 1;
         if(negrita == true){
@@ -1145,7 +1145,7 @@ public class Mayusculas {
         g2.draw(U);
     }
     
-    public void dibujarV(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva){
+    public void dibujarV(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva, float tamaño){
         Path2D.Double V = new Path2D.Double();
         int limite = 1;
         if(negrita == true){
@@ -1182,7 +1182,7 @@ public class Mayusculas {
         g2.draw(V);
     }
     
-    public void dibujarW(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva){
+    public void dibujarW(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva, float tamaño){
         Path2D.Double W = new Path2D.Double();
         int limite = 1;
         if(negrita == true){
@@ -1226,7 +1226,7 @@ public class Mayusculas {
         g2.draw(W);
     }
     
-    public void dibujarX(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva){
+    public void dibujarX(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva, float tamaño){
         Path2D.Double X = new Path2D.Double();
         int limite = 1;
         if(negrita == true){
@@ -1264,7 +1264,7 @@ public class Mayusculas {
         g2.draw(X);
     }
     
-    public void dibujarY(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva){
+    public void dibujarY(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva, float tamaño){
         Path2D.Double Y = new Path2D.Double();
         int limite = 1;
         if(negrita == true){
@@ -1328,7 +1328,7 @@ public class Mayusculas {
         g2.draw(Y);
     }
     
-    public void dibujarZ(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva){
+    public void dibujarZ(Graphics2D g2, int x, int y, boolean bandera,boolean negrita, boolean subrayado, boolean cursiva, float tamaño){
         Path2D.Double Z = new Path2D.Double();
         int limite = 1;
         if(negrita == true){
@@ -1360,12 +1360,12 @@ public class Mayusculas {
         if(bandera == true){ 
             g2.fillOval(30+x,80+y,5,5);
             g2.fillOval(0+x,70+y,5,5);
-            g2.fillOval(0+x,55+y,5,5);
+            g2.fillOval(0+x,55,5,5);
             g2.fillOval(100+x,60+y,5,5);
             g2.fillOval(90+x,20+y,5,5);
-            g2.fillOval(30+x,143+y,5,5);
-            g2.fillOval(0+x,143+y,5,5);
-            g2.fillOval(10+x,110+y,5,5);
+            g2.fillOval(30+x,143,5,5);
+            g2.fillOval(0+x,143,5,5);
+            g2.fillOval(10+x,110,5,5);
             g2.fillOval(90+x,175+y,5,5);
             g2.fillOval(100+x,120+y,5,5);
             g2.fillOval(30+x,100+y,5,5);
