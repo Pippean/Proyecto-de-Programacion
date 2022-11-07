@@ -106,6 +106,7 @@ public class DibujarCanvas extends JComponent {
                         negrita = false;
                         cursiva = false;
                         tamaño = 1;
+                        limite = 1;
                         x+=40;                       
                         break;
                     }   
@@ -892,7 +893,7 @@ public class DibujarCanvas extends JComponent {
                                     System.out.println("tamaño = 8");
                                     tamaño = (float) 1.5;
                                     limite = (float) 0.63;
-                                }
+                                } 
                             }
                         }
                         break;
