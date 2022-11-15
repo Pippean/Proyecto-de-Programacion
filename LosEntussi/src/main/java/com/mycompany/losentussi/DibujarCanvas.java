@@ -19,7 +19,12 @@ public class DibujarCanvas extends JComponent {
     private boolean bandera;
     private boolean negrita = false;
     private boolean subrayado = false;    
-    private boolean cursiva = false;    
+    private boolean cursiva = false;   
+    private float  tamaño = 1;
+    private float limite = 1;
+    private String n = "";
+    private String s = "";
+    
     
     
     public DibujarCanvas(int w, int h, String texto, String color, boolean bandera ){
@@ -40,7 +45,7 @@ public class DibujarCanvas extends JComponent {
             RenderingHints.KEY_ANTIALIASING,
             RenderingHints.VALUE_ANTIALIAS_ON);
         g2.setRenderingHints(rh);
-        
+       
         
         //Switch para el Choise Menu:
         switch(color){
@@ -109,7 +114,7 @@ public class DibujarCanvas extends JComponent {
                     //Minusculas
                     case 'a':{
                     if(i== 0){
-                        m1.dibujara(g2, x, y, bandera,false,negrita, subrayado, cursiva);
+                        m1.dibujara(g2, x, y, bandera,false,negrita, subrayado, cursiva,tamaño);
                         x+=90;
                     }
                     else if(texto.charAt(i-1)=='b'){
@@ -126,7 +131,7 @@ public class DibujarCanvas extends JComponent {
                     }
 
                     else{
-                        m1.dibujara(g2, x, y, bandera,false,negrita,subrayado, cursiva);
+                        m1.dibujara(g2, x, y, bandera,false,negrita,subrayado, cursiva,tamaño);
                          x+=90;
                     }
                     break;
@@ -604,7 +609,7 @@ public class DibujarCanvas extends JComponent {
                     //Tildes:
                     case 'á':{
                     if(i== 0){
-                        m1.dibujara(g2, x, y, bandera,true, negrita,subrayado, cursiva);
+                        m1.dibujara(g2, x, y, bandera,true, negrita,subrayado, cursiva,tamaño);
                         x+=90;
                     }
                     else if(texto.charAt(i-1)=='b'){
@@ -621,7 +626,7 @@ public class DibujarCanvas extends JComponent {
                     }
 
                     else{
-                        m1.dibujara(g2, x, y, bandera,true,negrita,subrayado, cursiva);
+                        m1.dibujara(g2, x, y, bandera,true,negrita,subrayado, cursiva,tamaño);
                         x+=90;
                     }
                     break;
@@ -863,8 +868,74 @@ public class DibujarCanvas extends JComponent {
                         }
                         if (texto.charAt(i+1)=='T') {
                             i+=1;
+                            if(texto.charAt(i+1)=='0'){
+                                System.out.println(tamaño = 0);
+                                tamaño = (float) 0.3;
+                                limite = (float) 3.5;
+                            }
+                            if(texto.charAt(i+1)=='2'){
+                                System.out.println(tamaño = 2);
+                                tamaño = (float) 0.5;
+                                limite = 2;
+                            }
+                            if(texto.charAt(i+1)=='4'){
+                                System.out.println(tamaño = 4);
+                                tamaño = (float) 0.7;
+                                limite = (float) 1.44;
+                            }
+                            if(texto.charAt(i+1)=='6'){
+                                System.out.println(tamaño = 6);
+                                tamaño = (float) 1.3;
+                                limite = (float) 0.75;
+                            }
+                            if(texto.charAt(i+1)=='8'){
+                                System.out.println(tamaño = 8);
+                                tamaño = (float) 1.5;
+                                limite = (float) 0.63;
+                                m1.dibujara(g2, x, y, bandera,false,negrita, subrayado, cursiva,tamaño);
+                                x+=90;
+                            } 
+                            break;
                         }
+      
+                        if(texto.charAt(i+1)=='X'){
+                            i+=1; 
+                            int aa;
+                            aa=digitos();
+                            x+=aa;
+                            if(texto.charAt(i+1)=='+'){
+                                i+=1;
+                                if(texto.charAt(i+1)=='Y'){
+                                    i+=1; 
+                                    int aa2;
+                                    aa2=digitos();
+                                    y+=aa2;
+                                }
+                            }
                         break;
+                        }
+                        
+                        if(texto.charAt(i+1)=='Y'){
+                            i+=1; 
+                            int aa2;
+                            aa2=digitos();
+                            y+=aa2;
+                            if(texto.charAt(i+1)=='+'){
+                                i+=1;
+                                if(texto.charAt(i+1)=='X'){
+                                    i+=1;
+                                    char []aux3 =texto.toCharArray();
+                                    for (int j = i+1; j < aux3.length; j++) {
+                                        if(Character.isDigit(aux3[j])){
+                                        s+=aux3[j];
+                                        }
+                                    }
+                                    x+=Integer.parseInt(s);
+                                    break;
+                                }
+                            }
+                        break;
+                        }  
                     }
                     default:{
                         break;
@@ -872,5 +943,15 @@ public class DibujarCanvas extends JComponent {
                 }    
             }
         }    
+    }
+    
+    public int digitos(){
+        char []aux2 = texto.toCharArray(); 
+        for (int j = 0; j < aux2.length; j++) {
+            if(Character.isDigit(aux2[j])){
+                n+=aux2[j];
+            }
+        }
+        return Integer.parseInt(n);
     }
 }
