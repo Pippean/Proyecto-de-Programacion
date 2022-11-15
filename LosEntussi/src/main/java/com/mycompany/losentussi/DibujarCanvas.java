@@ -11,11 +11,14 @@ public class DibujarCanvas extends JComponent {
     //Variables de la Clase:
     private int width;
     private int height;
+    private int rotate;
     private Minusculas m1;
     private Mayusculas m2;
     private Simbolos s1;
     private String texto;
     private String color;
+    private String n = "";
+    private String s = "";
     private boolean bandera;
     private boolean negrita = false;
     private boolean subrayado = false;    
@@ -85,6 +88,7 @@ public class DibujarCanvas extends JComponent {
                 break;
             }           
         }
+        
         
         //Switch para dibujar los caracteres:
         int x= 10, y=0;        
@@ -861,16 +865,74 @@ public class DibujarCanvas extends JComponent {
                             }
 
                         }
-                        if (texto.charAt(i+1)=='T') {
-                            i+=1;
+                        if(texto.charAt(i+1)=='A'){                            
+                            negrita = true;
+                            i+=1;                            
+                            if (texto.charAt(i+1)=='#') {
+                                i+=1;
+                                rotate = digitos();
+                                System.out.println(rotate);
+                                g2.rotate(Math.toRadians(rotate));
+                            }
+                            else{                                
+                                break;
+                            }
+
                         }
+                        if(texto.charAt(i+1)=='X'){
+                            i+=1; 
+                            int aa;
+                            aa=digitos();
+                            x+=aa;
+                            if(texto.charAt(i+1)=='+'){
+                                i+=1;
+                                if(texto.charAt(i+1)=='Y'){
+                                    i+=1; 
+                                    int aa2;
+                                    aa2=digitos();
+                                    y+=aa2;
+                                }
+                            }
                         break;
-                    }
+                        }
+
+                        if(texto.charAt(i+1)=='Y'){
+                            i+=1; 
+                            int aa2;
+                            aa2=digitos();
+                            y+=aa2;
+                            if(texto.charAt(i+1)=='+'){
+                                i+=1;
+                                if(texto.charAt(i+1)=='X'){
+                                    i+=1;
+                                    char []aux3 =texto.toCharArray();
+                                    for (int j = i+1; j < aux3.length; j++) {
+                                        if(Character.isDigit(aux3[j])){
+                                        s+=aux3[j];
+                                        }
+                                    }
+                                    x+=Integer.parseInt(s);
+                                    break;
+                                }
+                            }
+                        break;
+                        }                        
+                    }                    
                     default:{
                         break;
-                    } 
+                    }
+                    
                 }    
             }
         }    
+    }
+    public int digitos(){
+        char []aux2 = texto.toCharArray(); 
+        for (int j = 0; j < aux2.length; j++) {
+            if(Character.isDigit(aux2[j])){
+                n+=aux2[j];
+            }
+        }
+        return Integer.parseInt(n);
     }
 }
