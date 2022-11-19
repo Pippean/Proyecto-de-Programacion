@@ -896,13 +896,38 @@ public class DibujarCanvas extends JComponent {
                                 } 
                             }
                         }
+                        if (texto.charAt (i+1) == 'R'){
+                            texto = reves(texto);
+                        }
                         break;
                     }
+                    
                     default:{
                         break;
                     } 
                 }    
             }
         }    
+    }
+    public static String reves(String texto){
+        StringBuilder cadena1 = new StringBuilder(texto); 
+        String invertido = cadena1.reverse().toString();
+ 
+        String aux = "";
+        String nueva = "";
+        for(int i = 0; i<invertido.length();i++){ 
+           if(invertido.charAt(i) == ' '){
+               StringBuilder aux1 = new StringBuilder(aux);
+               String inv = aux1.reverse().toString();
+               nueva += inv + " ";
+               System.out.println(nueva);
+               aux = "";
+           }
+           else{
+                aux += invertido.charAt(i);
+           }
+            
+        }
+        return nueva;
     }
 }

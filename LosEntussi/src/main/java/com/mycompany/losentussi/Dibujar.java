@@ -82,7 +82,7 @@ public class Dibujar{
                 dc.setVisible(false);
                 color = menu.getItem(menu.getSelectedIndex());                                 
                 aux = t1.getText();
-                txtadibujar = ""; 
+                txtadibujar = " "; 
                 dc.setVisible(false);
                 txtadibujar = aux;                    
                 cargarDC(f,txtadibujar, color, bandera);                
