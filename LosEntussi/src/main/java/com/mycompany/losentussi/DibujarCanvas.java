@@ -106,8 +106,11 @@ public class DibujarCanvas extends JComponent {
                         negrita = false;
                         cursiva = false;
                         tamaño = 1;
-                        limite = 1;
-                        x+=40;                       
+                        limite = 1;    
+                        x+=40; 
+                        if(verificadorsubrayado(texto, i) == true){
+                            s1.guionbajo(g2, x, y, bandera);
+                        }                    
                         break;
                     }   
                     //Minusculas
@@ -897,7 +900,7 @@ public class DibujarCanvas extends JComponent {
                             }
                         }
                         if (texto.charAt (i+1) == 'R'){
-                            texto = reves(texto);
+                            texto = " " + reves(texto);
                         }
                         break;
                     }
@@ -912,7 +915,6 @@ public class DibujarCanvas extends JComponent {
     public static String reves(String texto){
         StringBuilder cadena1 = new StringBuilder(texto); 
         String invertido = cadena1.reverse().toString();
- 
         String aux = "";
         String nueva = "";
         for(int i = 0; i<invertido.length();i++){ 
@@ -926,8 +928,27 @@ public class DibujarCanvas extends JComponent {
            else{
                 aux += invertido.charAt(i);
            }
-            
         }
         return nueva;
+    }
+    public static boolean verificadorsubrayado(String texto, int i){
+        boolean bandera = false;
+        for(int j = i; j<texto.length();j++){
+            System.out.println(texto.charAt(j));
+            if(texto.charAt(j)== '+'){
+                if(texto.charAt(j+1)== 'S')
+                    bandera = true;
+            }
+            if(texto.charAt(j)=='^'){
+                if(texto.charAt(j+1)=='S')
+                    bandera = true;
+            }
+            if(texto.charAt(j)!=' '){
+                if(texto.charAt(j+1) == ' '){
+                   break; 
+                }
+            }
+        }
+        return bandera;
     }
 }
