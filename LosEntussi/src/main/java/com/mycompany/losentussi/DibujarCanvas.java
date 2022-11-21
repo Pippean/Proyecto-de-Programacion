@@ -926,7 +926,6 @@ public class DibujarCanvas extends JComponent {
                StringBuilder aux1 = new StringBuilder(aux);
                String inv = aux1.reverse().toString();
                nueva += inv + " ";
-               System.out.println(nueva);
                aux = "";
            }
            else{
@@ -939,21 +938,27 @@ public class DibujarCanvas extends JComponent {
         boolean bandera = false;
         for(int j = i+1; j<texto.length();j++){
              if(texto.charAt(j)=='^'){
-                if(texto.charAt(j+1)=='S')
+                if(texto.charAt(j+1)=='S'){
                     bandera = true;
+                    break;
+                }
+                    
                 if(texto.charAt(j+1) == 'K'){
                     j++;
                     if(texto.charAt(j+1) == '+'){
                         j++;
                         if(texto.charAt(j+1)== 'S'){
                             bandera = true;
+                            break;
                         }
                         if(texto.charAt(j+1)== 'N'){
                             j++;
                             if(texto.charAt(j+1)== '+'){
                                 j++;
                                 if(texto.charAt(j+1) == 'S'){
-                                    bandera = true;                                }
+                                    bandera = true;
+                                    break;
+                                }
                             }
                         }
                     }
@@ -983,7 +988,7 @@ public class DibujarCanvas extends JComponent {
             }
                 
         }
-     return bandera;    
+        return bandera;    
     }
        
 }
