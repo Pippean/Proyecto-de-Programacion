@@ -276,4 +276,14 @@ public class Simbolos {
         }
         g2.draw(s);
     }
+    public void seguirsubrayado(Graphics2D g2, int x, int y, boolean bandera){
+        Path2D.Double s = new Path2D.Double();
+        s.moveTo(0+x, 153+y);
+        s.lineTo(40+x, 153+y);
+        if(bandera==true){
+            g2.fillOval(0+x,153+y, 5, 5);
+            g2.fillOval(40+x,153+y, 5, 5);
+        }
+        g2.draw(s);
+    }
 }

@@ -19,7 +19,8 @@ public class DibujarCanvas extends JComponent {
     private boolean bandera;
     private boolean negrita = false;
     private boolean subrayado = false;    
-    private boolean cursiva = false;  
+    private boolean cursiva = false;
+    private boolean sub2 = false;
     private float  tamaño = 1;
     private float limite = 1;
     
@@ -102,15 +103,18 @@ public class DibujarCanvas extends JComponent {
                 }                
                 switch(caracter){
                     case ' ':{
-                        subrayado = false;
+                        if(verificadorsubrayado(texto, i) == true && subrayado == true){
+                            s1.seguirsubrayado(g2, x, y, bandera);
+                        }
+                        else{
+                           subrayado = false;    
+                        }                        
                         negrita = false;
                         cursiva = false;
                         tamaño = 1;
                         limite = 1;    
                         x+=40; 
-                        if(verificadorsubrayado(texto, i) == true){
-                            s1.guionbajo(g2, x, y, bandera);
-                        }                    
+                                           
                         break;
                     }   
                     //Minusculas
@@ -933,22 +937,53 @@ public class DibujarCanvas extends JComponent {
     }
     public static boolean verificadorsubrayado(String texto, int i){
         boolean bandera = false;
-        for(int j = i; j<texto.length();j++){
-            System.out.println(texto.charAt(j));
-            if(texto.charAt(j)== '+'){
-                if(texto.charAt(j+1)== 'S')
-                    bandera = true;
-            }
-            if(texto.charAt(j)=='^'){
+        for(int j = i+1; j<texto.length();j++){
+             if(texto.charAt(j)=='^'){
                 if(texto.charAt(j+1)=='S')
                     bandera = true;
-            }
-            if(texto.charAt(j)!=' '){
-                if(texto.charAt(j+1) == ' '){
-                   break; 
+                if(texto.charAt(j+1) == 'K'){
+                    j++;
+                    if(texto.charAt(j+1) == '+'){
+                        j++;
+                        if(texto.charAt(j+1)== 'S'){
+                            bandera = true;
+                        }
+                        if(texto.charAt(j+1)== 'N'){
+                            j++;
+                            if(texto.charAt(j+1)== '+'){
+                                j++;
+                                if(texto.charAt(j+1) == 'S'){
+                                    bandera = true;                                }
+                            }
+                        }
+                    }
+                }
+                if(texto.charAt(j+1) == 'N'){
+                    j++;
+                    if(texto.charAt(j+1) == '+'){
+                        j++;
+                        if(texto.charAt(j+1)== 'S'){
+                            bandera = true;
+                        }
+                        if(texto.charAt(j+1)== 'K'){
+                            j++;
+                            if(texto.charAt(j+1)== '+'){
+                                j++;
+                                if(texto.charAt(j+1) == 'S'){
+                                    bandera = true;                                }
+                            }
+                        }
+                    }
                 }
             }
+            else if(texto.charAt(j) == ' '){ 
+            }
+            else{
+                break;
+            }
+                
         }
-        return bandera;
+     return bandera;    
     }
+       
 }
