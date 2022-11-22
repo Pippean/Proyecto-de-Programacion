@@ -16,6 +16,8 @@ public class DibujarCanvas extends JComponent {
     private Simbolos s1;
     private String texto;
     private String color;
+    private String s="";
+    private String n="";
     private boolean bandera;
     private boolean negrita = false;
     private boolean subrayado = false;    
@@ -906,6 +908,34 @@ public class DibujarCanvas extends JComponent {
                         if (texto.charAt (i+1) == 'R'){
                             texto = " " + reves(texto);
                         }
+                        
+                    if(texto.charAt(i+1)=='M'){
+                        int bandera2=0;
+                        i+=1;
+                        if(texto.charAt(i+1)=='('){
+                            i+=1;
+                            char []aux3 =texto.toCharArray();
+                            for (int w = 0; w < aux3.length; w++) {
+                                if(Character.isDigit(aux3[w]) && bandera2==0){
+                                    s+=aux3[w];                                
+                                    i+=1;
+                                }
+                                if(aux3[w]==','){
+                                    i+=1;
+                                    bandera2++;
+                                }
+                                if(Character.isDigit(aux3[w]) && bandera2==1){
+                                    i+=1;
+                                    n+=aux3[w];
+                                }                              
+                            }
+                        }                            
+                        if(texto.charAt(i+1)==')'){
+                            x+=Integer.parseInt(s);
+                            y+=Integer.parseInt(n);
+                            i+=1;
+                        }
+                    }
                         break;
                     }
                     
