@@ -12,7 +12,7 @@ public class Mayusculas {
     public Mayusculas(){
         
     }
-    public void dibujarA(Graphics2D g2, int x, int y, boolean bandera,boolean tilde,boolean negrita, boolean subrayado, boolean cursiva){
+    public void dibujarA(Graphics2D g2, int x, int y, int angulo, boolean banderaang, boolean bandera,boolean tilde,boolean negrita, boolean subrayado, boolean cursiva){
         Path2D.Double A = new Path2D.Double();
         int limite = 1;
         if(negrita == true){
@@ -46,6 +46,9 @@ public class Mayusculas {
                 g2.fillOval(40+x, 50+y, 5, 5);
                 g2.fillOval(60+x,30+y , 5, 5);
                 }
+            }
+            if (banderaang==true){
+                g2.rotate(angulo, 50, 100);
             }
             x+=1;
             

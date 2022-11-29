@@ -10,7 +10,8 @@ import javax.swing.*;
 public class DibujarCanvas extends JComponent {
     //Variables de la Clase:
     private int width;
-    private int height;    
+    private int height; 
+    private int angulo = 0;
     private Minusculas m1;
     private Mayusculas m2;
     private Simbolos s1;
@@ -22,7 +23,8 @@ public class DibujarCanvas extends JComponent {
     private boolean negrita = false;
     private boolean subrayado = false;    
     private boolean cursiva = false;
-    private boolean sub2 = false;   
+    private boolean sub2 = false;  
+    private boolean banderaang = false;
     private float  tamaño = 1;
     private float limite = 1;
     
@@ -110,7 +112,8 @@ public class DibujarCanvas extends JComponent {
                         }
                         else{
                            subrayado = false;    
-                        }                        
+                        }
+                        banderaang = false;
                         negrita = false;
                         cursiva = false;
                         tamaño = 1;
@@ -480,7 +483,7 @@ public class DibujarCanvas extends JComponent {
                     //Mayusculas
                     
                     case 'A':{
-                        m2.dibujarA(g2, x, y, bandera,false,negrita,subrayado,cursiva);
+                        m2.dibujarA(g2, x, y, angulo, banderaang, bandera,false,negrita,subrayado,cursiva);
                         x+=110;
                         break;
                     }
@@ -732,7 +735,7 @@ public class DibujarCanvas extends JComponent {
                     break;
                     }
                     case 'Á':{
-                        m2.dibujarA(g2, x, y, bandera,true,negrita, subrayado, cursiva);
+                        m2.dibujarA(g2, x, y, angulo, banderaang, bandera,true,negrita, subrayado, cursiva);
                         x+=110;
                         break;
                     }
@@ -909,33 +912,53 @@ public class DibujarCanvas extends JComponent {
                             texto = " " + reves(texto);
                         }
                         
-                    if(texto.charAt(i+1)=='M'){
-                        int bandera2=0;
-                        i+=1;
-                        if(texto.charAt(i+1)=='('){
+                        if(texto.charAt(i+1)=='M'){
+                            int bandera2=0;
                             i+=1;
-                            char []aux3 =texto.toCharArray();
-                            for (int w = 0; w < aux3.length; w++) {
-                                if(Character.isDigit(aux3[w]) && bandera2==0){
-                                    s+=aux3[w];                                
-                                    i+=1;
+                            if(texto.charAt(i+1)=='('){
+                                i+=1;
+                                char []aux3 =texto.toCharArray();
+                                for (int w = 0; w < aux3.length; w++) {
+                                    if(Character.isDigit(aux3[w]) && bandera2==0){
+                                        s+=aux3[w];                                
+                                        i+=1;
+                                    }
+                                    if(aux3[w]==','){
+                                        i+=1;
+                                        bandera2++;
+                                    }
+                                    if(Character.isDigit(aux3[w]) && bandera2==1){
+                                        i+=1;
+                                        n+=aux3[w];
+                                    }                              
                                 }
-                                if(aux3[w]==','){
-                                    i+=1;
-                                    bandera2++;
-                                }
-                                if(Character.isDigit(aux3[w]) && bandera2==1){
-                                    i+=1;
-                                    n+=aux3[w];
-                                }                              
+                            }                            
+                            if(texto.charAt(i+1)==')'){
+                                x+=Integer.parseInt(s);
+                                y+=Integer.parseInt(n);
+                                i+=1;
                             }
-                        }                            
-                        if(texto.charAt(i+1)==')'){
-                            x+=Integer.parseInt(s);
-                            y+=Integer.parseInt(n);
-                            i+=1;
                         }
-                    }
+                        
+                        if (texto.charAt(i+1)=='A') {
+                            i+=1;                            
+                            angulo = digitos();
+                            
+                            g2.rotate(Math.toRadians(angulo), x+50, y+100);
+                        }
+                        if (texto.charAt(i+1)=='a') {
+                            i+=1;
+                            banderaang = true;
+                            if (banderaang==true) {
+                                angulo = digitos();                            
+                                g2.rotate(Math.toRadians(angulo), x+50, y+100);
+                            }
+                            else{
+                                angulo=0;
+                                g2.rotate(0);
+                            }
+                        }
+                        
                         break;
                     }
                     
@@ -945,7 +968,8 @@ public class DibujarCanvas extends JComponent {
                 }    
             }
         }    
-    }
+    }        
+    
     public static String reves(String texto){
         StringBuilder cadena1 = new StringBuilder(texto); 
         String invertido = cadena1.reverse().toString();
@@ -1019,6 +1043,16 @@ public class DibujarCanvas extends JComponent {
                 
         }
         return bandera;    
+    }
+    
+    public int digitos(){
+        char []aux2 = texto.toCharArray(); 
+        for (int j = 0; j < aux2.length; j++) {
+            if(Character.isDigit(aux2[j])){
+                n+=aux2[j];
+            }
+        }
+        return Integer.parseInt(n);
     }
        
 }
