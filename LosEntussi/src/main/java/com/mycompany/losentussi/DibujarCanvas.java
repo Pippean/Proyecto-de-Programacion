@@ -1,6 +1,5 @@
 package com.mycompany.losentussi;
 import java.awt.*;
-
 import javax.swing.*;
 
 /**
@@ -11,21 +10,21 @@ import javax.swing.*;
 public class DibujarCanvas extends JComponent {
     //Variables de la Clase:
     private int width;
-    private int height;
+    private int height;    
     private Minusculas m1;
     private Mayusculas m2;
     private Simbolos s1;
     private String texto;
     private String color;
+    private String s="";
+    private String n="";
     private boolean bandera;
     private boolean negrita = false;
     private boolean subrayado = false;    
-    private boolean cursiva = false;   
+    private boolean cursiva = false;
+    private boolean sub2 = false;   
     private float  tamaño = 1;
     private float limite = 1;
-    private String n = "";
-    private String s = "";
-    
     
     
     public DibujarCanvas(int w, int h, String texto, String color, boolean bandera ){
@@ -46,7 +45,7 @@ public class DibujarCanvas extends JComponent {
             RenderingHints.KEY_ANTIALIASING,
             RenderingHints.VALUE_ANTIALIAS_ON);
         g2.setRenderingHints(rh);
-       
+        
         
         //Switch para el Choise Menu:
         switch(color){
@@ -97,19 +96,27 @@ public class DibujarCanvas extends JComponent {
         if(!"".equals(texto)){
             for (int i = 0; i < texto.length(); i++) {
                 char caracter = texto.charAt(i);
-                if(x>=1150){
+                if(x>=1150*limite){
                     if(texto.charAt(i)!= ' '){
-                        s1.guion(g2, x, y, bandera);
+                        s1.guion(g2, x, y, bandera,tamaño);
                     }
                     y+=180;
                     x=10;
                 }                
                 switch(caracter){
                     case ' ':{
-                        subrayado = false;
+                        if(verificadorsubrayado(texto, i) == true && subrayado == true){
+                            s1.seguirsubrayado(g2, x, y, bandera);
+                        }
+                        else{
+                           subrayado = false;    
+                        }                        
                         negrita = false;
                         cursiva = false;
-                        x+=40;                       
+                        tamaño = 1;
+                        limite = 1;    
+                        x+=40; 
+                                           
                         break;
                     }   
                     //Minusculas
@@ -119,15 +126,15 @@ public class DibujarCanvas extends JComponent {
                         x+=90;
                     }
                     else if(texto.charAt(i-1)=='b'){
-                        m1.dibujaracaso(g2, x, y, bandera,false,negrita, subrayado, cursiva,tamaño);
+                        m1.dibujaracaso(g2, x, y, bandera,false,negrita, subrayado, cursiva);
                         x+=70;
                     }
                     else if(texto.charAt(i-1) == 'v'){
-                        m1.dibujaracaso(g2, x, y, bandera,false,negrita, subrayado, cursiva,tamaño);
+                        m1.dibujaracaso(g2, x, y, bandera,false,negrita, subrayado, cursiva);
                         x+=70; 
                     }
                     else if(texto.charAt(i-1)== 'w'){
-                        m1.dibujaracaso(g2, x, y, bandera,false,negrita, subrayado, cursiva,tamaño);
+                        m1.dibujaracaso(g2, x, y, bandera,false,negrita, subrayado, cursiva);
                         x+=70;
                     }
 
@@ -459,7 +466,7 @@ public class DibujarCanvas extends JComponent {
                     }
                     case '-':{
                         x+=25;
-                        s1.guion(g2, x, y, bandera);
+                        s1.guion(g2, x, y, bandera,tamaño);
                         x+=55;
                         break;
                     }
@@ -614,15 +621,15 @@ public class DibujarCanvas extends JComponent {
                         x+=90;
                     }
                     else if(texto.charAt(i-1)=='b'){
-                        m1.dibujaracaso(g2, x, y, bandera,true,negrita, subrayado, cursiva,tamaño);
+                        m1.dibujaracaso(g2, x, y, bandera,true,negrita, subrayado, cursiva);
                         x+=70;
                     }
                     else if(texto.charAt(i-1) == 'v'){
-                        m1.dibujaracaso(g2, x, y, bandera,true,negrita, subrayado, cursiva,tamaño);
+                        m1.dibujaracaso(g2, x, y, bandera,true,negrita, subrayado, cursiva);
                         x+=70; 
                     }
                     else if(texto.charAt(i-1)== 'w'){
-                        m1.dibujaracaso(g2, x, y, bandera,true,negrita, subrayado, cursiva,tamaño);
+                        m1.dibujaracaso(g2, x, y, bandera,true,negrita, subrayado, cursiva);
                         x+=70;
                     }
 
@@ -830,7 +837,7 @@ public class DibujarCanvas extends JComponent {
                         }
                         if(texto.charAt(i+1)=='N'){                            
                             negrita = true;
-                            i+=1;                            
+                            i+=1;
                             if (texto.charAt(i+1)=='+') {
                                 i+=1;
                                 if (texto.charAt(i+1)=='S') {
@@ -869,66 +876,69 @@ public class DibujarCanvas extends JComponent {
                         }
                         if (texto.charAt(i+1)=='T') {
                             i+=1;
-                            if(texto.charAt(i+1)=='0'){
-                                System.out.println(tamaño = 0);
-                                tamaño = (float) 0.3;
-                                limite = (float) 3.5;
+                            if(texto.charAt(i+1)== '1'){
+                                i+=1;
+                                if(texto.charAt(i+1)=='0'){
+                                    System.out.println("tamaño = 0");
+                                    tamaño = (float) 0.3;
+                                    limite = (float) 3.5;
+                                }
+                                if(texto.charAt(i+1)=='2'){
+                                    System.out.println("tamaño = 2");
+                                    tamaño = (float) 0.5;
+                                    limite = 2;
+                                }
+                                if(texto.charAt(i+1)=='4'){
+                                    System.out.println("tamaño = 4");
+                                    tamaño = (float) 0.7;
+                                    limite = (float) 1.44;
+                                }
+                                if(texto.charAt(i+1)=='6'){
+                                    System.out.println("tamaño = 6");
+                                    tamaño = (float) 1.3;
+                                    limite = (float) 0.75;
+                                }
+                                if(texto.charAt(i+1)=='8'){
+                                    System.out.println("tamaño = 8");
+                                    tamaño = (float) 1.5;
+                                    limite = (float) 0.63;
+                                } 
                             }
-                            if(texto.charAt(i+1)=='2'){
-                                System.out.println(tamaño = 2);
-                                tamaño = (float) 0.5;
-                                limite = 2;
-                            }
-                            if(texto.charAt(i+1)=='4'){
-                                System.out.println(tamaño = 4);
-                                tamaño = (float) 0.7;
-                                limite = (float) 1.44;
-                            }
-                            if(texto.charAt(i+1)=='6'){
-                                System.out.println(tamaño = 6);
-                                tamaño = (float) 1.3;
-                                limite = (float) 0.75;
-                            }
-                            if(texto.charAt(i+1)=='8'){
-                                System.out.println(tamaño = 8);
-                                tamaño = (float) 1.5;
-                                limite = (float) 0.63;
-                                m1.dibujara(g2, x, y, bandera,false,negrita, subrayado, cursiva,tamaño);
-                                x+=90;
-                            } 
-                            break;
+                        }
+                        if (texto.charAt (i+1) == 'R'){
+                            texto = " " + reves(texto);
                         }
                         
-                        if(texto.charAt(i+1)=='M'){
-                            int bandera=0;
+                    if(texto.charAt(i+1)=='M'){
+                        int bandera2=0;
+                        i+=1;
+                        if(texto.charAt(i+1)=='('){
                             i+=1;
-                            if(texto.charAt(i+1)=='('){
-                                i+=1;
-                                char []aux3 =texto.toCharArray();
-                                for (int j = 0; j < aux3.length; j++) {
-                                    if(Character.isDigit(aux3[j]) && bandera==0){
-                                        s+=aux3[j];
-                                        System.out.println("s:  "+s);
-                                        i+=1;
-                                    }
-                                    if(aux3[j]==','){
-                                        i+=1;
-                                        bandera++;
-                                    }
-                                    if(Character.isDigit(aux3[j]) && bandera==1){
-                                        i+=1;
-                                        n+=aux3[j];
-                                    }                              
+                            char []aux3 =texto.toCharArray();
+                            for (int w = 0; w < aux3.length; w++) {
+                                if(Character.isDigit(aux3[w]) && bandera2==0){
+                                    s+=aux3[w];                                
+                                    i+=1;
                                 }
+                                if(aux3[w]==','){
+                                    i+=1;
+                                    bandera2++;
+                                }
+                                if(Character.isDigit(aux3[w]) && bandera2==1){
+                                    i+=1;
+                                    n+=aux3[w];
+                                }                              
                             }
-                            
-                            if(texto.charAt(i+1)==')'){
-                                x+=Integer.parseInt(s);
-                                y+=Integer.parseInt(n);
-                                i+=1;
-                                }
+                        }                            
+                        if(texto.charAt(i+1)==')'){
+                            x+=Integer.parseInt(s);
+                            y+=Integer.parseInt(n);
+                            i+=1;
                         }
                     }
+                        break;
+                    }
+                    
                     default:{
                         break;
                     } 
@@ -936,4 +946,79 @@ public class DibujarCanvas extends JComponent {
             }
         }    
     }
+    public static String reves(String texto){
+        StringBuilder cadena1 = new StringBuilder(texto); 
+        String invertido = cadena1.reverse().toString();
+        String aux = "";
+        String nueva = "";
+        for(int i = 0; i<invertido.length();i++){ 
+           if(invertido.charAt(i) == ' '){
+               StringBuilder aux1 = new StringBuilder(aux);
+               String inv = aux1.reverse().toString();
+               nueva += inv + " ";
+               aux = "";
+           }
+           else{
+                aux += invertido.charAt(i);
+           }
+        }
+        return nueva;
+    }
+    public static boolean verificadorsubrayado(String texto, int i){
+        boolean bandera = false;
+        for(int j = i+1; j<texto.length();j++){
+             if(texto.charAt(j)=='^'){
+                if(texto.charAt(j+1)=='S'){
+                    bandera = true;
+                    break;
+                }
+                    
+                if(texto.charAt(j+1) == 'K'){
+                    j++;
+                    if(texto.charAt(j+1) == '+'){
+                        j++;
+                        if(texto.charAt(j+1)== 'S'){
+                            bandera = true;
+                            break;
+                        }
+                        if(texto.charAt(j+1)== 'N'){
+                            j++;
+                            if(texto.charAt(j+1)== '+'){
+                                j++;
+                                if(texto.charAt(j+1) == 'S'){
+                                    bandera = true;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                }
+                if(texto.charAt(j+1) == 'N'){
+                    j++;
+                    if(texto.charAt(j+1) == '+'){
+                        j++;
+                        if(texto.charAt(j+1)== 'S'){
+                            bandera = true;
+                        }
+                        if(texto.charAt(j+1)== 'K'){
+                            j++;
+                            if(texto.charAt(j+1)== '+'){
+                                j++;
+                                if(texto.charAt(j+1) == 'S'){
+                                    bandera = true;                                }
+                            }
+                        }
+                    }
+                }
+            }
+            else if(texto.charAt(j) == ' '){ 
+            }
+            else{
+                break;
+            }
+                
+        }
+        return bandera;    
+    }
+       
 }
