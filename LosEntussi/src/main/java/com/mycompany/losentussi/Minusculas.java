@@ -69,7 +69,7 @@ public class Minusculas {
             }
         g2.draw(a);
     }
-    public void dibujaracaso(Graphics2D g2, int x, int y, boolean bandera, boolean tilde, boolean negrita, boolean subrayado, boolean cursiva){
+    public void dibujaracaso(Graphics2D g2, int x, int y, boolean bandera, boolean tilde, boolean negrita, boolean subrayado, boolean cursiva, float tamaño){
         Path2D.Double a1 = new Path2D.Double();
         int limite = 1;
         if(negrita == true){
@@ -77,30 +77,30 @@ public class Minusculas {
         }
         for(int i = 0; i<limite;i++){
             if (cursiva==true) {
-                a1.moveTo(0+x, 120+y);
-                a1.curveTo(10+x, 90+y, 60+x, 90+y, 50+x, 120+y);
-                a1.moveTo(0+x, 120+y);
-                a1.curveTo(-10+x, 160+y, 40+x, 160+y, 50+x, 120+y);
-                a1.moveTo(50+x, 120+y);
-                a1.curveTo(50+x, 120+y, 50+x, 143+y, 70+x, 143+y);                
+                a1.moveTo((0+x)*tamaño, (120+y)*tamaño);
+                a1.curveTo((10+x)*tamaño, (90+y)*tamaño, (60+x)*tamaño, (90+y)*tamaño, (50+x)*tamaño, (120+y)*tamaño);
+                a1.moveTo((0+x)*tamaño, (120+y)*tamaño);
+                a1.curveTo((-10+x)*tamaño, (160+y)*tamaño, (40+x)*tamaño, (160+y)*tamaño, (50+x)*tamaño, (120+y)*tamaño);
+                a1.moveTo((50+x)*tamaño, (120+y)*tamaño);
+                a1.curveTo((50+x)*tamaño, (120+y)*tamaño, (50+x)*tamaño, (143+y)*tamaño, (70+x)*tamaño, (143+y)*tamaño);                
             }
             else{
-                a1.moveTo(0+x, 120+y);
-                a1.curveTo(0+x, 90+y, 50+x, 90+y, 50+x, 120+y);
-                a1.moveTo(0+x, 120+y);
-                a1.curveTo(0+x, 160+y, 50+x, 160+y, 50+x, 120+y);
-                a1.moveTo(50+x, 120+y);
-                a1.curveTo(50+x, 120+y, 50+x, 143+y, 70+x, 143+y);
+                a1.moveTo((0+x)*tamaño, (120+y)*tamaño);
+                a1.curveTo((0+x)*tamaño, (90+y)*tamaño, (50+x)*tamaño, (90+y)*tamaño, (50+x)*tamaño, (120+y)*tamaño);
+                a1.moveTo((0+x)*tamaño, (120+y)*tamaño);
+                a1.curveTo((0+x)*tamaño, (160+y)*tamaño, (50+x)*tamaño, (160+y)*tamaño, (50+x)*tamaño, (120+y)*tamaño);
+                a1.moveTo((50+x)*tamaño, (120+y)*tamaño);
+                a1.curveTo((50+x)*tamaño, (120+y)*tamaño, (50+x)*tamaño, (143+y)*tamaño, (70+x)*tamaño, (143+y)*tamaño);
             }            
             
             if(subrayado==true){
-                a1.moveTo(0+x, 153+y);
-                a1.lineTo(70+x, 153+y);
+                a1.moveTo((0+x)*tamaño, (153+y)*tamaño);
+                a1.lineTo((70+x)*tamaño, (153+y)*tamaño);
             }
             
             if(tilde==true){
-                a1.moveTo(25+x,85+y);
-                a1.lineTo(45+x,70+y);
+                a1.moveTo((25+x)*tamaño,(85+y)*tamaño);
+                a1.lineTo((45+x)*tamaño,(70+y)*tamaño);
                 if(bandera == true){
                     g2.fillOval(25+x,85+y, 5, 5);
                     g2.fillOval(45+x,70+y, 5, 5);

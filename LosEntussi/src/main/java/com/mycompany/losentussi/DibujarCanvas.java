@@ -1,6 +1,6 @@
 package com.mycompany.losentussi;
 import java.awt.*;
-import java.util.ArrayList;
+
 import javax.swing.*;
 
 /**
@@ -119,15 +119,15 @@ public class DibujarCanvas extends JComponent {
                         x+=90;
                     }
                     else if(texto.charAt(i-1)=='b'){
-                        m1.dibujaracaso(g2, x, y, bandera,false,negrita, subrayado, cursiva);
+                        m1.dibujaracaso(g2, x, y, bandera,false,negrita, subrayado, cursiva,tamaño);
                         x+=70;
                     }
                     else if(texto.charAt(i-1) == 'v'){
-                        m1.dibujaracaso(g2, x, y, bandera,false,negrita, subrayado, cursiva);
+                        m1.dibujaracaso(g2, x, y, bandera,false,negrita, subrayado, cursiva,tamaño);
                         x+=70; 
                     }
                     else if(texto.charAt(i-1)== 'w'){
-                        m1.dibujaracaso(g2, x, y, bandera,false,negrita, subrayado, cursiva);
+                        m1.dibujaracaso(g2, x, y, bandera,false,negrita, subrayado, cursiva,tamaño);
                         x+=70;
                     }
 
@@ -614,15 +614,15 @@ public class DibujarCanvas extends JComponent {
                         x+=90;
                     }
                     else if(texto.charAt(i-1)=='b'){
-                        m1.dibujaracaso(g2, x, y, bandera,true,negrita, subrayado, cursiva);
+                        m1.dibujaracaso(g2, x, y, bandera,true,negrita, subrayado, cursiva,tamaño);
                         x+=70;
                     }
                     else if(texto.charAt(i-1) == 'v'){
-                        m1.dibujaracaso(g2, x, y, bandera,true,negrita, subrayado, cursiva);
+                        m1.dibujaracaso(g2, x, y, bandera,true,negrita, subrayado, cursiva,tamaño);
                         x+=70; 
                     }
                     else if(texto.charAt(i-1)== 'w'){
-                        m1.dibujaracaso(g2, x, y, bandera,true,negrita, subrayado, cursiva);
+                        m1.dibujaracaso(g2, x, y, bandera,true,negrita, subrayado, cursiva,tamaño);
                         x+=70;
                     }
 
@@ -927,72 +927,7 @@ public class DibujarCanvas extends JComponent {
                                 y+=Integer.parseInt(n);
                                 i+=1;
                                 }
-                            
                         }
-      
-                        if(texto.charAt(i+1)=='X'){
-                            i+=1; 
-                            int aa;
-                            aa=digitos();
-                            x+=aa;
-                            if(texto.charAt(i+1+n.length())=='+'){
-                                System.out.println("hola");
-                                i+=1;
-                                if(texto.charAt(i+1+n.length())=='Y'){
-                                    System.out.println("si");
-                                    char []aux3 =texto.toCharArray();
-                                    for (int j = i+1+n.length(); j < aux3.length; j++) {
-                                        if(Character.isDigit(aux3[j])){
-                                        System.out.println("j: "+j);
-                                        s+=aux3[j];
-                                        }
-                                    }
-                                    y+=Integer.parseInt(s);
-                                    i+=1+n.length();
-                                    break;
-                                }else{ 
-                                    break;
-                                }
-                            }
-                        break;
-                        }
-                        
-                        if(texto.charAt(i+1)=='Y'){
-                            i+=1;
-                            int aa2;
-                            aa2=digitos();
-                            y+=aa2;
-                            System.out.println(n.length());
-                            i+=n.length();
-                            if(texto.charAt(i+1)=='+'){
-                                System.out.println("hola");
-                                i+=1;
-                                if(texto.charAt(i+1)=='X'){
-                                    i+=1;
-                                    int contador=0;
-                                    System.out.println("si");
-                                    char []aux3 =texto.toCharArray();
-                                    ArrayList<Character> aux4 = new ArrayList<>();
-                                    for (int j = i+1; j < aux3.length; j++) {
-                                        aux4.set(contador, aux3[j]);
-                                        contador++;
-                                        System.out.println("aux4:     "+aux4);
-                                    }
-                                    for (int j = i+1; j < aux3.length; j++) {
-                                        if(Character.isDigit(aux3[j])){
-                                            System.out.println("aa: "+Character.isDigit(aux3[j]));
-                                            s+=aux3[j];
-                                        }
-                                    }
-                                    x+=Integer.parseInt(s);
-                                    i+=1+s.length();
-                                    break;
-                                }else{
-                                    break;
-                                }
-                            }
-                        break;
-                        }  
                     }
                     default:{
                         break;
@@ -1000,15 +935,5 @@ public class DibujarCanvas extends JComponent {
                 }    
             }
         }    
-    }
-    
-    public int digitos(){
-        char []aux2 = texto.toCharArray(); 
-        for (int j = 0; j < aux2.length; j++) {
-            if(Character.isDigit(aux2[j])){
-                n+=aux2[j];
-            }
-        }
-        return Integer.parseInt(n);
     }
 }
