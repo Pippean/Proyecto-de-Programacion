@@ -6,14 +6,8 @@ import javax.swing.*;
 /**
  *
  * @author Pipe, Juano, Lázaro
- * 
- *      Cosas que tengo que hacer: 
- *  ScrollBar
- *  Rotación de las palabras
- *  
- *  
  */
-
+// ^
 public class Dibujar{   
     
     //Variables:
@@ -28,8 +22,7 @@ public class Dibujar{
     
     
     public static void main(String[] args){
-        //Variables de la Intefaz:
-        
+        //Variables de la Intefaz:        
         Button Borrar;
         Button Puntos;
         Choice menu;
@@ -55,19 +48,16 @@ public class Dibujar{
         TextField t1 = new TextField("");
         t1.setBounds(10, 690, 1000, 32); 
         t1.setFont(new Font("Arial", Font.BOLD, 20));
-        JFrame f = new JFrame();
-        
-        
+        JFrame f = new JFrame();               
+
         //Agregación para la interfaz
-        
         f.setSize(w,h);
         f.setTitle("Conversor de Scripts");
-        //f.setResizable(false);
+        f.setResizable(false);        
         f.add(Borrar);
         f.add(Puntos);
         f.add(menu);        
         f.add(t1);
-        
         
         cargarDC(f,txtadibujar, color, bandera);
         
@@ -88,7 +78,7 @@ public class Dibujar{
                 dc.setVisible(false);
                 color = menu.getItem(menu.getSelectedIndex());                                 
                 aux = t1.getText();
-                txtadibujar = ""; 
+                txtadibujar = " "; 
                 dc.setVisible(false);
                 txtadibujar = aux;                    
                 cargarDC(f,txtadibujar, color, bandera);                
