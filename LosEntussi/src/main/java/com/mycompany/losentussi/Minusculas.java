@@ -1080,7 +1080,7 @@ public class Minusculas {
                 o.curveTo((30*EY)+x,130+y,(50*EY)+x,130+y,(90*EY)+x,143+y);
             }
             else{
-                o.moveTo((0*EY), 143+y);
+                o.moveTo((0*EY)+x, 143+y);
                 o.curveTo((20*EY)+x, 143+y, (20*EY)+x, 130+y, (20*EY)+x, 120+y);
                 o.moveTo((20*EY)+x, 120+y);
                 o.curveTo((20*EY)+x, 90+y, (70*EY)+x, 90+y, (70*EY)+x, 120+y);
