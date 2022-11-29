@@ -10,7 +10,7 @@ import javax.swing.*;
 public class DibujarCanvas extends JComponent {
     //Variables de la Clase:
     private int width;
-    private int height;
+    private int height;    
     private Minusculas m1;
     private Mayusculas m2;
     private Simbolos s1;
@@ -22,7 +22,7 @@ public class DibujarCanvas extends JComponent {
     private boolean negrita = false;
     private boolean subrayado = false;    
     private boolean cursiva = false;
-    private boolean sub2 = false;
+    private boolean sub2 = false;   
     private float  tamaño = 1;
     private float limite = 1;
     
