@@ -7,7 +7,7 @@ import javax.swing.*;
  *
  * @author Pipe, Juano, Lázaro
  */
-
+// ^
 public class Dibujar{   
     
     //Variables:
@@ -22,18 +22,15 @@ public class Dibujar{
     
     
     public static void main(String[] args){
-        //Variables de la Intefaz:
-        //Button Convertir;
+        //Variables de la Intefaz:        
         Button Borrar;
         Button Puntos;
         Choice menu;
         
         //Dimensiones de los botones:
-        //Convertir = new Button("Convertir");
-        //Convertir.setBounds(1050, 700, 100, 22);
-        Borrar = new Button("Borrar");
-        Borrar.setBounds(1050, 700, 100, 22);
         
+        Borrar = new Button("Borrar");
+        Borrar.setBounds(1050, 700, 100, 22);        
         Puntos = new Button("Puntos");
         Puntos.setBounds(1170, 700, 100, 22);
         menu = new Choice();
@@ -49,15 +46,14 @@ public class Dibujar{
         menu.add("Celeste");
         menu.add("Blanco");
         TextField t1 = new TextField("");
-        t1.setBounds(10, 700, 1000, 22);  
-        JFrame f = new JFrame();
-        
+        t1.setBounds(10, 690, 1000, 32); 
+        t1.setFont(new Font("Arial", Font.BOLD, 20));
+        JFrame f = new JFrame();               
 
         //Agregación para la interfaz
         f.setSize(w,h);
         f.setTitle("Conversor de Scripts");
-        f.setResizable(false);
-        //f.add(Convertir);
+        f.setResizable(false);        
         f.add(Borrar);
         f.add(Puntos);
         f.add(menu);        
@@ -82,7 +78,7 @@ public class Dibujar{
                 dc.setVisible(false);
                 color = menu.getItem(menu.getSelectedIndex());                                 
                 aux = t1.getText();
-                txtadibujar = ""; 
+                txtadibujar = " "; 
                 dc.setVisible(false);
                 txtadibujar = aux;                    
                 cargarDC(f,txtadibujar, color, bandera);                
