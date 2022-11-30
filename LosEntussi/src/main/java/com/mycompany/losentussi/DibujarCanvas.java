@@ -909,7 +909,8 @@ public class DibujarCanvas extends JComponent {
                             }
                         }
                         if (texto.charAt (i+1) == 'R'){
-                            texto = " " + reves(texto);
+                            texto = reves(texto);
+                            i++;
                         }
                         
                         if(texto.charAt(i+1)=='M'){
@@ -989,21 +990,54 @@ public class DibujarCanvas extends JComponent {
     }
     
     public static String reves(String texto){
-        StringBuilder cadena1 = new StringBuilder(texto); 
-        String invertido = cadena1.reverse().toString();
-        String aux = "";
+        String cadena2= "";
+        String caret = "";
+        int ubicacion = 0;
+        for(int i = 0; i<texto.length();i++){
+            if(texto.charAt(i)== '^'){
+                i+=1;
+                if(texto.charAt(i)== 'R'){
+                    ubicacion = i;
+                    caret = "^R";
+                    break;
+                    
+                }
+            }
+            else{
+               cadena2 +=  texto.charAt(i);
+            }
+        }
+        System.out.println(ubicacion);
+        String lista = texto.substring(0, ubicacion+1);
+        String invertir= texto.substring(ubicacion+1, texto.length());
+        System.out.println(lista);
+        System.out.println(invertir);
+        StringBuilder aux = new StringBuilder(invertir);
+        String inv = aux.reverse().toString();
+        System.out.println(inv);
+        
+        String aux3 = "";
         String nueva = "";
-        for(int i = 0; i<invertido.length();i++){ 
-           if(invertido.charAt(i) == ' '){
-               StringBuilder aux1 = new StringBuilder(aux);
-               String inv = aux1.reverse().toString();
-               nueva += inv + " ";
-               aux = "";
+        
+        for(int i = 0; i<inv.length();i++){ 
+           if(inv.charAt(i) == ' '){
+               StringBuilder aux1 = new StringBuilder(aux3);
+               String invo = aux1.reverse().toString();
+               nueva += invo +" ";
+               aux3 = "";
            }
            else{
-                aux += invertido.charAt(i);
+                aux3 += inv.charAt(i);
            }
         }
+        System.out.println(nueva);
+        StringBuilder aux1 = new StringBuilder(aux3);
+        System.out.println(aux3);
+        String invo = aux1.reverse().toString();
+        nueva += invo;
+        System.out.println(nueva);
+        nueva  =  cadena2 + caret +  nueva;
+        System.out.println(nueva);
         return nueva;
     }
     public static boolean verificadorsubrayado(String texto, int i){
