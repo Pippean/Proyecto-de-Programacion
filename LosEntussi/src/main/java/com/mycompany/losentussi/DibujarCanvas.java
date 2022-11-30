@@ -12,6 +12,7 @@ public class DibujarCanvas extends JComponent {
     private int width;
     private int height;   
     private int angulo = 0;
+    private int tmpangulo = 0;
     private Minusculas m1;
     private Mayusculas m2;
     private Simbolos s1;
@@ -25,6 +26,7 @@ public class DibujarCanvas extends JComponent {
     private boolean cursiva = false;
     private boolean sub2 = false;
     private boolean EspejoY = false;
+    private boolean banderaang = false;
     private float  tamaño = 1;
     private float limite = 1;
     
@@ -113,6 +115,11 @@ public class DibujarCanvas extends JComponent {
                         else{
                            subrayado = false;    
                         } 
+                        if (banderaang==true) {
+                            
+                            g2.rotate(Math.toRadians(-tmpangulo), 0, 0);
+                            banderaang = false;
+                        }
                         EspejoY = false;
                         negrita = false;
                         cursiva = false;
@@ -949,24 +956,20 @@ public class DibujarCanvas extends JComponent {
                         }
                         
                         if (texto.charAt(i+1)=='A') {
-                                i+=1;                            
-                                angulo = digitos();
-
-                                g2.rotate(Math.toRadians(angulo), x+50, y+100);
+                            i+=1;                            
+                            angulo = digitos();
+                            g2.rotate(Math.toRadians(angulo), x+50, y+100);
+                            
                         }
-                        /*
+                        
                         if (texto.charAt(i+1)=='a') {
                             i+=1;
+                            angulo = digitos();
+                            tmpangulo = angulo;
                             banderaang = true;
-                            if (banderaang==true) {
-                                angulo = digitos();                            
-                                g2.rotate(Math.toRadians(angulo), x+50, y+100);
-                            }
-                            else{
-                                angulo=0;
-                                g2.rotate(0);
-                            }
-                        }*/    
+                            g2.rotate(Math.toRadians(angulo), x+50, y+100);                                                        
+                        }
+                           
                         break;
                     }
                     
@@ -981,9 +984,14 @@ public class DibujarCanvas extends JComponent {
     public int digitos(){
         char []aux2 = texto.toCharArray(); 
         for (int j = 0; j < aux2.length; j++) {
+            if (aux2[j]==' ') {
+                System.out.println("no suma");
+                System.out.println(n);
+            }
             if(Character.isDigit(aux2[j])){
                 n+=aux2[j];
-            }
+            }  
+            
         }
         return Integer.parseInt(n);
     }

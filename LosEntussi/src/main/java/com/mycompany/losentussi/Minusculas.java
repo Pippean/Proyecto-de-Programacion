@@ -934,7 +934,7 @@ public class Minusculas {
             g2.fillOval((130*EY)+x, 150+y, 5, 5);
             g2.fillOval((150*EY)+x, 143+y, 5, 5);
             g2.fillOval((155*EY)+x, 143+y, 5, 5);
-        }
+        }        
         g2.draw(m);
     }
     
