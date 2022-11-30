@@ -13,7 +13,7 @@ public class Mayusculas {
 
     }
 
-    public void dibujarA(Graphics2D g2, int x, int y, boolean bandera, boolean tilde, boolean negrita, boolean subrayado, boolean cursiva, boolean EspejoY) {
+    public void dibujarA(Graphics2D g2, int x, int y, boolean bandera, boolean tilde, boolean negrita, boolean subrayado, boolean cursiva,float tamaño, boolean EspejoY) {
         Path2D.Double A = new Path2D.Double();
         int limite = 1;
         int EY = 1;
@@ -25,27 +25,27 @@ public class Mayusculas {
         }
         for (int i = 0; i < limite; i++) {
             if (cursiva == true) {
-                A.moveTo((55 * EY) + x, 53 + y);
-                A.curveTo((0 * EY) + x, 53 + y, (0 * EY) + x, 143 + y, (25 * EY) + x, 140 + y);
-                A.moveTo((55 * EY) + x, 53 + y);
-                A.curveTo((80 * EY) + x, 53 + y, (80 * EY) + x, 143 + y, (25 * EY) + x, 140 + y);
-                A.moveTo((66 * EY) + x, 110 + y);
-                A.curveTo((67 * EY) + x, 110 + y, (70 * EY) + x, 143 + y, (100 * EY) + x, 143 + y);
+                A.moveTo(((55 * EY) + x)*tamaño, (53 + y)*tamaño);
+                A.curveTo(((0 * EY) + x)*tamaño, (53 + y)*tamaño, ((0 * EY) + x)*tamaño, (143 + y)*tamaño, ((25 * EY) + x)*tamaño, (140 + y)*tamaño);
+                A.moveTo(((55 * EY) + x)*tamaño, (53 + y)*tamaño);
+                A.curveTo(((80 * EY) + x)*tamaño, (53 + y)*tamaño, ((80 * EY) + x)*tamaño, (143 + y)*tamaño, ((25 * EY) + x)*tamaño, (140 + y)*tamaño);
+                A.moveTo(((66 * EY) + x)*tamaño, (110 + y)*tamaño);
+                A.curveTo(((67 * EY) + x)*tamaño, (110 + y)*tamaño, ((70 * EY) + x)*tamaño, (143 + y)*tamaño, ((100 * EY) + x)*tamaño, (143 + y)*tamaño);
             } else {
-                A.moveTo((40 * EY) + x, 55 + y);
-                A.curveTo((0 * EY) + x, 55 + y, (0 * EY) + x, 143 + y, (40 * EY) + x, 143 + y);
-                A.moveTo((40 * EY) + x, 55 + y);
-                A.curveTo((80 * EY) + x, 55 + y, (80 * EY) + x, 143 + y, (40 * EY) + x, 143 + y);
-                A.moveTo((70 * EY) + x, 110 + y);
-                A.curveTo((70 * EY) + x, 110 + y, (70 * EY) + x, 143 + y, (100 * EY) + x, 143 + y);
+                A.moveTo(((40 * EY) + x)*tamaño, (55 + y)*tamaño);
+                A.curveTo(((0 * EY) + x)*tamaño, (55 + y)*tamaño, ((0 * EY) + x)*tamaño, (143 + y)*tamaño, ((40 * EY) + x)*tamaño, (143 + y)*tamaño);
+                A.moveTo(((40 * EY) + x)*tamaño, (55 + y)*tamaño);
+                A.curveTo(((80 * EY) + x)*tamaño, (55 + y)*tamaño, ((80 * EY) + x)*tamaño, (143 + y)*tamaño, ((40 * EY) + x)*tamaño, (143 + y)*tamaño);
+                A.moveTo(((70 * EY) + x)*tamaño, (110 + y)*tamaño);
+                A.curveTo(((70 * EY) + x)*tamaño, (110 + y)*tamaño, ((70 * EY) + x)*tamaño, (143 + y)*tamaño, ((100 * EY) + x)*tamaño, (143 + y)*tamaño);
             }
             if (subrayado == true) {
-                A.moveTo((0 * EY) + x, 153 + y);
-                A.lineTo((110 * EY) + x, 153 + y);
+                A.moveTo(((0 * EY) + x)*tamaño, (153 + y)*tamaño);
+                A.lineTo(((110 * EY) + x)*tamaño, (153 + y)*tamaño);
             }
             if (tilde == true) {
-                A.moveTo((40 * EY) + x, 50 + y);
-                A.lineTo((60 * EY) + x, 30 + y);
+                A.moveTo(((40 * EY) + x)*tamaño, (50 + y)*tamaño);
+                A.lineTo(((60 * EY) + x)*tamaño, (30 + y)*tamaño);
                 if (bandera == true) {
                     g2.fillOval((40 * EY) + x, 50 + y, 5, 5);
                     g2.fillOval((60 * EY) + x, 30 + y, 5, 5);
@@ -69,7 +69,7 @@ public class Mayusculas {
         g2.draw(A);
     }
 
-    public void dibujarB(Graphics2D g2, int x, int y, boolean bandera, boolean negrita, boolean subrayado, boolean cursiva, boolean EspejoY) {
+    public void dibujarB(Graphics2D g2, int x, int y, boolean bandera, boolean negrita, boolean subrayado, boolean cursiva,float tamaño, boolean EspejoY) {
         Path2D.Double B = new Path2D.Double();
         int limite = 1;
         int EY = 1;
@@ -81,27 +81,27 @@ public class Mayusculas {
         }
         for (int i = 0; i < limite; i++) {
             if (cursiva == true) {
-                B.moveTo((0 * EY) + x, 70 + y);
-                B.curveTo((0 * EY) + x, 70 + y, (15 * EY) + x, 70 + y, (20 * EY) + x, 55 + y);
-                B.moveTo((20 * EY) + x, 55 + y);
-                B.curveTo((20 * EY) + x, 55 + y, (10 * EY) + x, 143 + y, (10 * EY) + x, 143 + y);
-                B.moveTo((20 * EY) + x, 55 + y);
-                B.curveTo((70 * EY) + x, 55 + y, (60 * EY) + x, 100 + y, (30 * EY) + x, 100 + y);
-                B.moveTo((30 * EY) + x, 100 + y);
-                B.curveTo((50 * EY) + x, 100 + y, (60 * EY) + x, 153 + y, (0 * EY) + x, 143 + y);
+                B.moveTo(((0 * EY) + x)*tamaño, (70 + y)*tamaño);
+                B.curveTo(((0 * EY) + x)*tamaño, (70 + y)*tamaño, ((15 * EY) + x)*tamaño, (70 + y)*tamaño, ((20 * EY) + x)*tamaño, (55 + y)*tamaño);
+                B.moveTo(((20 * EY) + x)*tamaño, (55 + y)*tamaño);
+                B.curveTo(((20 * EY) + x)*tamaño, (55 + y)*tamaño, ((10 * EY) + x)*tamaño, (143 + y)*tamaño, ((10 * EY) + x)*tamaño, (143 + y)*tamaño);
+                B.moveTo(((20 * EY) + x)*tamaño, (55 + y)*tamaño);
+                B.curveTo(((70 * EY) + x)*tamaño, (55 + y)*tamaño, ((60 * EY) + x)*tamaño, (100 + y)*tamaño, ((30 * EY) + x)*tamaño, (100 + y)*tamaño);
+                B.moveTo(((30 * EY) + x)*tamaño, (100 + y)*tamaño);
+                B.curveTo(((50 * EY) + x)*tamaño, (100 + y)*tamaño, ((60 * EY) + x)*tamaño, (153 + y)*tamaño, ((0 * EY) + x)*tamaño, (143 + y)*tamaño);
             } else {
-                B.moveTo((0 * EY) + x, 70 + y);
-                B.curveTo((0 * EY) + x, 70 + y, (10 * EY) + x, 65 + y, (10 * EY) + x, 55 + y);
-                B.moveTo((10 * EY) + x, 55 + y);
-                B.curveTo((10 * EY) + x, 55 + y, (10 * EY) + x, 143 + y, (10 * EY) + x, 143 + y);
-                B.moveTo((10 * EY) + x, 55 + y);
-                B.curveTo((60 * EY) + x, 45 + y, (60 * EY) + x, 100 + y, (30 * EY) + x, 100 + y);
-                B.moveTo((30 * EY) + x, 100 + y);
-                B.curveTo((60 * EY) + x, 100 + y, (60 * EY) + x, 153 + y, (10 * EY) + x, 143 + y);
+                B.moveTo(((0 * EY) + x)*tamaño, (70 + y)*tamaño);
+                B.curveTo(((0 * EY) + x)*tamaño, (70 + y)*tamaño, ((10 * EY) + x)*tamaño, (65 + y)*tamaño, ((10 * EY) + x)*tamaño, (55 + y)*tamaño);
+                B.moveTo(((10 * EY) + x)*tamaño, (55 + y)*tamaño);
+                B.curveTo(((10 * EY) + x)*tamaño, (55 + y)*tamaño, ((10 * EY) + x)*tamaño, (143 + y)*tamaño, ((10 * EY) + x)*tamaño, (143 + y)*tamaño);
+                B.moveTo(((10 * EY) + x)*tamaño, (55 + y)*tamaño);
+                B.curveTo(((60 * EY) + x)*tamaño, (45 + y)*tamaño, ((60 * EY) + x)*tamaño, (100 + y)*tamaño, ((30 * EY) + x)*tamaño, (100 + y)*tamaño);
+                B.moveTo(((30 * EY) + x)*tamaño, (100 + y)*tamaño);
+                B.curveTo(((60 * EY) + x)*tamaño, (100 + y)*tamaño, ((60 * EY) + x)*tamaño, (153 + y)*tamaño, ((10 * EY) + x)*tamaño, (143 + y)*tamaño);
             }
             if (subrayado == true) {
-                B.moveTo((0 * EY) + x, 153 + y);
-                B.lineTo((70 * EY) + x, 153 + y);
+                B.moveTo(((0 * EY) + x)*tamaño, (153 + y)*tamaño);
+                B.lineTo(((70 * EY) + x)*tamaño, (153 + y)*tamaño);
             }
             x += 1;
         }
@@ -120,7 +120,7 @@ public class Mayusculas {
 
     }
 
-    public void dibujarC(Graphics2D g2, int x, int y, boolean bandera, boolean negrita, boolean subrayado, boolean cursiva, boolean EspejoY) {
+    public void dibujarC(Graphics2D g2, int x, int y, boolean bandera, boolean negrita, boolean subrayado, boolean cursiva,float tamaño, boolean EspejoY) {
         Path2D.Double C = new Path2D.Double();
         int limite = 1;
         int EY = 1;
@@ -132,15 +132,15 @@ public class Mayusculas {
         }
         for (int i = 0; i < limite; i++) {
             if (cursiva == true) {
-                C.moveTo((80 * EY) + x, 70 + y);
-                C.curveTo((0 * EY) + x, 45 + y, (0 * EY) + x, 170 + y, (70 * EY) + x, 143 + y);
+                C.moveTo(((80 * EY) + x)*tamaño, (70 + y)*tamaño);
+                C.curveTo(((0 * EY) + x)*tamaño, (45 + y)*tamaño, ((0 * EY) + x)*tamaño, (170 + y)*tamaño, ((70 * EY) + x)*tamaño, (143 + y)*tamaño);
             } else {
-                C.moveTo((70 * EY) + x, 55 + y);
-                C.curveTo((0 * EY) + x, 45 + y, (0 * EY) + x, 153 + y, (70 * EY) + x, 143 + y);
+                C.moveTo(((70 * EY) + x)*tamaño, (55 + y)*tamaño);
+                C.curveTo(((0 * EY) + x)*tamaño, (45 + y)*tamaño, ((0 * EY) + x)*tamaño, (153 + y)*tamaño, ((70 * EY) + x)*tamaño, (143 + y)*tamaño);
             }
             if (subrayado == true) {
-                C.moveTo((0 * EY) + x, 153 + y);
-                C.lineTo((80 * EY) + x, 153 + y);
+                C.moveTo(((0 * EY) + x)*tamaño, (153 + y)*tamaño);
+                C.lineTo(((80 * EY) + x)*tamaño, (153 + y)*tamaño);
             }
             x += 1;
         }
@@ -154,7 +154,7 @@ public class Mayusculas {
         g2.draw(C);
     }
 
-    public void dibujarD(Graphics2D g2, int x, int y, boolean bandera, boolean negrita, boolean subrayado, boolean cursiva, boolean EspejoY) {
+    public void dibujarD(Graphics2D g2, int x, int y, boolean bandera, boolean negrita, boolean subrayado, boolean cursiva,float tamaño, boolean EspejoY) {
         Path2D.Double D = new Path2D.Double();
         int limite = 1;
         int EY = 1;
@@ -166,27 +166,27 @@ public class Mayusculas {
         }
         for (int i = 0; i < limite; i++) {
             if (cursiva == true) {
-                D.moveTo((75 * EY) + x, 65 + y);
-                D.curveTo((60 * EY) + x, 65 + y, (60 * EY) + x, 120 + y, (52 * EY) + x, 130 + y);
-                D.moveTo((52 * EY) + x, 130 + y);
-                D.curveTo((32 * EY) + x, 160 + y, (0 * EY) + x, 128 + y, (30 * EY) + x, 130 + y);
-                D.moveTo((30 * EY) + x, 130 + y);
-                D.curveTo((40 * EY) + x, 145 + y, (100 * EY) + x, 155 + y, (110 * EY) + x, 100 + y);
-                D.moveTo((110 * EY) + x, 100 + y);
-                D.curveTo((110 * EY) + x, 60 + y, (65 * EY) + x, 45 + y, (50 * EY) + x, 60 + y);
+                D.moveTo(((75 * EY) + x)*tamaño, (65 + y)*tamaño);
+                D.curveTo(((60 * EY) + x)*tamaño, (65 + y)*tamaño, ((60 * EY) + x)*tamaño, (120 + y)*tamaño, ((52 * EY) + x)*tamaño, (130 + y)*tamaño);
+                D.moveTo(((52 * EY) + x)*tamaño, (130 + y)*tamaño);
+                D.curveTo(((32 * EY) + x)*tamaño, (160 + y)*tamaño, ((0 * EY) + x)*tamaño, (128 + y)*tamaño, ((30 * EY) + x)*tamaño, (130 + y)*tamaño);
+                D.moveTo(((30 * EY) + x)*tamaño, (130 + y)*tamaño);
+                D.curveTo(((40 * EY) + x)*tamaño, (145 + y)*tamaño, ((100 * EY) + x)*tamaño, (155 + y)*tamaño, ((110 * EY) + x)*tamaño, (100 + y)*tamaño);
+                D.moveTo(((110 * EY) + x)*tamaño, (100 + y)*tamaño);
+                D.curveTo(((110 * EY) + x)*tamaño, (60 + y)*tamaño, ((65 * EY) + x)*tamaño, (45 + y)*tamaño, ((50 * EY) + x)*tamaño, (60 + y)*tamaño);
             } else {
-                D.moveTo((55 * EY) + x, 55 + y);
-                D.curveTo((45 * EY) + x, 65 + y, (60*EY) + x, 120 + y, (47*EY) + x, 130 + y);
-                D.moveTo((47 * EY) + x, 130 + y);
-                D.curveTo((30 * EY) + x, 160 + y, (0 * EY) + x, 128 + y, (30 * EY) + x, 130 + y);
-                D.moveTo((30 * EY) + x, 130 + y);
-                D.curveTo((40 * EY) + x, 145 + y, (100 * EY) + x, 155 + y, (110 * EY) + x, 100 + y);
-                D.moveTo((110 * EY) + x, 100 + y);
-                D.curveTo((110 * EY) + x, 60 + y, (75 * EY) + x, 45 + y, (30 * EY) + x, 55 + y);
+                D.moveTo(((55 * EY) + x)*tamaño, (55 + y)*tamaño);
+                D.curveTo(((45 * EY) + x)*tamaño, (65 + y)*tamaño, ((60*EY) + x)*tamaño, (120 + y)*tamaño, ((47*EY) + x)*tamaño, (130 + y)*tamaño);
+                D.moveTo(((47 * EY) + x)*tamaño, (130 + y)*tamaño);
+                D.curveTo(((30 * EY) + x)*tamaño, (160 + y)*tamaño, ((0 * EY) + x)*tamaño, (128 + y)*tamaño, ((30 * EY) + x)*tamaño, (130 + y)*tamaño);
+                D.moveTo(((30 * EY) + x)*tamaño, (130 + y)*tamaño);
+                D.curveTo(((40 * EY) + x)*tamaño, (145 + y)*tamaño, ((100 * EY) + x)*tamaño, (155 + y)*tamaño, ((110 * EY) + x)*tamaño, (100 + y)*tamaño);
+                D.moveTo(((110 * EY) + x)*tamaño, (100 + y)*tamaño);
+                D.curveTo(((110 * EY) + x)*tamaño, (60 + y)*tamaño, ((75 * EY) + x)*tamaño, (45 + y)*tamaño, ((30 * EY) + x)*tamaño, (55 + y)*tamaño);
             }
             if (subrayado == true) {
-                D.moveTo((0 * EY) + x, 153 + y);
-                D.lineTo((120 * EY) + x, 153 + y);
+                D.moveTo(((0 * EY) + x)*tamaño, (153 + y)*tamaño);
+                D.lineTo(((120 * EY) + x)*tamaño, (153 + y)*tamaño);
             }
             x += 1;
         }
@@ -209,7 +209,7 @@ public class Mayusculas {
         g2.draw(D);
     }
 
-    public void dibujarE(Graphics2D g2, int x, int y, boolean bandera, boolean tilde, boolean negrita, boolean subrayado, boolean cursiva, boolean EspejoY) {
+    public void dibujarE(Graphics2D g2, int x, int y, boolean bandera, boolean tilde, boolean negrita, boolean subrayado, boolean cursiva,float tamaño, boolean EspejoY) {
         Path2D.Double E = new Path2D.Double();
         int limite = 1;
         int EY = 1;
@@ -221,31 +221,31 @@ public class Mayusculas {
         }
         for (int i = 0; i < limite; i++) {
             if (cursiva == true) {
-                E.moveTo((20 * EY) + x, 60 + y);
-                E.curveTo((30 * EY) + x, 50 + y, (50 * EY) + x, 65 + y, (80 * EY) + x, 55 + y);
-                E.moveTo((50 * EY) + x, 57 + y);
-                E.curveTo((50 * EY) + x, 55 + y, (50 * EY) + x, 133 + y, (0 * EY) + x, 143 + y);
-                E.moveTo((40 * EY) + x, 100 + y);
-                E.curveTo((40 * EY) + x, 100 + y, (60 * EY) + x, 100 + y, (55 * EY) + x, 100 + y);
-                E.moveTo((0 * EY) + x, 143 + y);
-                E.curveTo((30 * EY) + x, 130 + y, (50 * EY) + x, 145 + y, (60 * EY) + x, 143 + y);
+                E.moveTo(((20 * EY) + x)*tamaño, (60 + y)*tamaño);
+                E.curveTo(((30 * EY) + x)*tamaño, (50 + y)*tamaño, ((50 * EY) + x)*tamaño, (65 + y)*tamaño, ((80 * EY) + x)*tamaño, (55 + y)*tamaño);
+                E.moveTo(((50 * EY) + x)*tamaño, (57 + y)*tamaño);
+                E.curveTo(((50 * EY) + x)*tamaño, (55 + y)*tamaño, ((50 * EY) + x)*tamaño, (133 + y)*tamaño, ((0 * EY) + x)*tamaño, (143 + y)*tamaño);
+                E.moveTo(((40 * EY) + x)*tamaño, (100 + y)*tamaño);
+                E.curveTo(((40 * EY) + x)*tamaño, (100 + y)*tamaño, ((60 * EY) + x)*tamaño, (100 + y)*tamaño, ((55 * EY) + x)*tamaño, (100 + y)*tamaño);
+                E.moveTo(((0 * EY) + x)*tamaño, (143 + y)*tamaño);
+                E.curveTo(((30 * EY) + x)*tamaño, (130 + y)*tamaño, ((50 * EY) + x)*tamaño, (145 + y)*tamaño, ((60 * EY) + x)*tamaño, (143 + y)*tamaño);
             } else {
-                E.moveTo((10 * EY) + x, 60 + y);
-                E.curveTo((30 * EY) + x, 50 + y, (50 * EY) + x, 65 + y, (70 * EY) + x, 55 + y);
-                E.moveTo((40 * EY) + x, 57 + y);
-                E.curveTo((40 * EY) + x, 55 + y, (50 * EY) + x, 133 + y, (10 * EY) + x, 143 + y);
-                E.moveTo((40 * EY) + x, 100 + y);
-                E.curveTo((40 * EY) + x, 100 + y, (60 * EY) + x, 100 + y, (55 * EY) + x, 100 + y);
-                E.moveTo((10 * EY) + x, 143 + y);
-                E.curveTo((30 * EY) + x, 130 + y, (50 * EY) + x, 145 + y, (70 * EY) + x, 143 + y);
+                E.moveTo(((10 * EY) + x)*tamaño, (60 + y)*tamaño);
+                E.curveTo(((30 * EY) + x)*tamaño, (50 + y)*tamaño, ((50 * EY) + x)*tamaño, (65 + y)*tamaño, ((70 * EY) + x)*tamaño, (55 + y)*tamaño);
+                E.moveTo(((40 * EY) + x)*tamaño, (57 + y)*tamaño);
+                E.curveTo(((40 * EY) + x)*tamaño, (55 + y)*tamaño, ((50 * EY) + x)*tamaño, (133 + y)*tamaño, ((10 * EY) + x)*tamaño, (143 + y)*tamaño);
+                E.moveTo(((40 * EY) + x)*tamaño, (100 + y)*tamaño);
+                E.curveTo(((40 * EY) + x)*tamaño, (100 + y)*tamaño, ((60 * EY) + x)*tamaño, (100 + y)*tamaño, ((55 * EY) + x)*tamaño, (100 + y)*tamaño);
+                E.moveTo(((10 * EY) + x)*tamaño, (143 + y)*tamaño);
+                E.curveTo(((30 * EY) + x)*tamaño, (130 + y)*tamaño, ((50 * EY) + x)*tamaño, (145 + y)*tamaño, ((70 * EY) + x)*tamaño, (143 + y)*tamaño);
             }
             if (subrayado == true) {
-                E.moveTo((0 * EY) + x, 153 + y);
-                E.lineTo((80 * EY) + x, 153 + y);
+                E.moveTo(((0 * EY) + x)*tamaño, (153 + y)*tamaño);
+                E.lineTo(((80 * EY) + x)*tamaño, (153 + y)*tamaño);
             }
             if (tilde == true) {
-                E.moveTo((40 * EY) + x, 50 + y);
-                E.lineTo((60 * EY) + x, 30 + y);
+                E.moveTo(((40 * EY) + x)*tamaño, (50 + y)*tamaño);
+                E.lineTo(((60 * EY) + x)*tamaño, (30 + y)*tamaño);
                 if (bandera == true) {
                     g2.fillOval((40 * EY) + x, 50 + y, 5, 5);
                     g2.fillOval((60 * EY) + x, 30 + y, 5, 5);
@@ -273,7 +273,7 @@ public class Mayusculas {
         g2.draw(E);
     }
 
-    public void dibujarF(Graphics2D g2, int x, int y, boolean bandera, boolean negrita, boolean subrayado, boolean cursiva, boolean EspejoY) {
+    public void dibujarF(Graphics2D g2, int x, int y, boolean bandera, boolean negrita, boolean subrayado, boolean cursiva,float tamaño, boolean EspejoY) {
         Path2D.Double F = new Path2D.Double();
         int limite = 1;
         int EY = 1;
@@ -285,23 +285,23 @@ public class Mayusculas {
         }
         for (int i = 0; i < limite; i++) {
             if (cursiva == true) {
-                F.moveTo((20 * EY) + x, 60 + y);
-                F.curveTo((30 * EY) + x, 50 + y, (50 * EY) + x, 65 + y, (80 * EY) + x, 55 + y);
-                F.moveTo((50 * EY) + x, 57 + y);
-                F.curveTo((50 * EY) + x, 55 + y, (50 * EY) + x, 133 + y, (0 * EY) + x, 143 + y);
-                F.moveTo((30 * EY) + x, 100 + y);
-                F.curveTo((30 * EY) + x, 100 + y, (50 * EY) + x, 100 + y, (65 * EY) + x, 100 + y);
+                F.moveTo(((20 * EY) + x)*tamaño, (60 + y)*tamaño);
+                F.curveTo(((30 * EY) + x)*tamaño, (50 + y)*tamaño, ((50 * EY) + x)*tamaño, (65 + y)*tamaño, ((80 * EY) + x)*tamaño, (55 + y)*tamaño);
+                F.moveTo(((50 * EY) + x)*tamaño, (57 + y)*tamaño);
+                F.curveTo(((50 * EY) + x)*tamaño, (55 + y)*tamaño, ((50 * EY) + x)*tamaño, (133 + y)*tamaño, ((0 * EY) + x)*tamaño, (143 + y)*tamaño);
+                F.moveTo(((30 * EY) + x)*tamaño, (100 + y)*tamaño);
+                F.curveTo(((30 * EY) + x)*tamaño, (100 + y)*tamaño, ((50 * EY) + x)*tamaño, (100 + y)*tamaño, ((65 * EY) + x)*tamaño, (100 + y)*tamaño);
             } else {
-                F.moveTo((10 * EY) + x, 60 + y);
-                F.curveTo((30 * EY) + x, 50 + y, (50 * EY) + x, 65 + y, (70 * EY) + x, 55 + y);
-                F.moveTo((40 * EY) + x, 57 + y);
-                F.curveTo((40 * EY) + x, 55 + y, (50 * EY) + x, 133 + y, (10 * EY) + x, 143 + y);
-                F.moveTo((20 * EY) + x, 100 + y);
-                F.curveTo((20 * EY) + x, 100 + y, (40 * EY) + x, 100 + y, (55 * EY) + x, 100 + y);
+                F.moveTo(((10 * EY) + x)*tamaño, (60 + y)*tamaño);
+                F.curveTo(((30 * EY) + x)*tamaño, (50 + y)*tamaño, ((50 * EY) + x)*tamaño, (65 + y)*tamaño, ((70 * EY) + x)*tamaño, (55 + y)*tamaño);
+                F.moveTo(((40 * EY) + x)*tamaño, (57 + y)*tamaño);
+                F.curveTo(((40 * EY) + x)*tamaño, (55 + y)*tamaño, ((50 * EY) + x)*tamaño, (133 + y)*tamaño, ((10 * EY) + x)*tamaño, (143 + y)*tamaño);
+                F.moveTo(((20 * EY) + x)*tamaño, (100 + y)*tamaño);
+                F.curveTo(((20 * EY) + x)*tamaño, (100 + y)*tamaño, ((40 * EY) + x)*tamaño, (100 + y)*tamaño, ((55 * EY) + x)*tamaño, (100 + y)*tamaño);
             }
             if (subrayado == true) {
-                F.moveTo((0 * EY) + x, 153 + y);
-                F.lineTo((80 * EY) + x, 153 + y);
+                F.moveTo(((0 * EY) + x)*tamaño, (153 + y)*tamaño);
+                F.lineTo(((80 * EY) + x)*tamaño, (153 + y)*tamaño);
             }
             x += 1;
         }
@@ -320,7 +320,7 @@ public class Mayusculas {
         g2.draw(F);
     }
 
-    public void dibujarG(Graphics2D g2, int x, int y, boolean bandera, boolean negrita, boolean subrayado, boolean cursiva, boolean EspejoY) {
+    public void dibujarG(Graphics2D g2, int x, int y, boolean bandera, boolean negrita, boolean subrayado, boolean cursiva,float tamaño, boolean EspejoY) {
         Path2D.Double G = new Path2D.Double();
         int limite = 1;
         int EY = 1;
@@ -332,31 +332,31 @@ public class Mayusculas {
         }
         for (int i = 0; i < limite; i++) {
             if (cursiva == true) {
-                G.moveTo((75 * EY) + x, 65 + y);
-                G.curveTo((0 * EY) + x, 55 + y, (0 * EY) + x, 153 + y, (40 * EY) + x, 143 + y);
-                G.moveTo((40 * EY) + x, 143 + y);
-                G.curveTo((60 * EY) + x, 143 + y, (70 * EY) + x, 110 + y, (80 * EY) + x, 100 + y);
-                G.moveTo((80 * EY) + x, 100 + y);
-                G.curveTo((80 * EY) + x, 100 + y, (80 * EY) + x, 180 + y, (50 * EY) + x, 180 + y);
-                G.moveTo((50 * EY) + x, 180 + y);
-                G.curveTo((35 * EY) + x, 183 + y, (20 * EY) + x, 180 + y, (50 * EY) + x, 160 + y);
-                G.moveTo((50 * EY) + x, 160 + y);
-                G.curveTo((50 * EY) + x, 160 + y, (90 * EY) + x, 140 + y, (100 * EY) + x, 143 + y);
+                G.moveTo(((75 * EY) + x)*tamaño, (65 + y)*tamaño);
+                G.curveTo(((0 * EY) + x)*tamaño, (55 + y)*tamaño, ((0 * EY) + x)*tamaño, (153 + y)*tamaño, ((40 * EY) + x)*tamaño, (143 + y)*tamaño);
+                G.moveTo(((40 * EY) + x)*tamaño, (143 + y)*tamaño);
+                G.curveTo(((60 * EY) + x)*tamaño, (143 + y)*tamaño, ((70 * EY) + x)*tamaño, (110 + y)*tamaño, ((80 * EY) + x)*tamaño, (100 + y)*tamaño);
+                G.moveTo(((80 * EY) + x)*tamaño, (100 + y)*tamaño);
+                G.curveTo(((80 * EY) + x)*tamaño, (100 + y)*tamaño, ((80 * EY) + x)*tamaño, (180 + y)*tamaño, ((50 * EY) + x)*tamaño, (180 + y)*tamaño);
+                G.moveTo(((50 * EY) + x)*tamaño, (180 + y)*tamaño);
+                G.curveTo(((35 * EY) + x)*tamaño, (183 + y)*tamaño, ((20 * EY) + x)*tamaño, (180 + y)*tamaño, ((50 * EY) + x)*tamaño, (160 + y)*tamaño);
+                G.moveTo(((50 * EY) + x)*tamaño, (160 + y)*tamaño);
+                G.curveTo(((50 * EY) + x)*tamaño, (160 + y)*tamaño, ((90 * EY) + x)*tamaño, (140 + y)*tamaño, ((100 * EY) + x)*tamaño, (143 + y)*tamaño);
             } else {
-                G.moveTo((60 * EY) + x, 65 + y);
-                G.curveTo((0 * EY) + x, 55 + y, (0 * EY) + x, 153 + y, (40 * EY) + x, 143 + y);
-                G.moveTo((40 * EY) + x, 143 + y);
-                G.curveTo((60 * EY) + x, 143 + y, (70 * EY) + x, 110 + y, (70 * EY) + x, 100 + y);
-                G.moveTo((70 * EY) + x, 100 + y);
-                G.curveTo((70 * EY) + x, 100 + y, (80 * EY) + x, 180 + y, (55 * EY) + x, 180 + y);
-                G.moveTo((55 * EY) + x, 180 + y);
-                G.curveTo((40 * EY) + x, 185 + y, (15 * EY) + x, 180 + y, (50 * EY) + x, 160 + y);
-                G.moveTo((50 * EY) + x, 160 + y);
-                G.curveTo((50 * EY) + x, 160 + y, (90 * EY) + x, 140 + y, (100 * EY) + x, 143 + y);
+                G.moveTo(((60 * EY) + x)*tamaño, (65 + y)*tamaño);
+                G.curveTo(((0 * EY) + x)*tamaño, (55 + y)*tamaño, ((0 * EY) + x)*tamaño, (153 + y)*tamaño, ((40 * EY) + x)*tamaño, (143 + y)*tamaño);
+                G.moveTo(((40 * EY) + x)*tamaño, (143 + y)*tamaño);
+                G.curveTo(((60 * EY) + x)*tamaño, (143 + y)*tamaño, ((70 * EY) + x)*tamaño, (110 + y)*tamaño, ((70 * EY) + x)*tamaño, (100 + y)*tamaño);
+                G.moveTo(((70 * EY) + x)*tamaño, (100 + y)*tamaño);
+                G.curveTo(((70 * EY) + x)*tamaño, (100 + y)*tamaño, ((80 * EY) + x)*tamaño, (180 + y)*tamaño, ((55 * EY) + x)*tamaño, (180 + y)*tamaño);
+                G.moveTo(((55 * EY) + x)*tamaño, (180 + y)*tamaño);
+                G.curveTo(((40 * EY) + x)*tamaño, (185 + y)*tamaño, ((15 * EY) + x)*tamaño, (180 + y)*tamaño, ((50 * EY) + x)*tamaño, (160 + y)*tamaño);
+                G.moveTo(((50 * EY) + x)*tamaño, (160 + y)*tamaño);
+                G.curveTo(((50 * EY) + x)*tamaño, (160 + y)*tamaño, ((90 * EY) + x)*tamaño, (140 + y)*tamaño, ((100 * EY) + x)*tamaño, (143 + y)*tamaño);
             }
             if (subrayado == true) {
-                G.moveTo((0 * EY) + x, 153 + y);
-                G.lineTo((120 * EY) + x, 153 + y);
+                G.moveTo(((0 * EY) + x)*tamaño, (153 + y)*tamaño);
+                G.lineTo(((120 * EY) + x)*tamaño, (153 + y)*tamaño);
             }
             x += 1;
         }
