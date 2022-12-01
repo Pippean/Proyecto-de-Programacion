@@ -108,7 +108,7 @@ public class DibujarCanvas extends JComponent {
                 switch(caracter){
                     case ' ':{
                         if(verificadorsubrayado(texto, i) == true && subrayado == true){
-                            s1.seguirsubrayado(g2, x, y, bandera);
+                            s1.seguirsubrayado(g2, x, y, bandera,tamaño);
                         }
                         else{
                            subrayado = false;    
@@ -379,22 +379,22 @@ public class DibujarCanvas extends JComponent {
                     }
                     // Simbolos 
                     case '¿':{
-                        s1.interrogacionabierto(g2, x, y, bandera);
+                        s1.interrogacionabierto(g2, x, y, bandera,tamaño);
                         x+=45;
                         break;
                     }
                     case '?':{
-                        s1.interrogacioncerrado(g2, x, y, bandera);
+                        s1.interrogacioncerrado(g2, x, y, bandera,tamaño);
                         x+=55;
                         break;
                     }
                     case '!':{
-                        s1.exclamacionabierto(g2, x, y, bandera);
+                        s1.exclamacionabierto(g2, x, y, bandera,tamaño);
                         x+=40;
                         break;
                     }
                     case '¡':{
-                        s1.exclamacioncerrado(g2, x, y, bandera);
+                        s1.exclamacioncerrado(g2, x, y, bandera,tamaño);
                         x+=40;
                         break;
                     }
@@ -404,12 +404,12 @@ public class DibujarCanvas extends JComponent {
                         break;
                     }
                     case ',':{
-                        s1.coma(g2, x, y, bandera);
+                        s1.coma(g2, x, y, bandera,tamaño);
                         x+=25;
                         break;
                     }
                     case ';':{
-                        s1.puntoycoma(g2, x, y, bandera);
+                        s1.puntoycoma(g2, x, y, bandera,tamaño);
                         x+=25;
                         break;
                     }
@@ -419,51 +419,51 @@ public class DibujarCanvas extends JComponent {
                         break;
                     }
                     case '‘':{
-                        s1.comillasabiertas(g2, x, y, bandera);
+                        s1.comillasabiertas(g2, x, y, bandera,tamaño);
                         x+=35;
                         break;
                     }
                     case '’':{
-                        s1.comillascerradas(g2, x, y, bandera);
+                        s1.comillascerradas(g2, x, y, bandera,tamaño);
                         x+=35;
                         break;
                     }
                     case '\"':{
-                        s1.comillasinglesas(g2, x, y, bandera);
+                        s1.comillasinglesas(g2, x, y, bandera,tamaño);
                         x+=35;
                         break;
                     }
                     case '«':{
-                        s1.españolaabierta(g2, x, y, bandera);
+                        s1.españolaabierta(g2, x, y, bandera,tamaño);
                         x+=18;
-                        s1.españolaabierta(g2, x, y, bandera);
+                        s1.españolaabierta(g2, x, y, bandera,tamaño);
                         x+=50;
                         break;
                     }
                     case '»':{
-                        s1.españolacerrada(g2, x, y, bandera);
+                        s1.españolacerrada(g2, x, y, bandera,tamaño);
                         x+=18;
-                        s1.españolacerrada(g2, x, y, bandera);
+                        s1.españolacerrada(g2, x, y, bandera,tamaño);
                         x+=50;
                         break;
                     }
                     case '(':{
-                        s1.parentesisabierto(g2, x, y, bandera);
+                        s1.parentesisabierto(g2, x, y, bandera,tamaño);
                         x+=35;
                         break;
                     }
                     case ')':{
-                        s1.parentesiscerrado(g2, x, y, bandera);
+                        s1.parentesiscerrado(g2, x, y, bandera,tamaño);
                         x+=35;
                         break;
                     }
                     case '{':{
-                        s1.llavesabiertas(g2, x, y, bandera);
+                        s1.llavesabiertas(g2, x, y, bandera,tamaño);
                         x+=45;
                         break;
                     }
                     case '}':{
-                        s1.llavescerradas(g2, x, y, bandera);
+                        s1.llavescerradas(g2, x, y, bandera,tamaño);
                         x+=45;
                         break;
                     }
@@ -475,7 +475,7 @@ public class DibujarCanvas extends JComponent {
                     }
                     case '_':{
                         x+=30;
-                        s1.guionbajo(g2, x, y, bandera);
+                        s1.guionbajo(g2, x, y, bandera,tamaño);
                         x+=65;
                         break;
                     }
@@ -518,102 +518,102 @@ public class DibujarCanvas extends JComponent {
                         break;
                     }
                     case 'H':{
-                        m2.dibujarH(g2, x, y, bandera,negrita,subrayado,cursiva,EspejoY);
+                        m2.dibujarH(g2, x, y, bandera,negrita,subrayado,cursiva,tamaño,EspejoY);
                         x+=110;
                         break;
                     }
                     case 'I':{
-                        m2.dibujarI(g2, x, y, bandera,false,negrita,subrayado,cursiva,EspejoY);
+                        m2.dibujarI(g2, x, y, bandera,false,negrita,subrayado,cursiva,tamaño,EspejoY);
                         x+=70;
                         break;
                     }
                     case 'J':{
-                        m2.dibujarJ(g2, x, y, bandera,negrita,subrayado,cursiva,EspejoY);
+                        m2.dibujarJ(g2, x, y, bandera,negrita,subrayado,cursiva,tamaño,EspejoY);
                         x+=70;
                         break;
                     }
                     case 'K':{
-                        m2.dibujarK(g2, x, y, bandera,negrita,subrayado,cursiva,EspejoY);
+                        m2.dibujarK(g2, x, y, bandera,negrita,subrayado,cursiva,tamaño,EspejoY);
                         x+=110;
                         break;
                     }
                     case 'L':{
-                        m2.dibujarL(g2, x, y, bandera,negrita,subrayado,cursiva,EspejoY);
+                        m2.dibujarL(g2, x, y, bandera,negrita,subrayado,cursiva,tamaño,EspejoY);
                         x+=110;
                         break;
                     }
                     case 'M':{
-                        m2.dibujarM(g2, x, y, bandera,negrita,subrayado,cursiva,EspejoY);
+                        m2.dibujarM(g2, x, y, bandera,negrita,subrayado,cursiva,tamaño,EspejoY);
                         x+=130;
                         break;
                     }
                     case 'N':{
-                        m2.dibujarN(g2, x, y, bandera,negrita,subrayado,cursiva,EspejoY);
+                        m2.dibujarN(g2, x, y, bandera,negrita,subrayado,cursiva,tamaño,EspejoY);
                         x+=130;
                         break;
                     }
                     case 'Ñ':{
-                        m2.dibujarÑ(g2, x, y, bandera,negrita,subrayado,cursiva,EspejoY);
+                        m2.dibujarÑ(g2, x, y, bandera,negrita,subrayado,cursiva,tamaño,EspejoY);
                         x+=130;
                         break;
                     }
                     case 'O':{
-                        m2.dibujarO(g2, x, y, bandera,false,negrita,subrayado,cursiva,EspejoY);
+                        m2.dibujarO(g2, x, y, bandera,false,negrita,subrayado,cursiva,tamaño,EspejoY);
                         x+=90;
                         break;
                     }
                     case 'P':{
-                        m2.dibujarP(g2, x, y, bandera,negrita,subrayado,cursiva,EspejoY);
+                        m2.dibujarP(g2, x, y, bandera,negrita,subrayado,cursiva,tamaño,EspejoY);
                         x+=90;
                         break;
                     }
                     case 'Q':{
-                        m2.dibujarQ(g2, x, y, bandera,negrita,subrayado,cursiva,EspejoY);
+                        m2.dibujarQ(g2, x, y, bandera,negrita,subrayado,cursiva,tamaño,EspejoY);
                         x+=100;
                         break;
                     }
                     case 'R':{
-                        m2.dibujarR(g2, x, y, bandera,negrita,subrayado,cursiva,EspejoY);
+                        m2.dibujarR(g2, x, y, bandera,negrita,subrayado,cursiva,tamaño,EspejoY);
                         x+=80;
                         break;
                     }
                     case 'S':{
-                        m2.dibujarS(g2, x, y, bandera,negrita,subrayado,cursiva,EspejoY);
+                        m2.dibujarS(g2, x, y, bandera,negrita,subrayado,cursiva,tamaño,EspejoY);
                         x+=90;
                         break;
                     }
                     case 'T':{
-                        m2.dibujarT(g2, x, y, bandera,negrita,subrayado,cursiva,EspejoY);
+                        m2.dibujarT(g2, x, y, bandera,negrita,subrayado,cursiva,tamaño,EspejoY);
                         x+=100;
                         break;
                     }
                     case 'U':{
-                        m2.dibujarU(g2, x, y, bandera,false,negrita,subrayado,cursiva,EspejoY);
+                        m2.dibujarU(g2, x, y, bandera,false,negrita,subrayado,cursiva,tamaño,EspejoY);
                         x+=100;
                         break;
                     }
                     case 'V':{
-                        m2.dibujarV(g2, x, y, bandera,negrita,subrayado,cursiva,EspejoY);
+                        m2.dibujarV(g2, x, y, bandera,negrita,subrayado,cursiva,tamaño,EspejoY);
                         x+=90;
                         break;
                     }
                     case 'W':{
-                        m2.dibujarW(g2, x, y, bandera,negrita,subrayado,cursiva,EspejoY);
+                        m2.dibujarW(g2, x, y, bandera,negrita,subrayado,cursiva,tamaño,EspejoY);
                         x+=100;
                         break;
                     }
                     case 'X':{
-                        m2.dibujarX(g2, x, y, bandera,negrita,subrayado,cursiva,EspejoY);
+                        m2.dibujarX(g2, x, y, bandera,negrita,subrayado,cursiva,tamaño,EspejoY);
                         x+=110;
                         break;
                     }
                     case 'Y':{
-                        m2.dibujarY(g2, x, y, bandera,negrita,subrayado,cursiva,EspejoY);
+                        m2.dibujarY(g2, x, y, bandera,negrita,subrayado,cursiva,tamaño,EspejoY);
                         x+=110;
                         break;
                     }
                     case 'Z':{
-                        m2.dibujarZ(g2, x, y, bandera,negrita,subrayado,cursiva,EspejoY);
+                        m2.dibujarZ(g2, x, y, bandera,negrita,subrayado,cursiva,tamaño,EspejoY);
                         x+=110;
                         break;
                     }
@@ -745,17 +745,17 @@ public class DibujarCanvas extends JComponent {
                         break;
                     }
                     case 'Í':{
-                        m2.dibujarI(g2, x, y, bandera,true, negrita, subrayado, cursiva,EspejoY);
+                        m2.dibujarI(g2, x, y, bandera,true, negrita, subrayado, cursiva,tamaño,EspejoY);
                         x+=110;
                         break;
                     }
                     case 'Ó':{
-                        m2.dibujarO(g2, x, y, bandera,true, negrita, subrayado, cursiva,EspejoY);
+                        m2.dibujarO(g2, x, y, bandera,true, negrita, subrayado, cursiva,tamaño,EspejoY);
                         x+=110;
                         break;
                     }
                     case 'Ú':{
-                        m2.dibujarU(g2, x, y, bandera,true, negrita, subrayado, cursiva,EspejoY);
+                        m2.dibujarU(g2, x, y, bandera,true, negrita, subrayado, cursiva,tamaño,EspejoY);
                         x+=110;
                         break;
                     }
