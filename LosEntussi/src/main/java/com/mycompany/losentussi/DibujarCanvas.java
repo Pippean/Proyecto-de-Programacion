@@ -117,8 +117,40 @@ public class DibujarCanvas extends JComponent {
                         } 
                         if (banderaang==true) {
                             
-                            g2.rotate(Math.toRadians(-tmpangulo), 0, 0);
-                            banderaang = false;
+                            if (angulo>=0 && angulo<=45) {
+                                g2.rotate(Math.toRadians(-tmpangulo), 150-y, x);
+                                banderaang = false;
+                            }
+                            if (angulo>=46 && angulo<=90) {
+                                g2.rotate(Math.toRadians(-tmpangulo), 60, 146);
+                                banderaang = false;
+                            }
+                            if (angulo>=91 && angulo<=135) {
+                                g2.rotate(Math.toRadians(-tmpangulo), y, x);
+                                banderaang = false;
+                            }
+                            if (angulo>=136 && angulo<=180) {
+                                g2.rotate(Math.toRadians(-tmpangulo), y, x);
+                                banderaang = false;
+                            }
+                            if (angulo>=181 && angulo<=225) {
+                                g2.rotate(Math.toRadians(-tmpangulo), y, x);
+                                banderaang = false;
+                            }
+                            if (angulo>=226 && angulo<=270) {
+                                g2.rotate(Math.toRadians(-tmpangulo), y, x);
+                                banderaang = false;
+                            }
+                            if (angulo>=270 && angulo<=315) {
+                                g2.rotate(Math.toRadians(-tmpangulo), y, x);
+                                banderaang = false;
+                            }
+                            if (angulo>=316 && angulo<=360) {
+                                g2.rotate(Math.toRadians(-tmpangulo), y, x);
+                                banderaang = false;
+                            }
+                            //g2.rotate(Math.toRadians(-tmpangulo), y, x);                            
+                            //banderaang = false;
                         }
                         EspejoY = false;
                         negrita = false;
@@ -963,8 +995,8 @@ public class DibujarCanvas extends JComponent {
                         }
                         
                         if (texto.charAt(i+1)=='a') {
-                            i+=1;
-                            angulo = digitos();
+                            i+=1;                                                        
+                            angulo = angulodigitos(texto, i);
                             tmpangulo = angulo;
                             banderaang = true;
                             g2.rotate(Math.toRadians(angulo), x+50, y+100);                                                        
@@ -981,20 +1013,34 @@ public class DibujarCanvas extends JComponent {
         }    
     }
     
-    public int digitos(){
-        char []aux2 = texto.toCharArray(); 
-        for (int j = 0; j < aux2.length; j++) {
-            if (aux2[j]==' ') {
-                System.out.println("no suma");
-                System.out.println(n);
+    public static int angulodigitos(String texto, int k){        
+        int ubicacion = k;        
+        String lista = texto.substring(0, ubicacion+1);
+        String invertir= texto.substring(ubicacion+1, texto.length());
+        char []aux2 = invertir.toCharArray();
+        String n = "";
+        for(int i = 0; i<invertir.length();i++){
+            if(Character.isDigit(aux2[i]) && invertir.charAt(i) != ' '){
+                n+=aux2[i];
             }
-            if(Character.isDigit(aux2[j])){
-                n+=aux2[j];
-            }  
-            
+            else{
+                break;
+            }
         }
+        System.out.println(n);
         return Integer.parseInt(n);
     }
+    
+    
+    public int digitos(){
+        char []aux2 = texto.toCharArray(); 
+        for (int j = 0; j < aux2.length; j++) {            
+            if(Character.isDigit(aux2[j])){
+                n+=aux2[j];
+            }              
+        }
+        return Integer.parseInt(n);
+    }        
     
     public static String reves(String texto){
         StringBuilder cadena1 = new StringBuilder(texto); 
@@ -1014,6 +1060,7 @@ public class DibujarCanvas extends JComponent {
         }
         return nueva;
     }
+    
     public static boolean verificadorsubrayado(String texto, int i){
         boolean bandera = false;
         for(int j = i+1; j<texto.length();j++){

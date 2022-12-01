@@ -52,8 +52,7 @@ public class Dibujar{
 
         //Agregación para la interfaz
         f.setSize(w,h);
-        f.setTitle("Conversor de Scripts");
-        f.setResizable(false);        
+        f.setTitle("Conversor de Scripts");               
         f.add(Borrar);
         f.add(Puntos);
         f.add(menu);        
