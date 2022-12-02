@@ -101,6 +101,9 @@ public class DibujarCanvas extends JComponent {
             for (int i = 0; i < texto.length(); i++) {
                 char caracter = texto.charAt(i);
                 if(x>=1150*limite){
+                    if (x<0) {                        
+                        x=10;
+                    }
                     if(texto.charAt(i)!= ' '){
                         s1.guion(g2, x, y, bandera,tamaño);
                     }
@@ -117,7 +120,7 @@ public class DibujarCanvas extends JComponent {
                         } 
                         if (banderaang==true) {                                                                                                                  
                             
-                            g2.rotate(Math.toRadians(-tmpangulo), y, x);                            
+                            g2.rotate(Math.toRadians(-tmpangulo), 143+y, 10+x);                            
                             banderaang = false;
                         }
                         EspejoY = false;
@@ -237,7 +240,7 @@ public class DibujarCanvas extends JComponent {
                     }
                     case 'k':{
                         m1.dibujark(g2, x, y, bandera,negrita, subrayado, cursiva,EspejoY);
-                        x+=100;
+                        x+=80;
                         break;
                     }
                     case 'l':{
@@ -256,6 +259,11 @@ public class DibujarCanvas extends JComponent {
                     break;
                     }
                     case 'm':{
+                        if (EspejoY==true) {
+                            
+                            m1.dibujarm(g2, x, y, bandera,negrita, subrayado, cursiva,EspejoY);     
+                            x+=155;
+                        }
                         m1.dibujarm(g2, x, y, bandera,negrita, subrayado, cursiva,EspejoY);
                         x+=155;
                         break;
