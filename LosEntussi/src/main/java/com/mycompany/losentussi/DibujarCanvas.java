@@ -115,42 +115,10 @@ public class DibujarCanvas extends JComponent {
                         else{
                            subrayado = false;    
                         } 
-                        if (banderaang==true) {
+                        if (banderaang==true) {                                                                                                                  
                             
-                            if (angulo>=0 && angulo<=45) {
-                                g2.rotate(Math.toRadians(-tmpangulo), 150-y, x);
-                                banderaang = false;
-                            }
-                            if (angulo>=46 && angulo<=90) {
-                                g2.rotate(Math.toRadians(-tmpangulo), 60, 146);
-                                banderaang = false;
-                            }
-                            if (angulo>=91 && angulo<=135) {
-                                g2.rotate(Math.toRadians(-tmpangulo), y, x);
-                                banderaang = false;
-                            }
-                            if (angulo>=136 && angulo<=180) {
-                                g2.rotate(Math.toRadians(-tmpangulo), y, x);
-                                banderaang = false;
-                            }
-                            if (angulo>=181 && angulo<=225) {
-                                g2.rotate(Math.toRadians(-tmpangulo), y, x);
-                                banderaang = false;
-                            }
-                            if (angulo>=226 && angulo<=270) {
-                                g2.rotate(Math.toRadians(-tmpangulo), y, x);
-                                banderaang = false;
-                            }
-                            if (angulo>=270 && angulo<=315) {
-                                g2.rotate(Math.toRadians(-tmpangulo), y, x);
-                                banderaang = false;
-                            }
-                            if (angulo>=316 && angulo<=360) {
-                                g2.rotate(Math.toRadians(-tmpangulo), y, x);
-                                banderaang = false;
-                            }
-                            //g2.rotate(Math.toRadians(-tmpangulo), y, x);                            
-                            //banderaang = false;
+                            g2.rotate(Math.toRadians(-tmpangulo), y, x);                            
+                            banderaang = false;
                         }
                         EspejoY = false;
                         negrita = false;
