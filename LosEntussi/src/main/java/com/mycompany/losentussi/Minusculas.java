@@ -202,7 +202,7 @@ public class Minusculas {
         }
         for (int i = 0; i < limite; i++) {
             if (cursiva == true) {
-                c.moveTo(((0 * EY) + x) * tamaño, (143 + y) * tamaño);
+                c.moveTo(((1 * EY) + x) * tamaño, (143 + y) * tamaño);
                 c.curveTo(((30 * EY) + x) * tamaño, (140 + y) * tamaño, ((5 * EY) + x) * tamaño, (85 + y) * tamaño, ((60 * EY) + x) * tamaño, (95 + y) * tamaño);
                 c.moveTo(((29 * EY) + x) * tamaño, (100 + y) * tamaño);
                 c.curveTo(((10 * EY) + x) * tamaño, (115 + y) * tamaño, ((20 * EY) + x) * tamaño, (148 + y) * tamaño, ((68 * EY) + x) * tamaño, (143 + y) * tamaño);
