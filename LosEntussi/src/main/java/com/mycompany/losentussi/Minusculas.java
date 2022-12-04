@@ -49,32 +49,32 @@ public class Minusculas {
                 a.curveTo(((70 * EY) + x) * tamaño, ((120*EX )+ y) * tamaño, ((70 * EY) + x) * tamaño, ((143*EX )+ y) * tamaño, ((90 * EY) + x) * tamaño, ((143*EX )+ y) * tamaño);
             }
             if (subrayado == true) {
-                a.moveTo(((0 * EY) + x) * tamaño, (153 + y) * tamaño);
-                a.lineTo(((90 * EY) + x) * tamaño, (153 + y) * tamaño);
+                a.moveTo(((0 * EY) + x) * tamaño, ((153*EX)+ y) * tamaño);
+                a.lineTo(((90 * EY) + x) * tamaño, ((153*EX) + y) * tamaño);
             }
             if (tilde == true) {
-                a.moveTo(((45 * EY) + x) * tamaño, (90 + y) * tamaño);
-                a.lineTo(((70 * EY) + x) * tamaño, (70 + y) * tamaño);
+                a.moveTo(((45 * EY) + x) * tamaño, ((90*EX) + y) * tamaño);
+                a.lineTo(((70 * EY) + x) * tamaño, ((70*EX) + y) * tamaño);
                 if (bandera == true) {
-                    g2.fillOval((45 * EY) + x, 90 + y, 5, 5);
-                    g2.fillOval((70 * EY) + x, 70 + y, 5, 5);
+                    g2.fillOval((45 * EY) + x, (90*EX) + y, 5, 5);
+                    g2.fillOval((70 * EY) + x, (70*EX) + y, 5, 5);
                 }
             }
             x += 1;
         }
         if (bandera == true) {
-            g2.fillOval((0 * EY) + x, 143 + y, 5, 5);
-            g2.fillOval((20 * EY) + x, 143 + y, 5, 5);
-            g2.fillOval((20 * EY) + x, 130 + y, 5, 5);
-            g2.fillOval((20 * EY) + x, 120 + y, 5, 5);
-            g2.fillOval((20 * EY) + x, 90 + y, 5, 5);
-            g2.fillOval((70 * EY) + x, 90 + y, 5, 5);
-            g2.fillOval((70 * EY) + x, 120 + y, 5, 5);
-            g2.fillOval((20 * EY) + x, 160 + y, 5, 5);
-            g2.fillOval((70 * EY) + x, 160 + y, 5, 5);
-            g2.fillOval((70 * EY) + x, 120 + y, 5, 5);
-            g2.fillOval((70 * EY) + x, 143 + y, 5, 5);
-            g2.fillOval((90 * EY) + x, 143 + y, 5, 5);
+            g2.fillOval((0 * EY) + x, (143 *EX)+ y, 5, 5);
+            g2.fillOval((20 * EY) + x, (143 *EX)+ y, 5, 5);
+            g2.fillOval((20 * EY) + x, (130 *EX)+ y, 5, 5);
+            g2.fillOval((20 * EY) + x, (120 *EX)+ y, 5, 5);
+            g2.fillOval((20 * EY) + x, (90 *EX)+ y, 5, 5);
+            g2.fillOval((70 * EY) + x, (90 *EX)+ y, 5, 5);
+            g2.fillOval((70 * EY) + x, (120 *EX)+ y, 5, 5);
+            g2.fillOval((20 * EY) + x, (160 *EX)+ y, 5, 5);
+            g2.fillOval((70 * EY) + x, (160 *EX)+ y, 5, 5);
+            g2.fillOval((70 * EY) + x, (120 *EX)+ y, 5, 5);
+            g2.fillOval((70 * EY) + x, (143 *EX)+ y, 5, 5);
+            g2.fillOval((90 * EY) + x, (143 *EX)+ y, 5, 5);
         }
         g2.draw(a);
     }
@@ -1084,7 +1084,7 @@ public class Minusculas {
 
             if (subrayado == true) {
                 ñ.moveTo(((0 * EY) + x) * tamaño, ((153 *EX )+ y) * tamaño);
-                ñ.lineTo(((10 * EY) + x) * tamaño, ((153 *EX )+ y) * tamaño);
+                ñ.lineTo(((100 * EY) + x) * tamaño, ((153 *EX )+ y) * tamaño);
             }
             x += 1;
         }
@@ -2000,6 +2000,7 @@ public class Minusculas {
             g2.fillOval((30 * EY) + x, (175*EX ) + y, 5, 5);
             g2.fillOval((40 * EY) + x, (200 *EX )+ y, 5, 5);
         }
+
         g2.draw(z);
     }
 
