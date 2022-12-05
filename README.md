@@ -11,4 +11,4 @@ Link del Trello:
 https://trello.com/b/rVDt9yem/%F0%9F%98%88-los-entussiasmados/power-up/55a5d916446f517774210004
 
 Link del Video:
-https://youtu.be/luegBkpwTlQ
+https://youtu.be/Y8HfRf7lxZQ
