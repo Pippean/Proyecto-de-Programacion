@@ -1647,7 +1647,7 @@ public class DibujarCanvas extends JComponent {
                         //CARET ROTAR:
                         if (texto.charAt(i + 1) == 'R') {                                                            
                             texto = reves(texto);
-                            i+=1;                            
+                            i+=1;                               
                             //Concatenación Pendiente
                         }
                         //CARET MOVER:
