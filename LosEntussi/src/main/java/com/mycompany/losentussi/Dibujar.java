@@ -11,7 +11,7 @@ import javax.swing.*;
 public class Dibujar{   
     
     //Variables:
-    public static String txtadibujar = "";
+    public static String txtadibujar = "SE PASO CTM!!!";
     public static String aux = txtadibujar;
     public static String color = "";
     static int w = 1300;
